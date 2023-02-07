@@ -31,6 +31,7 @@ Partial Class Form1
         Me.Password = New System.Windows.Forms.Label()
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.LoginPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LoginPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -119,12 +120,22 @@ Partial Class Form1
         Me.LoginPictureBox.TabIndex = 10
         Me.LoginPictureBox.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(141, 114)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1229, 646)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LoginPictureBox)
         Me.Controls.Add(Me.LogoPictureBox)
         Me.Controls.Add(Me.Password)
@@ -152,4 +163,5 @@ Partial Class Form1
     Friend WithEvents Password As Label
     Friend WithEvents LogoPictureBox As PictureBox
     Friend WithEvents LoginPictureBox As PictureBox
+    Friend WithEvents Button2 As Button
 End Class
