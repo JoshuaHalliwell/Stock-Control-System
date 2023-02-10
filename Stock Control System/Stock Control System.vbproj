@@ -73,11 +73,26 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="GobalModule\Rounded_Corner_Button.vb" />
+    <Compile Include="LoginForms\ForgottenPassword.Designer.vb">
+      <DependentUpon>ForgottenPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForms\ForgottenPassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="LoginForms\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForms\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GobalModule\AccessLevel.vb" />
+    <Compile Include="GobalModule\DatabaseConnection.vb" />
+    <Compile Include="MainMenu\MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\MainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -97,7 +112,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="LoginForms\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
