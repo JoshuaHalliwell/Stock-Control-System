@@ -73,13 +73,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.Designer.vb">
-      <DependentUpon>Customer.vb</DependentUpon>
+    <Compile Include="Customers.Designer.vb">
+      <DependentUpon>Customers.vb</DependentUpon>
     </Compile>
-    <Compile Include="Customer.vb">
+    <Compile Include="Customers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GobalModule\ChildForm.vb" />
+    <Compile Include="GobalModule\ColourClass.vb" />
     <Compile Include="GobalModule\Rounded_Corner_Button.vb" />
+    <Compile Include="GobalModule\SortSearchConnection.vb" />
     <Compile Include="LoginForms\ForgottenPassword.Designer.vb">
       <DependentUpon>ForgottenPassword.vb</DependentUpon>
     </Compile>
@@ -105,6 +108,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -116,13 +120,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="StockDataBase_copyDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockDataBase_copyDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.vb</DependentUpon>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -142,6 +154,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="StockDataBase_copyDataSet.xsc">
+      <DependentUpon>StockDataBase_copyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StockDataBase_copyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockDataBase_copyDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockDataBase_copyDataSet.xss">
+      <DependentUpon>StockDataBase_copyDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SJR_white_logo.png" />
@@ -151,6 +174,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login-PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StockDataBase copy.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
