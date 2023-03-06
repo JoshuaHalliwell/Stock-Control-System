@@ -71,7 +71,7 @@ Public Class MainMenu
 
     Private Sub BtnStock_Click(sender As Object, e As EventArgs) Handles BtnStock.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        'OpenChildForm(New GameApplianceListForm)
+        OpenChildForm(New StockAdd)
 
     End Sub
 
@@ -122,5 +122,9 @@ Public Class MainMenu
     Private Sub Paneltop_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelTop.MouseDown
         RealeaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    Private Sub PanelMain_Paint(sender As Object, e As PaintEventArgs) Handles PanelMain.Paint
+
     End Sub
 End Class

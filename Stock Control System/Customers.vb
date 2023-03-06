@@ -29,16 +29,16 @@
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        'OpenChildForm(New AddAppliance)                                                         ' opends the form in the open child form layout and closes this main form
+        OpenChildForm(New CustomerData)                                                         ' opends the form in the open child form layout and closes this main form
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        'OpenChildForm(New AddAppliance)                                                         ' opends the form in the open child form layout and closes this main form
+        OpenChildForm(New CustomerData)                                                         ' opends the form in the open child form layout and closes this main form
 
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        'OpenChildForm(New AddAppliance)                                                         ' opends the form in the open child form layout and closes this main form
+        OpenChildForm(New CustomerData)                                                         ' opends the form in the open child form layout and closes this main form
 
     End Sub
 
