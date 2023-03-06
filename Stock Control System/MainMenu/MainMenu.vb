@@ -26,6 +26,16 @@ Public Class MainMenu
         LblUsername.Text = Form1.Username
         Timer1.Start()                                                          ' starts the timer once the form is loaded
         LblWelcomemessage.Hide()
+
+        BtnCustomers.BackColor = ColourClass.Steelcolour
+        BtnHome.BackColor = ColourClass.Steelcolour
+        BtnLogoff.BackColor = ColourClass.Steelcolour
+        BtnProductSales.BackColor = ColourClass.Steelcolour
+        BtnReports.BackColor = ColourClass.Steelcolour
+        BtnStaff.BackColor = ColourClass.Steelcolour
+        BtnStock.BackColor = ColourClass.Steelcolour
+        BtnSuppliersOrders.BackColor = ColourClass.Steelcolour
+
         With Form1
             'access level 
         End With
@@ -48,7 +58,7 @@ Public Class MainMenu
     End Sub
     Private Sub DisableButton()
         If currentBtn IsNot Nothing Then                                     'Disbble the panle that is currently selected
-            currentBtn.BackColor = Color.FromArgb(95, 158, 160)
+            currentBtn.BackColor = Color.FromArgb(70, 130, 180)
             currentBtn.ForeColor = Color.Gainsboro
             currentBtn.TextAlign = ContentAlignment.MiddleLeft
             currentBtn.ImageAlign = ContentAlignment.MiddleLeft
@@ -58,7 +68,8 @@ Public Class MainMenu
 
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
-        CurrentChildForm.Close()
+
+
         LblWelcomemessage.Show()
         LblWelcomemessage.Text = ("Welcome to the system")            '" LblUsername  "'")
         Reset()
@@ -72,12 +83,14 @@ Public Class MainMenu
     Private Sub BtnStock_Click(sender As Object, e As EventArgs) Handles BtnStock.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         OpenChildForm(New StockAdd)
+        LblFormName.Text = "Stock"
 
     End Sub
 
     Private Sub BtnStaff_Click(sender As Object, e As EventArgs) Handles BtnStaff.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         'OpenChildForm(New GameApplianceListForm)
+        LblFormName.Text = "Staff"
 
 
     End Sub
@@ -85,24 +98,28 @@ Public Class MainMenu
     Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         OpenChildForm(New Customers)
-    
+        LblFormName.Text = "Customer"
+
     End Sub
 
     Private Sub BtnSuppliersOrders_Click(sender As Object, e As EventArgs) Handles BtnSuppliersOrders.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         'OpenChildForm(New GameApplianceListForm)
+        LblFormName.Text = "Suppliers Order"
 
     End Sub
 
     Private Sub BtnProductSales_Click(sender As Object, e As EventArgs) Handles BtnProductSales.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         'OpenChildForm(New GameApplianceListForm)
+        LblFormName.Text = "Product Sales"
 
     End Sub
 
     Private Sub BtnReports_Click(sender As Object, e As EventArgs) Handles BtnReports.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         'OpenChildForm(New GameApplianceListForm)
+        LblFormName.Text = "Report"
 
     End Sub
 

@@ -158,7 +158,7 @@ Partial Class MainMenu
         '
         'BtnStaff
         '
-        Me.BtnStaff.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnStaff.BackColor = System.Drawing.Color.SteelBlue
         Me.BtnStaff.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnStaff.Location = New System.Drawing.Point(0, 122)
         Me.BtnStaff.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
@@ -170,7 +170,7 @@ Partial Class MainMenu
         '
         'BtnStock
         '
-        Me.BtnStock.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnStock.BackColor = System.Drawing.Color.SteelBlue
         Me.BtnStock.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnStock.Location = New System.Drawing.Point(0, 63)
         Me.BtnStock.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
@@ -182,7 +182,7 @@ Partial Class MainMenu
         '
         'BtnHome
         '
-        Me.BtnHome.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnHome.BackColor = System.Drawing.Color.SteelBlue
         Me.BtnHome.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnHome.Location = New System.Drawing.Point(0, 0)
         Me.BtnHome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
