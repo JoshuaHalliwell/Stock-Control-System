@@ -171,6 +171,9 @@
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForms\ForgottenPassword.resx">
+      <DependentUpon>ForgottenPassword.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffAdd.resx">
       <DependentUpon>StaffAdd.vb</DependentUpon>
     </EmbeddedResource>
