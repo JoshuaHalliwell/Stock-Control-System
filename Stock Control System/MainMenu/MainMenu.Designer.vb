@@ -53,7 +53,7 @@ Partial Class MainMenu
         Me.PanelTop.Controls.Add(Me.PictureBox1)
         Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
-        Me.PanelTop.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelTop.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelTop.Name = "PanelTop"
         Me.PanelTop.Size = New System.Drawing.Size(1067, 78)
         Me.PanelTop.TabIndex = 0
@@ -96,7 +96,7 @@ Partial Class MainMenu
         Me.PanelLeft.Controls.Add(Me.BtnHome)
         Me.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelLeft.Location = New System.Drawing.Point(0, 78)
-        Me.PanelLeft.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelLeft.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelLeft.Name = "PanelLeft"
         Me.PanelLeft.Size = New System.Drawing.Size(153, 476)
         Me.PanelLeft.TabIndex = 1
@@ -104,8 +104,9 @@ Partial Class MainMenu
         'BtnLogoff
         '
         Me.BtnLogoff.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnLogoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLogoff.Location = New System.Drawing.Point(0, 417)
-        Me.BtnLogoff.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnLogoff.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnLogoff.Name = "BtnLogoff"
         Me.BtnLogoff.Size = New System.Drawing.Size(153, 59)
         Me.BtnLogoff.TabIndex = 7
@@ -115,8 +116,9 @@ Partial Class MainMenu
         'BtnReports
         '
         Me.BtnReports.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnReports.Location = New System.Drawing.Point(0, 358)
-        Me.BtnReports.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnReports.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnReports.Name = "BtnReports"
         Me.BtnReports.Size = New System.Drawing.Size(153, 59)
         Me.BtnReports.TabIndex = 6
@@ -126,8 +128,9 @@ Partial Class MainMenu
         'BtnProductSales
         '
         Me.BtnProductSales.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnProductSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnProductSales.Location = New System.Drawing.Point(0, 299)
-        Me.BtnProductSales.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnProductSales.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnProductSales.Name = "BtnProductSales"
         Me.BtnProductSales.Size = New System.Drawing.Size(153, 59)
         Me.BtnProductSales.TabIndex = 5
@@ -137,8 +140,9 @@ Partial Class MainMenu
         'BtnSuppliersOrders
         '
         Me.BtnSuppliersOrders.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnSuppliersOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSuppliersOrders.Location = New System.Drawing.Point(0, 240)
-        Me.BtnSuppliersOrders.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnSuppliersOrders.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSuppliersOrders.Name = "BtnSuppliersOrders"
         Me.BtnSuppliersOrders.Size = New System.Drawing.Size(153, 59)
         Me.BtnSuppliersOrders.TabIndex = 4
@@ -148,8 +152,9 @@ Partial Class MainMenu
         'BtnCustomers
         '
         Me.BtnCustomers.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCustomers.Location = New System.Drawing.Point(0, 181)
-        Me.BtnCustomers.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCustomers.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCustomers.Name = "BtnCustomers"
         Me.BtnCustomers.Size = New System.Drawing.Size(153, 59)
         Me.BtnCustomers.TabIndex = 3
@@ -160,8 +165,9 @@ Partial Class MainMenu
         '
         Me.BtnStaff.BackColor = System.Drawing.Color.SteelBlue
         Me.BtnStaff.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStaff.Location = New System.Drawing.Point(0, 122)
-        Me.BtnStaff.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnStaff.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnStaff.Name = "BtnStaff"
         Me.BtnStaff.Size = New System.Drawing.Size(153, 59)
         Me.BtnStaff.TabIndex = 2
@@ -172,8 +178,10 @@ Partial Class MainMenu
         '
         Me.BtnStock.BackColor = System.Drawing.Color.SteelBlue
         Me.BtnStock.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnStock.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStock.Location = New System.Drawing.Point(0, 63)
-        Me.BtnStock.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnStock.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnStock.Name = "BtnStock"
         Me.BtnStock.Size = New System.Drawing.Size(153, 59)
         Me.BtnStock.TabIndex = 1
@@ -184,8 +192,10 @@ Partial Class MainMenu
         '
         Me.BtnHome.BackColor = System.Drawing.Color.SteelBlue
         Me.BtnHome.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHome.Location = New System.Drawing.Point(0, 0)
-        Me.BtnHome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnHome.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnHome.Name = "BtnHome"
         Me.BtnHome.Size = New System.Drawing.Size(153, 63)
         Me.BtnHome.TabIndex = 0
@@ -198,7 +208,7 @@ Partial Class MainMenu
         Me.PanelMain.Controls.Add(Me.LblWelcomemessage)
         Me.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelMain.Location = New System.Drawing.Point(153, 78)
-        Me.PanelMain.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelMain.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelMain.Name = "PanelMain"
         Me.PanelMain.Size = New System.Drawing.Size(914, 476)
         Me.PanelMain.TabIndex = 2
@@ -235,7 +245,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.PanelMain)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MainMenu"
         Me.Text = "MainMenu"
         Me.PanelTop.ResumeLayout(False)

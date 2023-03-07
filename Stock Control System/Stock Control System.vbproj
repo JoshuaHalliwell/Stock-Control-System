@@ -85,6 +85,12 @@
     <Compile Include="Customers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HomeForm.Designer.vb">
+      <DependentUpon>HomeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StaffAdd.Designer.vb">
       <DependentUpon>StaffAdd.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffAdd.resx">
       <DependentUpon>StaffAdd.vb</DependentUpon>
