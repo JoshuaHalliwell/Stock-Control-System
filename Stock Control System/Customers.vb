@@ -1,4 +1,5 @@
 ﻿Public Class Customers
+
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'StockDataBase_copyDataSet.TblCustomer' table. You can move, or remove it, as needed.
         Me.TblCustomerTableAdapter.Fill(Me.StockDataBase_copyDataSet.TblCustomer)
@@ -19,13 +20,13 @@
         RoundCornerButton(BtnAdd)
         RoundCornerButton(BtnDelete)                                   'calls the roundCornerButton module
         RoundCornerButton(BtnEdit)
-        RoundCornerButton(BtnNext)
-        RoundCornerButton(BtnPrevious)
         RoundCornerButton(BtnSearchCustomer)
         RoundCornerButton(BtnSortCustomers)
 
         Llbchange.Hide()
         cbproductchange.Hide()
+
+        Tablename = "TblCustomer"
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
@@ -44,8 +45,8 @@
 
     Private Sub txbID_TextChanged(sender As Object, e As EventArgs) Handles txbID.TextChanged
         con.Open()
-        sql = "SELECT * FROM TblCustomer WHERE CustomerID LIKE '%" & txbID.Text & "%'"
-        SandSconnection(DGVCustomers)
+        sql = "SELECT * FROM TblCustomer WHERE CustomerID LIKE '%" & txbID.Text & "%'"             ' Sql checks to find a simular result in the database  
+        SandSconnection(DGVCustomers)                                                               'Sends the data grid to the connection opration 
     End Sub
 
     Private Sub BtnSearchCustomer_Click(sender As Object, e As EventArgs) Handles BtnSearchCustomer.Click
@@ -78,4 +79,16 @@
     End Sub
 
 
+
+    Private Sub txbname_TextChanged(sender As Object, e As EventArgs) Handles txbname.TextChanged
+        con.Open()
+        sql = "SELECT * FROM TblCustomer WHERE CustomerFirstname LIKE '%" & txbname.Text & "%' OR WHERE CustomerSurname LIKE '%" & txbname.Text & "%' "            ' Sql checks to find a simular result in the database  
+        SandSconnection(DGVCustomers)                                                               'Sends the data grid to the connection opration 
+    End Sub
+
+    Private Sub txbEmail_TextChanged(sender As Object, e As EventArgs) Handles txbEmail.TextChanged
+        con.Open()
+        sql = "SELECT * FROM TblCustomer WHERE CustomerEmail LIKE '%" & txbEmail.Text & "%'"             ' Sql checks to find a simular result in the database  
+        SandSconnection(DGVCustomers)                                                               'Sends the data grid to the connection opration 
+    End Sub
 End Class

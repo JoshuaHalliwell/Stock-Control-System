@@ -4,4 +4,8 @@
         Me.TblStocksTableAdapter.Fill(Me.StockDataBase_copyDataSet1.TblStocks)
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnSortByStorageStock.Click
+
+    End Sub
 End Class

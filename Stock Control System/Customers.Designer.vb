@@ -25,6 +25,14 @@ Partial Class Customers
         Me.components = New System.ComponentModel.Container()
         Me.BtnSearchCustomer = New System.Windows.Forms.Button()
         Me.DGVCustomers = New System.Windows.Forms.DataGridView()
+        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerFirstnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerSurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerPhoneNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CustomerPostcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblCustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StockDataBase_copyDataSet = New Stock_Control_System.StockDataBase_copyDataSet()
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.Llbchange = New System.Windows.Forms.Label()
         Me.cbproductchange = New System.Windows.Forms.ComboBox()
@@ -35,33 +43,23 @@ Partial Class Customers
         Me.txbID = New System.Windows.Forms.TextBox()
         Me.radID = New System.Windows.Forms.RadioButton()
         Me.radName = New System.Windows.Forms.RadioButton()
-        Me.BtnPrevious = New System.Windows.Forms.Button()
-        Me.BtnNext = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnSortCustomers = New System.Windows.Forms.Button()
-        Me.StockDataBase_copyDataSet = New Stock_Control_System.StockDataBase_copyDataSet()
-        Me.TblCustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblCustomerTableAdapter = New Stock_Control_System.StockDataBase_copyDataSetTableAdapters.TblCustomerTableAdapter()
-        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerFirstnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerSurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerPostcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGVCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblCustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StockDataBase_copyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GrpSort.SuspendLayout()
         Me.GrpSearch.SuspendLayout()
-        CType(Me.StockDataBase_copyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblCustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnSearchCustomer
         '
-        Me.BtnSearchCustomer.Location = New System.Drawing.Point(329, 298)
+        Me.BtnSearchCustomer.Location = New System.Drawing.Point(292, 298)
         Me.BtnSearchCustomer.Name = "BtnSearchCustomer"
-        Me.BtnSearchCustomer.Size = New System.Drawing.Size(98, 42)
+        Me.BtnSearchCustomer.Size = New System.Drawing.Size(141, 42)
         Me.BtnSearchCustomer.TabIndex = 3
         Me.BtnSearchCustomer.Text = "Search customer"
         Me.BtnSearchCustomer.UseVisualStyleBackColor = True
@@ -76,6 +74,52 @@ Partial Class Customers
         Me.DGVCustomers.Name = "DGVCustomers"
         Me.DGVCustomers.Size = New System.Drawing.Size(433, 217)
         Me.DGVCustomers.TabIndex = 7
+        '
+        'CustomerIDDataGridViewTextBoxColumn
+        '
+        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
+        '
+        'CustomerFirstnameDataGridViewTextBoxColumn
+        '
+        Me.CustomerFirstnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerFirstname"
+        Me.CustomerFirstnameDataGridViewTextBoxColumn.HeaderText = "CustomerFirstname"
+        Me.CustomerFirstnameDataGridViewTextBoxColumn.Name = "CustomerFirstnameDataGridViewTextBoxColumn"
+        '
+        'CustomerSurnameDataGridViewTextBoxColumn
+        '
+        Me.CustomerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname"
+        Me.CustomerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname"
+        Me.CustomerSurnameDataGridViewTextBoxColumn.Name = "CustomerSurnameDataGridViewTextBoxColumn"
+        '
+        'CustomerEmailDataGridViewTextBoxColumn
+        '
+        Me.CustomerEmailDataGridViewTextBoxColumn.DataPropertyName = "CustomerEmail"
+        Me.CustomerEmailDataGridViewTextBoxColumn.HeaderText = "CustomerEmail"
+        Me.CustomerEmailDataGridViewTextBoxColumn.Name = "CustomerEmailDataGridViewTextBoxColumn"
+        '
+        'CustomerPhoneNumberDataGridViewTextBoxColumn
+        '
+        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhoneNumber"
+        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.HeaderText = "CustomerPhoneNumber"
+        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.Name = "CustomerPhoneNumberDataGridViewTextBoxColumn"
+        '
+        'CustomerPostcodeDataGridViewTextBoxColumn
+        '
+        Me.CustomerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode"
+        Me.CustomerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode"
+        Me.CustomerPostcodeDataGridViewTextBoxColumn.Name = "CustomerPostcodeDataGridViewTextBoxColumn"
+        '
+        'TblCustomerBindingSource
+        '
+        Me.TblCustomerBindingSource.DataMember = "TblCustomer"
+        Me.TblCustomerBindingSource.DataSource = Me.StockDataBase_copyDataSet
+        '
+        'StockDataBase_copyDataSet
+        '
+        Me.StockDataBase_copyDataSet.DataSetName = "StockDataBase_copyDataSet"
+        Me.StockDataBase_copyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GrpSort
         '
@@ -182,38 +226,20 @@ Partial Class Customers
         Me.radName.Text = "Customer Name"
         Me.radName.UseVisualStyleBackColor = True
         '
-        'BtnPrevious
-        '
-        Me.BtnPrevious.Location = New System.Drawing.Point(163, 298)
-        Me.BtnPrevious.Name = "BtnPrevious"
-        Me.BtnPrevious.Size = New System.Drawing.Size(98, 42)
-        Me.BtnPrevious.TabIndex = 70
-        Me.BtnPrevious.Text = "Previous"
-        Me.BtnPrevious.UseVisualStyleBackColor = True
-        '
-        'BtnNext
-        '
-        Me.BtnNext.Location = New System.Drawing.Point(0, 298)
-        Me.BtnNext.Name = "BtnNext"
-        Me.BtnNext.Size = New System.Drawing.Size(98, 42)
-        Me.BtnNext.TabIndex = 71
-        Me.BtnNext.Text = "Next"
-        Me.BtnNext.UseVisualStyleBackColor = True
-        '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(225, 242)
+        Me.BtnDelete.Location = New System.Drawing.Point(292, 242)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(98, 42)
+        Me.BtnDelete.Size = New System.Drawing.Size(141, 42)
         Me.BtnDelete.TabIndex = 72
         Me.BtnDelete.Text = "Delete Customer"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(112, 242)
+        Me.BtnEdit.Location = New System.Drawing.Point(145, 241)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(98, 42)
+        Me.BtnEdit.Size = New System.Drawing.Size(141, 42)
         Me.BtnEdit.TabIndex = 73
         Me.BtnEdit.Text = "Edit Customer "
         Me.BtnEdit.UseVisualStyleBackColor = True
@@ -222,69 +248,23 @@ Partial Class Customers
         '
         Me.BtnAdd.Location = New System.Drawing.Point(0, 242)
         Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(98, 42)
+        Me.BtnAdd.Size = New System.Drawing.Size(141, 42)
         Me.BtnAdd.TabIndex = 74
         Me.BtnAdd.Text = "Add Customer"
         Me.BtnAdd.UseVisualStyleBackColor = True
         '
         'BtnSortCustomers
         '
-        Me.BtnSortCustomers.Location = New System.Drawing.Point(329, 242)
+        Me.BtnSortCustomers.Location = New System.Drawing.Point(0, 298)
         Me.BtnSortCustomers.Name = "BtnSortCustomers"
-        Me.BtnSortCustomers.Size = New System.Drawing.Size(98, 42)
+        Me.BtnSortCustomers.Size = New System.Drawing.Size(141, 42)
         Me.BtnSortCustomers.TabIndex = 75
         Me.BtnSortCustomers.Text = "Sort Customers"
         Me.BtnSortCustomers.UseVisualStyleBackColor = True
         '
-        'StockDataBase_copyDataSet
-        '
-        Me.StockDataBase_copyDataSet.DataSetName = "StockDataBase_copyDataSet"
-        Me.StockDataBase_copyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblCustomerBindingSource
-        '
-        Me.TblCustomerBindingSource.DataMember = "TblCustomer"
-        Me.TblCustomerBindingSource.DataSource = Me.StockDataBase_copyDataSet
-        '
         'TblCustomerTableAdapter
         '
         Me.TblCustomerTableAdapter.ClearBeforeFill = True
-        '
-        'CustomerIDDataGridViewTextBoxColumn
-        '
-        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
-        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
-        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
-        '
-        'CustomerFirstnameDataGridViewTextBoxColumn
-        '
-        Me.CustomerFirstnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerFirstname"
-        Me.CustomerFirstnameDataGridViewTextBoxColumn.HeaderText = "CustomerFirstname"
-        Me.CustomerFirstnameDataGridViewTextBoxColumn.Name = "CustomerFirstnameDataGridViewTextBoxColumn"
-        '
-        'CustomerSurnameDataGridViewTextBoxColumn
-        '
-        Me.CustomerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname"
-        Me.CustomerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname"
-        Me.CustomerSurnameDataGridViewTextBoxColumn.Name = "CustomerSurnameDataGridViewTextBoxColumn"
-        '
-        'CustomerEmailDataGridViewTextBoxColumn
-        '
-        Me.CustomerEmailDataGridViewTextBoxColumn.DataPropertyName = "CustomerEmail"
-        Me.CustomerEmailDataGridViewTextBoxColumn.HeaderText = "CustomerEmail"
-        Me.CustomerEmailDataGridViewTextBoxColumn.Name = "CustomerEmailDataGridViewTextBoxColumn"
-        '
-        'CustomerPhoneNumberDataGridViewTextBoxColumn
-        '
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhoneNumber"
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.HeaderText = "CustomerPhoneNumber"
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.Name = "CustomerPhoneNumberDataGridViewTextBoxColumn"
-        '
-        'CustomerPostcodeDataGridViewTextBoxColumn
-        '
-        Me.CustomerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode"
-        Me.CustomerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode"
-        Me.CustomerPostcodeDataGridViewTextBoxColumn.Name = "CustomerPostcodeDataGridViewTextBoxColumn"
         '
         'Customers
         '
@@ -296,8 +276,6 @@ Partial Class Customers
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnDelete)
-        Me.Controls.Add(Me.BtnNext)
-        Me.Controls.Add(Me.BtnPrevious)
         Me.Controls.Add(Me.GrpSearch)
         Me.Controls.Add(Me.GrpSort)
         Me.Controls.Add(Me.DGVCustomers)
@@ -306,12 +284,12 @@ Partial Class Customers
         Me.Name = "Customers"
         Me.Text = "Customer"
         CType(Me.DGVCustomers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblCustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StockDataBase_copyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GrpSort.ResumeLayout(False)
         Me.GrpSort.PerformLayout()
         Me.GrpSearch.ResumeLayout(False)
         Me.GrpSearch.PerformLayout()
-        CType(Me.StockDataBase_copyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblCustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -327,8 +305,6 @@ Partial Class Customers
     Friend WithEvents txbID As TextBox
     Friend WithEvents radID As RadioButton
     Friend WithEvents radName As RadioButton
-    Friend WithEvents BtnPrevious As Button
-    Friend WithEvents BtnNext As Button
     Friend WithEvents BtnDelete As Button
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnAdd As Button
