@@ -24,43 +24,48 @@ Partial Class StockAdd
     Private Sub InitializeComponent()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BtnBackToStockPage = New System.Windows.Forms.Button()
-        Me.BtnSubmit = New System.Windows.Forms.Button()
         Me.LblStockID = New System.Windows.Forms.Label()
         Me.LblProductName = New System.Windows.Forms.Label()
         Me.LblQuantityOfDisplayStock = New System.Windows.Forms.Label()
         Me.LblQuantityOfStorageStock = New System.Windows.Forms.Label()
         Me.LblPricePerItem = New System.Windows.Forms.Label()
         Me.LblTotalStock = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Txtstockid = New System.Windows.Forms.TextBox()
+        Me.Txtproductname = New System.Windows.Forms.TextBox()
+        Me.Txtquantitystock = New System.Windows.Forms.TextBox()
+        Me.Txtquantityofstorage = New System.Windows.Forms.TextBox()
+        Me.Txtpriceperitem = New System.Windows.Forms.TextBox()
+        Me.Txttotalstock = New System.Windows.Forms.TextBox()
+        Me.Btncancel = New System.Windows.Forms.Button()
+        Me.Btnclear = New System.Windows.Forms.Button()
+        Me.Btnfirststockdetails = New System.Windows.Forms.Button()
+        Me.Btnnextstock = New System.Windows.Forms.Button()
+        Me.Btnprevioustock = New System.Windows.Forms.Button()
+        Me.Btnlaststock = New System.Windows.Forms.Button()
+        Me.Btnbacktomenu = New System.Windows.Forms.Button()
+        Me.Btndeletestockpage = New System.Windows.Forms.Button()
+        Me.Btnupdatestock = New System.Windows.Forms.Button()
+        Me.Lblstock = New System.Windows.Forms.Label()
+        Me.Lblproductnameerror = New System.Windows.Forms.Label()
+        Me.Lbldisplaystockerror = New System.Windows.Forms.Label()
+        Me.Lblstoragestockerror = New System.Windows.Forms.Label()
+        Me.Lblpriceperitemerror = New System.Windows.Forms.Label()
+        Me.Lbltotalstockerror = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnBackToStockPage
         '
-        Me.BtnBackToStockPage.Location = New System.Drawing.Point(138, 277)
+        Me.BtnBackToStockPage.Location = New System.Drawing.Point(155, 292)
         Me.BtnBackToStockPage.Name = "BtnBackToStockPage"
-        Me.BtnBackToStockPage.Size = New System.Drawing.Size(132, 59)
+        Me.BtnBackToStockPage.Size = New System.Drawing.Size(111, 28)
         Me.BtnBackToStockPage.TabIndex = 8
-        Me.BtnBackToStockPage.Text = "Back to stock page"
+        Me.BtnBackToStockPage.Text = "Add stock details"
         Me.BtnBackToStockPage.UseVisualStyleBackColor = True
-        '
-        'BtnSubmit
-        '
-        Me.BtnSubmit.Location = New System.Drawing.Point(403, 277)
-        Me.BtnSubmit.Name = "BtnSubmit"
-        Me.BtnSubmit.Size = New System.Drawing.Size(132, 59)
-        Me.BtnSubmit.TabIndex = 9
-        Me.BtnSubmit.Text = "Submit"
-        Me.BtnSubmit.UseVisualStyleBackColor = True
         '
         'LblStockID
         '
         Me.LblStockID.AutoSize = True
-        Me.LblStockID.Location = New System.Drawing.Point(175, 56)
+        Me.LblStockID.Location = New System.Drawing.Point(12, 56)
         Me.LblStockID.Name = "LblStockID"
         Me.LblStockID.Size = New System.Drawing.Size(46, 13)
         Me.LblStockID.TabIndex = 10
@@ -69,111 +74,272 @@ Partial Class StockAdd
         'LblProductName
         '
         Me.LblProductName.AutoSize = True
-        Me.LblProductName.Location = New System.Drawing.Point(175, 90)
+        Me.LblProductName.Location = New System.Drawing.Point(12, 90)
         Me.LblProductName.Name = "LblProductName"
-        Me.LblProductName.Size = New System.Drawing.Size(73, 13)
+        Me.LblProductName.Size = New System.Drawing.Size(72, 13)
         Me.LblProductName.TabIndex = 11
-        Me.LblProductName.Text = "Product name"
+        Me.LblProductName.Text = "ProductName"
         '
         'LblQuantityOfDisplayStock
         '
         Me.LblQuantityOfDisplayStock.AutoSize = True
-        Me.LblQuantityOfDisplayStock.Location = New System.Drawing.Point(175, 131)
+        Me.LblQuantityOfDisplayStock.Location = New System.Drawing.Point(12, 131)
         Me.LblQuantityOfDisplayStock.Name = "LblQuantityOfDisplayStock"
-        Me.LblQuantityOfDisplayStock.Size = New System.Drawing.Size(122, 13)
+        Me.LblQuantityOfDisplayStock.Size = New System.Drawing.Size(119, 13)
         Me.LblQuantityOfDisplayStock.TabIndex = 12
-        Me.LblQuantityOfDisplayStock.Text = "Quantity of display stock"
+        Me.LblQuantityOfDisplayStock.Text = "QuantityOfDisplayStock"
         '
         'LblQuantityOfStorageStock
         '
         Me.LblQuantityOfStorageStock.AutoSize = True
-        Me.LblQuantityOfStorageStock.Location = New System.Drawing.Point(175, 169)
+        Me.LblQuantityOfStorageStock.Location = New System.Drawing.Point(12, 169)
         Me.LblQuantityOfStorageStock.Name = "LblQuantityOfStorageStock"
-        Me.LblQuantityOfStorageStock.Size = New System.Drawing.Size(125, 13)
+        Me.LblQuantityOfStorageStock.Size = New System.Drawing.Size(122, 13)
         Me.LblQuantityOfStorageStock.TabIndex = 13
-        Me.LblQuantityOfStorageStock.Text = "Quantity of storage stock"
+        Me.LblQuantityOfStorageStock.Text = "QuantityOfStorageStock"
         '
         'LblPricePerItem
         '
         Me.LblPricePerItem.AutoSize = True
-        Me.LblPricePerItem.Location = New System.Drawing.Point(175, 208)
+        Me.LblPricePerItem.Location = New System.Drawing.Point(12, 208)
         Me.LblPricePerItem.Name = "LblPricePerItem"
-        Me.LblPricePerItem.Size = New System.Drawing.Size(73, 13)
+        Me.LblPricePerItem.Size = New System.Drawing.Size(67, 13)
         Me.LblPricePerItem.TabIndex = 14
-        Me.LblPricePerItem.Text = "Price Per Item"
+        Me.LblPricePerItem.Text = "PricePerItem"
         '
         'LblTotalStock
         '
         Me.LblTotalStock.AutoSize = True
-        Me.LblTotalStock.Location = New System.Drawing.Point(175, 248)
+        Me.LblTotalStock.Location = New System.Drawing.Point(12, 248)
         Me.LblTotalStock.Name = "LblTotalStock"
-        Me.LblTotalStock.Size = New System.Drawing.Size(62, 13)
+        Me.LblTotalStock.Size = New System.Drawing.Size(59, 13)
         Me.LblTotalStock.TabIndex = 15
-        Me.LblTotalStock.Text = "Total Stock"
+        Me.LblTotalStock.Text = "TotalStock"
         '
-        'TextBox1
+        'Txtstockid
         '
-        Me.TextBox1.Location = New System.Drawing.Point(366, 49)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox1.TabIndex = 16
+        Me.Txtstockid.Location = New System.Drawing.Point(160, 49)
+        Me.Txtstockid.Name = "Txtstockid"
+        Me.Txtstockid.Size = New System.Drawing.Size(340, 20)
+        Me.Txtstockid.TabIndex = 16
+        Me.Txtstockid.Text = "StockID"
         '
-        'TextBox2
+        'Txtproductname
         '
-        Me.TextBox2.Location = New System.Drawing.Point(366, 87)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox2.TabIndex = 17
+        Me.Txtproductname.Location = New System.Drawing.Point(160, 87)
+        Me.Txtproductname.Name = "Txtproductname"
+        Me.Txtproductname.Size = New System.Drawing.Size(340, 20)
+        Me.Txtproductname.TabIndex = 17
+        Me.Txtproductname.Text = "Product name"
         '
-        'TextBox3
+        'Txtquantitystock
         '
-        Me.TextBox3.Location = New System.Drawing.Point(366, 124)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox3.TabIndex = 18
+        Me.Txtquantitystock.Location = New System.Drawing.Point(160, 124)
+        Me.Txtquantitystock.Name = "Txtquantitystock"
+        Me.Txtquantitystock.Size = New System.Drawing.Size(340, 20)
+        Me.Txtquantitystock.TabIndex = 18
+        Me.Txtquantitystock.Text = "QuantityOfDisplayStock"
         '
-        'TextBox4
+        'Txtquantityofstorage
         '
-        Me.TextBox4.Location = New System.Drawing.Point(366, 162)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox4.TabIndex = 19
+        Me.Txtquantityofstorage.Location = New System.Drawing.Point(160, 162)
+        Me.Txtquantityofstorage.Name = "Txtquantityofstorage"
+        Me.Txtquantityofstorage.Size = New System.Drawing.Size(340, 20)
+        Me.Txtquantityofstorage.TabIndex = 19
+        Me.Txtquantityofstorage.Text = "QuantityOfStorageStock"
         '
-        'TextBox5
+        'Txtpriceperitem
         '
-        Me.TextBox5.Location = New System.Drawing.Point(366, 201)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox5.TabIndex = 20
+        Me.Txtpriceperitem.Location = New System.Drawing.Point(160, 201)
+        Me.Txtpriceperitem.Name = "Txtpriceperitem"
+        Me.Txtpriceperitem.Size = New System.Drawing.Size(340, 20)
+        Me.Txtpriceperitem.TabIndex = 20
+        Me.Txtpriceperitem.Text = "PricePerItem"
         '
-        'TextBox6
+        'Txttotalstock
         '
-        Me.TextBox6.Location = New System.Drawing.Point(366, 241)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox6.TabIndex = 21
+        Me.Txttotalstock.Location = New System.Drawing.Point(160, 241)
+        Me.Txttotalstock.Name = "Txttotalstock"
+        Me.Txttotalstock.Size = New System.Drawing.Size(340, 20)
+        Me.Txttotalstock.TabIndex = 21
+        Me.Txttotalstock.Text = "TotalStock"
         '
-        'Form2
+        'Btncancel
+        '
+        Me.Btncancel.Location = New System.Drawing.Point(521, 38)
+        Me.Btncancel.Name = "Btncancel"
+        Me.Btncancel.Size = New System.Drawing.Size(138, 30)
+        Me.Btncancel.TabIndex = 22
+        Me.Btncancel.Text = "Cancel Process"
+        Me.Btncancel.UseVisualStyleBackColor = True
+        '
+        'Btnclear
+        '
+        Me.Btnclear.Location = New System.Drawing.Point(521, 74)
+        Me.Btnclear.Name = "Btnclear"
+        Me.Btnclear.Size = New System.Drawing.Size(138, 30)
+        Me.Btnclear.TabIndex = 23
+        Me.Btnclear.Text = "Clear stock details"
+        Me.Btnclear.UseVisualStyleBackColor = True
+        '
+        'Btnfirststockdetails
+        '
+        Me.Btnfirststockdetails.Location = New System.Drawing.Point(521, 110)
+        Me.Btnfirststockdetails.Name = "Btnfirststockdetails"
+        Me.Btnfirststockdetails.Size = New System.Drawing.Size(138, 30)
+        Me.Btnfirststockdetails.TabIndex = 24
+        Me.Btnfirststockdetails.Text = "First stock details"
+        Me.Btnfirststockdetails.UseVisualStyleBackColor = True
+        '
+        'Btnnextstock
+        '
+        Me.Btnnextstock.Location = New System.Drawing.Point(521, 146)
+        Me.Btnnextstock.Name = "Btnnextstock"
+        Me.Btnnextstock.Size = New System.Drawing.Size(138, 30)
+        Me.Btnnextstock.TabIndex = 25
+        Me.Btnnextstock.Text = "Next stock"
+        Me.Btnnextstock.UseVisualStyleBackColor = True
+        '
+        'Btnprevioustock
+        '
+        Me.Btnprevioustock.Location = New System.Drawing.Point(521, 182)
+        Me.Btnprevioustock.Name = "Btnprevioustock"
+        Me.Btnprevioustock.Size = New System.Drawing.Size(138, 30)
+        Me.Btnprevioustock.TabIndex = 26
+        Me.Btnprevioustock.Text = "Prev stock "
+        Me.Btnprevioustock.UseVisualStyleBackColor = True
+        '
+        'Btnlaststock
+        '
+        Me.Btnlaststock.Location = New System.Drawing.Point(521, 218)
+        Me.Btnlaststock.Name = "Btnlaststock"
+        Me.Btnlaststock.Size = New System.Drawing.Size(138, 30)
+        Me.Btnlaststock.TabIndex = 27
+        Me.Btnlaststock.Text = "Last stock details"
+        Me.Btnlaststock.UseVisualStyleBackColor = True
+        '
+        'Btnbacktomenu
+        '
+        Me.Btnbacktomenu.Location = New System.Drawing.Point(521, 254)
+        Me.Btnbacktomenu.Name = "Btnbacktomenu"
+        Me.Btnbacktomenu.Size = New System.Drawing.Size(138, 30)
+        Me.Btnbacktomenu.TabIndex = 28
+        Me.Btnbacktomenu.Text = "Back to menu"
+        Me.Btnbacktomenu.UseVisualStyleBackColor = True
+        '
+        'Btndeletestockpage
+        '
+        Me.Btndeletestockpage.Location = New System.Drawing.Point(272, 292)
+        Me.Btndeletestockpage.Name = "Btndeletestockpage"
+        Me.Btndeletestockpage.Size = New System.Drawing.Size(111, 28)
+        Me.Btndeletestockpage.TabIndex = 29
+        Me.Btndeletestockpage.Text = "Delete stock details"
+        Me.Btndeletestockpage.UseVisualStyleBackColor = True
+        '
+        'Btnupdatestock
+        '
+        Me.Btnupdatestock.Location = New System.Drawing.Point(389, 292)
+        Me.Btnupdatestock.Name = "Btnupdatestock"
+        Me.Btnupdatestock.Size = New System.Drawing.Size(125, 28)
+        Me.Btnupdatestock.TabIndex = 30
+        Me.Btnupdatestock.Text = "Update stock details"
+        Me.Btnupdatestock.UseVisualStyleBackColor = True
+        '
+        'Lblstock
+        '
+        Me.Lblstock.AutoSize = True
+        Me.Lblstock.ForeColor = System.Drawing.Color.Red
+        Me.Lblstock.Location = New System.Drawing.Point(157, 33)
+        Me.Lblstock.Name = "Lblstock"
+        Me.Lblstock.Size = New System.Drawing.Size(68, 13)
+        Me.Lblstock.TabIndex = 31
+        Me.Lblstock.Text = "StockIDError"
+        '
+        'Lblproductnameerror
+        '
+        Me.Lblproductnameerror.AutoSize = True
+        Me.Lblproductnameerror.ForeColor = System.Drawing.Color.Red
+        Me.Lblproductnameerror.Location = New System.Drawing.Point(157, 71)
+        Me.Lblproductnameerror.Name = "Lblproductnameerror"
+        Me.Lblproductnameerror.Size = New System.Drawing.Size(94, 13)
+        Me.Lblproductnameerror.TabIndex = 32
+        Me.Lblproductnameerror.Text = "ProductNameError"
+        '
+        'Lbldisplaystockerror
+        '
+        Me.Lbldisplaystockerror.AutoSize = True
+        Me.Lbldisplaystockerror.ForeColor = System.Drawing.Color.Red
+        Me.Lbldisplaystockerror.Location = New System.Drawing.Point(157, 108)
+        Me.Lbldisplaystockerror.Name = "Lbldisplaystockerror"
+        Me.Lbldisplaystockerror.Size = New System.Drawing.Size(141, 13)
+        Me.Lbldisplaystockerror.TabIndex = 33
+        Me.Lbldisplaystockerror.Text = "QuantityOfDisplayStockError"
+        '
+        'Lblstoragestockerror
+        '
+        Me.Lblstoragestockerror.AutoSize = True
+        Me.Lblstoragestockerror.ForeColor = System.Drawing.Color.Red
+        Me.Lblstoragestockerror.Location = New System.Drawing.Point(157, 146)
+        Me.Lblstoragestockerror.Name = "Lblstoragestockerror"
+        Me.Lblstoragestockerror.Size = New System.Drawing.Size(144, 13)
+        Me.Lblstoragestockerror.TabIndex = 34
+        Me.Lblstoragestockerror.Text = "QuantityOfStorageStockError"
+        '
+        'Lblpriceperitemerror
+        '
+        Me.Lblpriceperitemerror.AutoSize = True
+        Me.Lblpriceperitemerror.ForeColor = System.Drawing.Color.Red
+        Me.Lblpriceperitemerror.Location = New System.Drawing.Point(157, 185)
+        Me.Lblpriceperitemerror.Name = "Lblpriceperitemerror"
+        Me.Lblpriceperitemerror.Size = New System.Drawing.Size(89, 13)
+        Me.Lblpriceperitemerror.TabIndex = 35
+        Me.Lblpriceperitemerror.Text = "PricePerItemError"
+        '
+        'Lbltotalstockerror
+        '
+        Me.Lbltotalstockerror.AutoSize = True
+        Me.Lbltotalstockerror.ForeColor = System.Drawing.Color.Red
+        Me.Lbltotalstockerror.Location = New System.Drawing.Point(157, 227)
+        Me.Lbltotalstockerror.Name = "Lbltotalstockerror"
+        Me.Lbltotalstockerror.Size = New System.Drawing.Size(81, 13)
+        Me.Lbltotalstockerror.TabIndex = 36
+        Me.Lbltotalstockerror.Text = "TotalStockError"
+        '
+        'StockAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(669, 348)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Lbltotalstockerror)
+        Me.Controls.Add(Me.Lblpriceperitemerror)
+        Me.Controls.Add(Me.Lblstoragestockerror)
+        Me.Controls.Add(Me.Lbldisplaystockerror)
+        Me.Controls.Add(Me.Lblproductnameerror)
+        Me.Controls.Add(Me.Lblstock)
+        Me.Controls.Add(Me.Btnupdatestock)
+        Me.Controls.Add(Me.Btndeletestockpage)
+        Me.Controls.Add(Me.Btnbacktomenu)
+        Me.Controls.Add(Me.Btnlaststock)
+        Me.Controls.Add(Me.Btnprevioustock)
+        Me.Controls.Add(Me.Btnnextstock)
+        Me.Controls.Add(Me.Btnfirststockdetails)
+        Me.Controls.Add(Me.Btnclear)
+        Me.Controls.Add(Me.Btncancel)
+        Me.Controls.Add(Me.Txttotalstock)
+        Me.Controls.Add(Me.Txtpriceperitem)
+        Me.Controls.Add(Me.Txtquantityofstorage)
+        Me.Controls.Add(Me.Txtquantitystock)
+        Me.Controls.Add(Me.Txtproductname)
+        Me.Controls.Add(Me.Txtstockid)
         Me.Controls.Add(Me.LblTotalStock)
         Me.Controls.Add(Me.LblPricePerItem)
         Me.Controls.Add(Me.LblQuantityOfStorageStock)
         Me.Controls.Add(Me.LblQuantityOfDisplayStock)
         Me.Controls.Add(Me.LblProductName)
         Me.Controls.Add(Me.LblStockID)
-        Me.Controls.Add(Me.BtnSubmit)
         Me.Controls.Add(Me.BtnBackToStockPage)
-        Me.Name = "Form2"
+        Me.Name = "StockAdd"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -181,17 +347,31 @@ Partial Class StockAdd
     End Sub
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents BtnBackToStockPage As Button
-    Friend WithEvents BtnSubmit As Button
     Friend WithEvents LblStockID As Label
     Friend WithEvents LblProductName As Label
     Friend WithEvents LblQuantityOfDisplayStock As Label
     Friend WithEvents LblQuantityOfStorageStock As Label
     Friend WithEvents LblPricePerItem As Label
     Friend WithEvents LblTotalStock As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Txtstockid As TextBox
+    Friend WithEvents Txtproductname As TextBox
+    Friend WithEvents Txtquantitystock As TextBox
+    Friend WithEvents Txtquantityofstorage As TextBox
+    Friend WithEvents Txtpriceperitem As TextBox
+    Friend WithEvents Txttotalstock As TextBox
+    Friend WithEvents Btncancel As Button
+    Friend WithEvents Btnclear As Button
+    Friend WithEvents Btnfirststockdetails As Button
+    Friend WithEvents Btnnextstock As Button
+    Friend WithEvents Btnprevioustock As Button
+    Friend WithEvents Btnlaststock As Button
+    Friend WithEvents Btnbacktomenu As Button
+    Friend WithEvents Btndeletestockpage As Button
+    Friend WithEvents Btnupdatestock As Button
+    Friend WithEvents Lblstock As Label
+    Friend WithEvents Lblproductnameerror As Label
+    Friend WithEvents Lbldisplaystockerror As Label
+    Friend WithEvents Lblstoragestockerror As Label
+    Friend WithEvents Lblpriceperitemerror As Label
+    Friend WithEvents Lbltotalstockerror As Label
 End Class
