@@ -69,10 +69,16 @@ Public Class MainMenu
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
 
+        ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
+        Try
+            LblWelcomemessage.Show()
+            LblWelcomemessage.Text = ("Welcome to the system")            '" LblUsername  "'")
+            Reset()
+        Catch ex As Exception
+        End Try
 
-        LblWelcomemessage.Show()
-        LblWelcomemessage.Text = ("Welcome to the system")            '" LblUsername  "'")
-        Reset()
+        OpenChildForm(New HomeForm)
+        LblFormName.Text = "Home"
     End Sub
     Private Sub Reset()                                                'Rest just turns all the icon to the home / blank form menu
         DisableButton()
