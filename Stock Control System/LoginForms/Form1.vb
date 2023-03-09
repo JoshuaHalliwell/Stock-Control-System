@@ -3,6 +3,8 @@
 Public Class Form1
     Public Username As String
     Public Password As String
+    Dim AccountSelected As String
+    Dim cmd As New OleDb.OleDbCommand
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,21 +41,29 @@ Public Class Form1
         sql = "SELECT AccessLevel FROM TblStaff WHERE StaffUsername = '" & TxbUsername.Text & "'AND StaffPassword = '" & TxbPassword.Text & "'"
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblStaff") 'Fill whatever is in the data adapter to the DataSet'
-        con.Close()
-        If sql = "Admin" Then
+        'cmd = New OleDb.OleDbCommand(sql, con) 'Pass the sql commad to the connection (database)'
+        'Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+
+        If ds.Tables("TblStaff").Rows(0).Item(0) = "Admin" Then
             Admin = 1
             Staff = 0
             MsgBox("Welcome to the system ,'" & TxbUsername.Text & "'", MsgBoxStyle.Information, "Login successfully")
             MainMenu.Show()
+            OpenChildForm(New HomeForm)                                                         ' opends the form in the open child form layout and closes this main form
             Me.Hide()
-        ElseIf sql = "Staff" Then
+            con.Close()
+        ElseIf ds.Tables("TblStaff").Rows(0).Item(0) = "Staff" Then
             Admin = 0
             Staff = 1
             MsgBox("Welcome to the system ,'" & TxbUsername.Text & "'", MsgBoxStyle.Information, "Login successfully")
             MainMenu.Show()
+            OpenChildForm(New HomeForm)                                                         ' opends the form in the open child form layout and closes this main form
             Me.Hide()
+            con.Close()
+
         Else
             MsgBox("Incorrect username or password")
         End If
+        con.Close()
     End Sub
 End Class

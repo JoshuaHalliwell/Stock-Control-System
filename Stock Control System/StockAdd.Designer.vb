@@ -45,7 +45,7 @@ Partial Class StockAdd
         Me.Btnbacktomenu = New System.Windows.Forms.Button()
         Me.Btndeletestockpage = New System.Windows.Forms.Button()
         Me.Btnupdatestock = New System.Windows.Forms.Button()
-        Me.Lblstock = New System.Windows.Forms.Label()
+        Me.LblstockError = New System.Windows.Forms.Label()
         Me.Lblproductnameerror = New System.Windows.Forms.Label()
         Me.Lbldisplaystockerror = New System.Windows.Forms.Label()
         Me.Lblstoragestockerror = New System.Windows.Forms.Label()
@@ -245,15 +245,15 @@ Partial Class StockAdd
         Me.Btnupdatestock.Text = "Update stock details"
         Me.Btnupdatestock.UseVisualStyleBackColor = True
         '
-        'Lblstock
+        'LblstockError
         '
-        Me.Lblstock.AutoSize = True
-        Me.Lblstock.ForeColor = System.Drawing.Color.Red
-        Me.Lblstock.Location = New System.Drawing.Point(157, 33)
-        Me.Lblstock.Name = "Lblstock"
-        Me.Lblstock.Size = New System.Drawing.Size(68, 13)
-        Me.Lblstock.TabIndex = 31
-        Me.Lblstock.Text = "StockIDError"
+        Me.LblstockError.AutoSize = True
+        Me.LblstockError.ForeColor = System.Drawing.Color.Red
+        Me.LblstockError.Location = New System.Drawing.Point(157, 33)
+        Me.LblstockError.Name = "LblstockError"
+        Me.LblstockError.Size = New System.Drawing.Size(68, 13)
+        Me.LblstockError.TabIndex = 31
+        Me.LblstockError.Text = "StockIDError"
         '
         'Lblproductnameerror
         '
@@ -316,7 +316,7 @@ Partial Class StockAdd
         Me.Controls.Add(Me.Lblstoragestockerror)
         Me.Controls.Add(Me.Lbldisplaystockerror)
         Me.Controls.Add(Me.Lblproductnameerror)
-        Me.Controls.Add(Me.Lblstock)
+        Me.Controls.Add(Me.LblstockError)
         Me.Controls.Add(Me.Btnupdatestock)
         Me.Controls.Add(Me.Btndeletestockpage)
         Me.Controls.Add(Me.Btnbacktomenu)
@@ -368,7 +368,7 @@ Partial Class StockAdd
     Friend WithEvents Btnbacktomenu As Button
     Friend WithEvents Btndeletestockpage As Button
     Friend WithEvents Btnupdatestock As Button
-    Friend WithEvents Lblstock As Label
+    Friend WithEvents LblstockError As Label
     Friend WithEvents Lblproductnameerror As Label
     Friend WithEvents Lbldisplaystockerror As Label
     Friend WithEvents Lblstoragestockerror As Label

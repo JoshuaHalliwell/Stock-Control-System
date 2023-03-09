@@ -26,6 +26,7 @@ Public Class MainMenu
         LblUsername.Text = Form1.Username
         Timer1.Start()                                                          ' starts the timer once the form is loaded
         LblWelcomemessage.Hide()
+        LblFormName.Text = "Home"
 
         BtnCustomers.BackColor = ColourClass.Steelcolour
         BtnHome.BackColor = ColourClass.Steelcolour

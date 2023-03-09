@@ -32,6 +32,12 @@ Partial Class Stock
         Me.radID = New System.Windows.Forms.RadioButton()
         Me.radName = New System.Windows.Forms.RadioButton()
         Me.DGVCustomers = New System.Windows.Forms.DataGridView()
+        Me.BtnAdd = New System.Windows.Forms.Button()
+        Me.BtnSortByDisplayStock = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.BtnSortByStorageStock = New System.Windows.Forms.Button()
         Me.StockIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuantityOfDisplayStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,18 +46,17 @@ Partial Class Stock
         Me.TotalStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblStocksBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StockDataBase_copyDataSet1 = New Stock_Control_System.StockDataBase_copyDataSet1()
-        Me.BtnAdd = New System.Windows.Forms.Button()
-        Me.BtnSortByDisplayStock = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.TblStocksTableAdapter = New Stock_Control_System.StockDataBase_copyDataSet1TableAdapters.TblStocksTableAdapter()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.BtnSortByStorageStock = New System.Windows.Forms.Button()
+        Me.StockDataBaseStockViewing = New Stock_Control_System.StockDataBaseStockViewing()
+        Me.TblStocksBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblStocksTableAdapter1 = New Stock_Control_System.StockDataBaseStockViewingTableAdapters.TblStocksTableAdapter()
         Me.GrpSort.SuspendLayout()
         Me.GrpSearch.SuspendLayout()
         CType(Me.DGVCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblStocksBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StockDataBase_copyDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StockDataBaseStockViewing, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblStocksBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GrpSort
@@ -143,11 +148,65 @@ Partial Class Stock
         Me.DGVCustomers.AutoGenerateColumns = False
         Me.DGVCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVCustomers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StockIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityOfDisplayStockDataGridViewTextBoxColumn, Me.QuantityOfStorageStockDataGridViewTextBoxColumn, Me.PricePerIteamDataGridViewTextBoxColumn, Me.TotalStockDataGridViewTextBoxColumn})
-        Me.DGVCustomers.DataSource = Me.TblStocksBindingSource
+        Me.DGVCustomers.DataSource = Me.TblStocksBindingSource1
         Me.DGVCustomers.Location = New System.Drawing.Point(-5, 12)
         Me.DGVCustomers.Name = "DGVCustomers"
         Me.DGVCustomers.Size = New System.Drawing.Size(424, 191)
         Me.DGVCustomers.TabIndex = 63
+        '
+        'BtnAdd
+        '
+        Me.BtnAdd.Location = New System.Drawing.Point(285, 293)
+        Me.BtnAdd.Name = "BtnAdd"
+        Me.BtnAdd.Size = New System.Drawing.Size(112, 42)
+        Me.BtnAdd.TabIndex = 75
+        Me.BtnAdd.Text = "Search Stock"
+        Me.BtnAdd.UseVisualStyleBackColor = True
+        '
+        'BtnSortByDisplayStock
+        '
+        Me.BtnSortByDisplayStock.Location = New System.Drawing.Point(-5, 299)
+        Me.BtnSortByDisplayStock.Name = "BtnSortByDisplayStock"
+        Me.BtnSortByDisplayStock.Size = New System.Drawing.Size(112, 42)
+        Me.BtnSortByDisplayStock.TabIndex = 76
+        Me.BtnSortByDisplayStock.Text = "Sort By Display Stock"
+        Me.BtnSortByDisplayStock.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(135, 222)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 42)
+        Me.Button2.TabIndex = 77
+        Me.Button2.Text = "Delete Stock"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(-5, 222)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(112, 42)
+        Me.Button3.TabIndex = 78
+        Me.Button3.Text = "Add Stock"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(285, 222)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(112, 42)
+        Me.Button4.TabIndex = 79
+        Me.Button4.Text = "Update Stock"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'BtnSortByStorageStock
+        '
+        Me.BtnSortByStorageStock.Location = New System.Drawing.Point(135, 294)
+        Me.BtnSortByStorageStock.Name = "BtnSortByStorageStock"
+        Me.BtnSortByStorageStock.Size = New System.Drawing.Size(112, 42)
+        Me.BtnSortByStorageStock.TabIndex = 80
+        Me.BtnSortByStorageStock.Text = "Sort by Storage Stock"
+        Me.BtnSortByStorageStock.UseVisualStyleBackColor = True
         '
         'StockIDDataGridViewTextBoxColumn
         '
@@ -195,63 +254,23 @@ Partial Class Stock
         Me.StockDataBase_copyDataSet1.DataSetName = "StockDataBase_copyDataSet1"
         Me.StockDataBase_copyDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'BtnAdd
-        '
-        Me.BtnAdd.Location = New System.Drawing.Point(285, 293)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(112, 42)
-        Me.BtnAdd.TabIndex = 75
-        Me.BtnAdd.Text = "Search Stock"
-        Me.BtnAdd.UseVisualStyleBackColor = True
-        '
-        'BtnSortByDisplayStock
-        '
-        Me.BtnSortByDisplayStock.Location = New System.Drawing.Point(-5, 299)
-        Me.BtnSortByDisplayStock.Name = "BtnSortByDisplayStock"
-        Me.BtnSortByDisplayStock.Size = New System.Drawing.Size(112, 42)
-        Me.BtnSortByDisplayStock.TabIndex = 76
-        Me.BtnSortByDisplayStock.Text = "Sort By Display Stock"
-        Me.BtnSortByDisplayStock.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(135, 222)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 42)
-        Me.Button2.TabIndex = 77
-        Me.Button2.Text = "Delete Stock"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(-5, 222)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 42)
-        Me.Button3.TabIndex = 78
-        Me.Button3.Text = "Add Stock"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'TblStocksTableAdapter
         '
         Me.TblStocksTableAdapter.ClearBeforeFill = True
         '
-        'Button4
+        'StockDataBaseStockViewing
         '
-        Me.Button4.Location = New System.Drawing.Point(285, 222)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(112, 42)
-        Me.Button4.TabIndex = 79
-        Me.Button4.Text = "Update Stock"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.StockDataBaseStockViewing.DataSetName = "StockDataBaseStockViewing"
+        Me.StockDataBaseStockViewing.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'BtnSortByStorageStock
+        'TblStocksBindingSource1
         '
-        Me.BtnSortByStorageStock.Location = New System.Drawing.Point(135, 294)
-        Me.BtnSortByStorageStock.Name = "BtnSortByStorageStock"
-        Me.BtnSortByStorageStock.Size = New System.Drawing.Size(112, 42)
-        Me.BtnSortByStorageStock.TabIndex = 80
-        Me.BtnSortByStorageStock.Text = "Sort by Storage Stock"
-        Me.BtnSortByStorageStock.UseVisualStyleBackColor = True
+        Me.TblStocksBindingSource1.DataMember = "TblStocks"
+        Me.TblStocksBindingSource1.DataSource = Me.StockDataBaseStockViewing
+        '
+        'TblStocksTableAdapter1
+        '
+        Me.TblStocksTableAdapter1.ClearBeforeFill = True
         '
         'Stock
         '
@@ -277,6 +296,8 @@ Partial Class Stock
         CType(Me.DGVCustomers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblStocksBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StockDataBase_copyDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StockDataBaseStockViewing, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblStocksBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -305,4 +326,7 @@ Partial Class Stock
     Friend WithEvents TotalStockDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Button4 As Button
     Friend WithEvents BtnSortByStorageStock As Button
+    Friend WithEvents StockDataBaseStockViewing As StockDataBaseStockViewing
+    Friend WithEvents TblStocksBindingSource1 As BindingSource
+    Friend WithEvents TblStocksTableAdapter1 As StockDataBaseStockViewingTableAdapters.TblStocksTableAdapter
 End Class
