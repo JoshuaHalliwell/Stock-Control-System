@@ -115,6 +115,12 @@
     <Compile Include="ReportMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SalesView.Designer.vb">
+      <DependentUpon>SalesView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StaffAdd.Designer.vb">
       <DependentUpon>StaffAdd.vb</DependentUpon>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportMenu.resx">
       <DependentUpon>ReportMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesView.resx">
+      <DependentUpon>SalesView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffAdd.resx">
       <DependentUpon>StaffAdd.vb</DependentUpon>

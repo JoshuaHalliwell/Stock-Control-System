@@ -141,9 +141,9 @@ Partial Class ProductSales
         Me.LblSaleIDError.ForeColor = System.Drawing.Color.Red
         Me.LblSaleIDError.Location = New System.Drawing.Point(215, 61)
         Me.LblSaleIDError.Name = "LblSaleIDError"
-        Me.LblSaleIDError.Size = New System.Drawing.Size(68, 13)
+        Me.LblSaleIDError.Size = New System.Drawing.Size(61, 13)
         Me.LblSaleIDError.TabIndex = 135
-        Me.LblSaleIDError.Text = "StockIDError"
+        Me.LblSaleIDError.Text = "SaleIDError"
         '
         'TxbCustomerID
         '
@@ -276,7 +276,7 @@ Partial Class ProductSales
         Me.LblSaleID.TabIndex = 119
         Me.LblSaleID.Text = "SaleID"
         '
-        'ProductSalesDesign
+        'ProductSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -307,7 +307,7 @@ Partial Class ProductSales
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.TxbSaleID)
         Me.Controls.Add(Me.LblSaleID)
-        Me.Name = "ProductSalesDesign"
+        Me.Name = "ProductSales"
         Me.Text = "ProductSalesDesign"
         Me.ResumeLayout(False)
         Me.PerformLayout()

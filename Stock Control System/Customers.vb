@@ -91,4 +91,9 @@
         sql = "SELECT * FROM TblCustomer WHERE CustomerEmail LIKE '%" & txbEmail.Text & "%'"             ' Sql checks to find a simular result in the database  
         SandSconnection(DGVCustomers)                                                               'Sends the data grid to the connection opration 
     End Sub
+
+    Private Sub DGVCustomers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVCustomers.CellContentClick
+
+
+    End Sub
 End Class
