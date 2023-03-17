@@ -25,12 +25,6 @@ Partial Class Customers
         Me.components = New System.ComponentModel.Container()
         Me.BtnSearchCustomer = New System.Windows.Forms.Button()
         Me.DGVCustomers = New System.Windows.Forms.DataGridView()
-        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerFirstnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerSurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerPostcodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblCustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StockDataBase_copyDataSet = New Stock_Control_System.StockDataBase_copyDataSet()
         Me.GrpSort = New System.Windows.Forms.GroupBox()
@@ -66,50 +60,11 @@ Partial Class Customers
         '
         'DGVCustomers
         '
-        Me.DGVCustomers.AutoGenerateColumns = False
         Me.DGVCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVCustomers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn, Me.CustomerFirstnameDataGridViewTextBoxColumn, Me.CustomerSurnameDataGridViewTextBoxColumn, Me.CustomerEmailDataGridViewTextBoxColumn, Me.CustomerPhoneNumberDataGridViewTextBoxColumn, Me.CustomerPostcodeDataGridViewTextBoxColumn})
-        Me.DGVCustomers.DataSource = Me.TblCustomerBindingSource
         Me.DGVCustomers.Location = New System.Drawing.Point(0, 12)
         Me.DGVCustomers.Name = "DGVCustomers"
         Me.DGVCustomers.Size = New System.Drawing.Size(433, 217)
         Me.DGVCustomers.TabIndex = 7
-        '
-        'CustomerIDDataGridViewTextBoxColumn
-        '
-        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
-        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
-        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
-        '
-        'CustomerFirstnameDataGridViewTextBoxColumn
-        '
-        Me.CustomerFirstnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerFirstname"
-        Me.CustomerFirstnameDataGridViewTextBoxColumn.HeaderText = "CustomerFirstname"
-        Me.CustomerFirstnameDataGridViewTextBoxColumn.Name = "CustomerFirstnameDataGridViewTextBoxColumn"
-        '
-        'CustomerSurnameDataGridViewTextBoxColumn
-        '
-        Me.CustomerSurnameDataGridViewTextBoxColumn.DataPropertyName = "CustomerSurname"
-        Me.CustomerSurnameDataGridViewTextBoxColumn.HeaderText = "CustomerSurname"
-        Me.CustomerSurnameDataGridViewTextBoxColumn.Name = "CustomerSurnameDataGridViewTextBoxColumn"
-        '
-        'CustomerEmailDataGridViewTextBoxColumn
-        '
-        Me.CustomerEmailDataGridViewTextBoxColumn.DataPropertyName = "CustomerEmail"
-        Me.CustomerEmailDataGridViewTextBoxColumn.HeaderText = "CustomerEmail"
-        Me.CustomerEmailDataGridViewTextBoxColumn.Name = "CustomerEmailDataGridViewTextBoxColumn"
-        '
-        'CustomerPhoneNumberDataGridViewTextBoxColumn
-        '
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "CustomerPhoneNumber"
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.HeaderText = "CustomerPhoneNumber"
-        Me.CustomerPhoneNumberDataGridViewTextBoxColumn.Name = "CustomerPhoneNumberDataGridViewTextBoxColumn"
-        '
-        'CustomerPostcodeDataGridViewTextBoxColumn
-        '
-        Me.CustomerPostcodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerPostcode"
-        Me.CustomerPostcodeDataGridViewTextBoxColumn.HeaderText = "CustomerPostcode"
-        Me.CustomerPostcodeDataGridViewTextBoxColumn.Name = "CustomerPostcodeDataGridViewTextBoxColumn"
         '
         'TblCustomerBindingSource
         '
@@ -312,10 +267,4 @@ Partial Class Customers
     Friend WithEvents StockDataBase_copyDataSet As StockDataBase_copyDataSet
     Friend WithEvents TblCustomerBindingSource As BindingSource
     Friend WithEvents TblCustomerTableAdapter As StockDataBase_copyDataSetTableAdapters.TblCustomerTableAdapter
-    Friend WithEvents CustomerIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomerFirstnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomerSurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomerEmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomerPhoneNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CustomerPostcodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

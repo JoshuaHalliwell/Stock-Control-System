@@ -1,8 +1,11 @@
 ﻿Public Class Customers
 
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'StockDataBase_copyDataSet.TblCustomer' table. You can move, or remove it, as needed.
-        Me.TblCustomerTableAdapter.Fill(Me.StockDataBase_copyDataSet.TblCustomer)
+        con.Open()
+        sql = "SELECT * FROM TblCustomer"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "TblCustomer") 'Fill whatever is in the data adapter to the DataSet'
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
         DGVCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         GrpSearch.Hide()
         GrpSort.Hide()
