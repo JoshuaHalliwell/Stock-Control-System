@@ -61,21 +61,21 @@
 
             Dim dsNewRow As DataRow 'declares variable
 
-            dsNewRow = ds.Tables("TblCustomer").NewRow()
+            dsNewRow = ds.Tables("TblStocks").NewRow()
 
-            dsNewRow.Item("CustomerID") = Txtstockid.Text
+            dsNewRow.Item("StockID") = Txtstockid.Text
 
-            dsNewRow.Item("CustomerFirstname") = Txtquantitystock.Text
+            dsNewRow.Item("ProductName") = Txtproductname.Text
 
-            dsNewRow.Item("CustomerSurname") = Txtquantitystock.Text
+            dsNewRow.Item("QuantityofDisplayStock") = Txtquantitystock.Text
 
-            dsNewRow.Item("CustomerEmail") = Txtquantityofstorage.Text
+            dsNewRow.Item("QuantityofStorageStock") = Txtquantityofstorage.Text
 
-            dsNewRow.Item("CustomerPhoneNumber") = Txtpriceperitem.Text
+            dsNewRow.Item("PricePerItem") = Txtpriceperitem.Text
 
-            dsNewRow.Item("CustomerPostcode") = Txtproductname.Text
+            dsNewRow.Item("TotalStock") = Txttotalstock.Text
 
-            ds.Tables("TblCustomer").Rows.Add(dsNewRow)
+            ds.Tables("TblStocks").Rows.Add(dsNewRow)
 
             cb.QuotePrefix = "["
 
@@ -83,7 +83,7 @@
 
             Try
 
-                da.Update(ds, "TblCustomer") 'Updates the database with the new row
+                da.Update(ds, "TblStocks") 'Updates the database with the new row
 
             Catch ex As Exception
 
@@ -105,7 +105,7 @@
     Private Sub Btndeletestockpage_Click(sender As Object, e As EventArgs) Handles Btndeletestockpage.Click
         MsgBox("Do you really want to Delete this stock's data?", MsgBoxStyle.YesNo, MessageBoxIcon.Warning) ' MessageBoxButtons creats buttons fro the user to click on'
 
-        If DialogResult.No Then 'if the user clicks no, it will just end the process of deleting
+                If DialogResult.No Then 'if the user clicks no, it will just end the process of deleting
 
             MsgBox("Delete cancel")
 
@@ -137,7 +137,7 @@
 
             End Try
 
-            MsgBox("The customer data has been delete successfully")
+            MsgBox("The stock data has been deleted successfully")
 
         End If
 
@@ -146,4 +146,51 @@
     Private Sub Btnbacktomenu_Click(sender As Object, e As EventArgs) Handles Btnbacktomenu.Click
 
     End Sub
+
+    Private Sub LblstockError_Click(sender As Object, e As EventArgs) Handles LblstockError.Click
+
+    End Sub
+
+    Private Sub btnnext_Click(sender As Object, e As EventArgs) Handles Btnnextstock.Click
+        If curRow <> MaxRows - 1 Then 'if the curRow isn't equal to MaxRow - 1 then execute the below '
+            curRow = curRow + 1 'Sets CurRow  to its own vaulue + 1' 
+            NavigateRecords() 'calls database funcation'
+        Else 'if the above doesn't apply then execute the below,
+            MsgBox("No More Customer's data ") 'display a message box with the following message of there is no data byoned that point' 
+        End If 'end if statement,
+    End Sub
+    Private Sub btnprev_Click(sender As Object, e As EventArgs) Handles Btnprevioustock.Click
+        If curRow > 0 Then 'if the variable is more than 0 then execute the below 
+            curRow = curRow - 1 'Sets value to a variable
+            NavigateRecords() 'calls function
+        ElseIf curRow = -1 Then 'if the variable is equal to -1, execute the below 
+            MsgBox("No new Customer data") 'display a message box with the following message 
+        ElseIf curRow = 0 Then 'if the variable is equal to 0 then execute the below 
+            MsgBox("First Customer data") 'display a message box with the following message 
+        End If 'end if statement
+    End Sub
+
+
+
+    Private Sub btnlastcustomer_Click(sender As Object, e As EventArgs) Handles Btnlaststock.Click
+        curRow = MaxRows - 1 'sets a new value to the variable so that the system know the current row is just one away from the max row value which holds no data.
+        NavigateRecords()
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 End Class

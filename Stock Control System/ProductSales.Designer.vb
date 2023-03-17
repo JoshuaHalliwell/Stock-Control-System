@@ -33,7 +33,7 @@ Partial Class ProductSales
         Me.LblSaleTimeError = New System.Windows.Forms.Label()
         Me.LblSaleIDError = New System.Windows.Forms.Label()
         Me.TxbCustomerID = New System.Windows.Forms.TextBox()
-        Me.TxtSaleDay = New System.Windows.Forms.TextBox()
+        Me.TxbSaleDay = New System.Windows.Forms.TextBox()
         Me.TxbStaffID = New System.Windows.Forms.TextBox()
         Me.TxbSaleTime = New System.Windows.Forms.TextBox()
         Me.btnlastStock = New System.Windows.Forms.Button()
@@ -153,13 +153,13 @@ Partial Class ProductSales
         Me.TxbCustomerID.TabIndex = 133
         Me.TxbCustomerID.Text = "CustomerID"
         '
-        'TxtSaleDay
+        'TxbSaleDay
         '
-        Me.TxtSaleDay.Location = New System.Drawing.Point(218, 167)
-        Me.TxtSaleDay.Name = "TxtSaleDay"
-        Me.TxtSaleDay.Size = New System.Drawing.Size(356, 20)
-        Me.TxtSaleDay.TabIndex = 132
-        Me.TxtSaleDay.Text = "SaleDay"
+        Me.TxbSaleDay.Location = New System.Drawing.Point(218, 167)
+        Me.TxbSaleDay.Name = "TxbSaleDay"
+        Me.TxbSaleDay.Size = New System.Drawing.Size(356, 20)
+        Me.TxbSaleDay.TabIndex = 132
+        Me.TxbSaleDay.Text = "SaleDay"
         '
         'TxbStaffID
         '
@@ -293,7 +293,7 @@ Partial Class ProductSales
         Me.Controls.Add(Me.LblSaleTimeError)
         Me.Controls.Add(Me.LblSaleIDError)
         Me.Controls.Add(Me.TxbCustomerID)
-        Me.Controls.Add(Me.TxtSaleDay)
+        Me.Controls.Add(Me.TxbSaleDay)
         Me.Controls.Add(Me.TxbStaffID)
         Me.Controls.Add(Me.TxbSaleTime)
         Me.Controls.Add(Me.btnlastStock)
@@ -325,7 +325,7 @@ Partial Class ProductSales
     Friend WithEvents LblSaleTimeError As Label
     Friend WithEvents LblSaleIDError As Label
     Friend WithEvents TxbCustomerID As TextBox
-    Friend WithEvents TxtSaleDay As TextBox
+    Friend WithEvents TxbSaleDay As TextBox
     Friend WithEvents TxbStaffID As TextBox
     Friend WithEvents TxbSaleTime As TextBox
     Friend WithEvents btnlastStock As Button
