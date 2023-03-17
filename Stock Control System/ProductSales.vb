@@ -22,9 +22,9 @@
         con.Open()
         sql = "SELECT * FROM QrySales"
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-        da.Fill(ds, "TblSalesLine") 'Fill whatever is in the data adapter to the DataSet'
+        da.Fill(ds, "QrySales") 'Fill whatever is in the data adapter to the DataSet'
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
-        MaxRows = ds.Tables("TblSalesLine").Rows.Count 'Gets how many rows there are currently in the DataSet'
+        MaxRows = ds.Tables("QrySales").Rows.Count 'Gets how many rows there are currently in the DataSet'
         curRow = 1   ' Selctes the second row of data from the database 
         NavigateRecords()
     End Sub
@@ -39,18 +39,18 @@
 
     Private Sub PresenceCheck()
         Try
-            If TxbSaleID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(0) Then          ' Checks to see if there is any data in the textboxes 
+            If TxbSaleID.Text = ds.Tables("QrySales").Rows(curRow).Item(0) Then          ' Checks to see if there is any data in the textboxes 
                 LblSaleIDError.Text = "Sale ID field must be filled in with data"        ' if there is none then the realtive error text will
-            ElseIf TxbSaleTime.Text = ds.Tables("TblQrySales").Rows(curRow).Item(1) Then        '  appear next to the relative textbox
+            ElseIf TxbSaleTime.Text = ds.Tables("QrySales").Rows(curRow).Item(1) Then        '  appear next to the relative textbox
                 LblSaleTime.Text = "Sale Time field must be filled in with data"
 
-            ElseIf TxbSaleDay.Text = ds.Tables("TblQrySales").Rows(curRow).Item(2) Then
+            ElseIf TxbSaleDay.Text = ds.Tables("QrySales").Rows(curRow).Item(2) Then
                 lblSaleDayError.Text = "Sale Day field must be filled in with data"
 
-            ElseIf TxbStaffID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(3) Then
+            ElseIf TxbStaffID.Text = ds.Tables("QrySales").Rows(curRow).Item(3) Then
                 LblStaffError.Text = "Staff ID field must be filled in with data"
 
-            ElseIf TxbCustomerID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(4) Then
+            ElseIf TxbCustomerID.Text = ds.Tables("QrySales").Rows(curRow).Item(4) Then
                 LblCustomerID.Text = "CustomerID field must be filled in with data"
                 'A try and catch statement is used to picked up the error  
                 'so that the application can break away from the sub processe
