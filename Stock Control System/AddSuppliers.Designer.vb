@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddSupplier
+Partial Class SuppliersData
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,102 +22,30 @@ Partial Class AddSupplier
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnSubmit = New System.Windows.Forms.Button()
-        Me.BtnBack = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.LblCustomerEmail = New System.Windows.Forms.Label()
+        Me.LblCustomerSurname = New System.Windows.Forms.Label()
+        Me.LblCustomerFirstName = New System.Windows.Forms.Label()
+        Me.LblAddressError = New System.Windows.Forms.Label()
+        Me.lblSuppliersAddressError = New System.Windows.Forms.Label()
+        Me.LblSupplierNameError = New System.Windows.Forms.Label()
+        Me.LblSuppliersIDError = New System.Windows.Forms.Label()
+        Me.TxbSurname = New System.Windows.Forms.TextBox()
+        Me.TxbEmail = New System.Windows.Forms.TextBox()
+        Me.TxbFirstname = New System.Windows.Forms.TextBox()
+        Me.btnlastcustomer = New System.Windows.Forms.Button()
+        Me.btnfirstcustomer = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnprev = New System.Windows.Forms.Button()
+        Me.btnadd = New System.Windows.Forms.Button()
+        Me.btnnext = New System.Windows.Forms.Button()
+        Me.btnupdate = New System.Windows.Forms.Button()
+        Me.btnclear = New System.Windows.Forms.Button()
+        Me.btncancel = New System.Windows.Forms.Button()
+        Me.TxbCustomerID = New System.Windows.Forms.TextBox()
+        Me.LblCustomerID = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'BtnSubmit
-        '
-        Me.BtnSubmit.Location = New System.Drawing.Point(350, 282)
-        Me.BtnSubmit.Name = "BtnSubmit"
-        Me.BtnSubmit.Size = New System.Drawing.Size(175, 43)
-        Me.BtnSubmit.TabIndex = 9
-        Me.BtnSubmit.Text = "Submit"
-        Me.BtnSubmit.UseVisualStyleBackColor = True
-        '
-        'BtnBack
-        '
-        Me.BtnBack.Location = New System.Drawing.Point(158, 282)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(164, 43)
-        Me.BtnBack.TabIndex = 11
-        Me.BtnBack.Text = "Back"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(200, 125)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox1.TabIndex = 12
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(200, 158)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(200, 228)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox3.TabIndex = 14
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(200, 194)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox4.TabIndex = 15
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(155, 128)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
-        Me.Label1.TabIndex = 18
-        Me.Label1.Text = "StockID"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(119, 158)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 13)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Product Name"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(119, 197)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 13)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "Stock Quantity"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(121, 235)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 13)
-        Me.Label4.TabIndex = 21
-        Me.Label4.Text = "Price Per Item"
         '
         'Label5
         '
@@ -127,51 +55,262 @@ Partial Class AddSupplier
         Me.Label5.Size = New System.Drawing.Size(0, 13)
         Me.Label5.TabIndex = 22
         '
-        'PictureBox2
+        'BtnBack
         '
-        'Me.PictureBox2.Image = Global.Stock_Control_Suppliers.My.Resources.Resources.Add_Supplier_Stock
-        Me.PictureBox2.Location = New System.Drawing.Point(169, 22)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(333, 61)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 23
-        Me.PictureBox2.TabStop = False
+        Me.BtnBack.AutoSize = True
+        Me.BtnBack.Location = New System.Drawing.Point(509, 297)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(144, 41)
+        Me.BtnBack.TabIndex = 118
+        Me.BtnBack.Text = "Back to menu "
+        Me.BtnBack.UseVisualStyleBackColor = True
         '
-        'AddSupplier
+        'LblCustomerEmail
+        '
+        Me.LblCustomerEmail.AutoSize = True
+        Me.LblCustomerEmail.Location = New System.Drawing.Point(28, 243)
+        Me.LblCustomerEmail.Name = "LblCustomerEmail"
+        Me.LblCustomerEmail.Size = New System.Drawing.Size(91, 13)
+        Me.LblCustomerEmail.TabIndex = 115
+        Me.LblCustomerEmail.Text = "Suppliers Address"
+        '
+        'LblCustomerSurname
+        '
+        Me.LblCustomerSurname.AutoSize = True
+        Me.LblCustomerSurname.Location = New System.Drawing.Point(40, 180)
+        Me.LblCustomerSurname.Name = "LblCustomerSurname"
+        Me.LblCustomerSurname.Size = New System.Drawing.Size(78, 13)
+        Me.LblCustomerSurname.TabIndex = 114
+        Me.LblCustomerSurname.Text = "Suppliers Email"
+        '
+        'LblCustomerFirstName
+        '
+        Me.LblCustomerFirstName.AutoSize = True
+        Me.LblCustomerFirstName.Location = New System.Drawing.Point(37, 126)
+        Me.LblCustomerFirstName.Name = "LblCustomerFirstName"
+        Me.LblCustomerFirstName.Size = New System.Drawing.Size(81, 13)
+        Me.LblCustomerFirstName.TabIndex = 113
+        Me.LblCustomerFirstName.Text = "Suppliers Name"
+        '
+        'LblAddressError
+        '
+        Me.LblAddressError.AutoSize = True
+        Me.LblAddressError.ForeColor = System.Drawing.Color.Red
+        Me.LblAddressError.Location = New System.Drawing.Point(125, 224)
+        Me.LblAddressError.Name = "LblAddressError"
+        Me.LblAddressError.Size = New System.Drawing.Size(67, 13)
+        Me.LblAddressError.TabIndex = 110
+        Me.LblAddressError.Text = "AddressError"
+        '
+        'lblSuppliersAddressError
+        '
+        Me.lblSuppliersAddressError.AutoSize = True
+        Me.lblSuppliersAddressError.ForeColor = System.Drawing.Color.Red
+        Me.lblSuppliersAddressError.Location = New System.Drawing.Point(125, 161)
+        Me.lblSuppliersAddressError.Name = "lblSuppliersAddressError"
+        Me.lblSuppliersAddressError.Size = New System.Drawing.Size(54, 13)
+        Me.lblSuppliersAddressError.TabIndex = 109
+        Me.lblSuppliersAddressError.Text = "EmailError"
+        '
+        'LblSupplierNameError
+        '
+        Me.LblSupplierNameError.AutoSize = True
+        Me.LblSupplierNameError.ForeColor = System.Drawing.Color.Red
+        Me.LblSupplierNameError.Location = New System.Drawing.Point(125, 103)
+        Me.LblSupplierNameError.Name = "LblSupplierNameError"
+        Me.LblSupplierNameError.Size = New System.Drawing.Size(57, 13)
+        Me.LblSupplierNameError.TabIndex = 108
+        Me.LblSupplierNameError.Text = "NameError"
+        '
+        'LblSuppliersIDError
+        '
+        Me.LblSuppliersIDError.AutoSize = True
+        Me.LblSuppliersIDError.ForeColor = System.Drawing.Color.Red
+        Me.LblSuppliersIDError.Location = New System.Drawing.Point(122, 41)
+        Me.LblSuppliersIDError.Name = "LblSuppliersIDError"
+        Me.LblSuppliersIDError.Size = New System.Drawing.Size(78, 13)
+        Me.LblSuppliersIDError.TabIndex = 107
+        Me.LblSuppliersIDError.Text = "SupplierIDError"
+        '
+        'TxbSurname
+        '
+        Me.TxbSurname.Location = New System.Drawing.Point(125, 177)
+        Me.TxbSurname.Name = "TxbSurname"
+        Me.TxbSurname.Size = New System.Drawing.Size(356, 20)
+        Me.TxbSurname.TabIndex = 104
+        Me.TxbSurname.Text = "SuppliersEmail"
+        '
+        'TxbEmail
+        '
+        Me.TxbEmail.Location = New System.Drawing.Point(125, 240)
+        Me.TxbEmail.Name = "TxbEmail"
+        Me.TxbEmail.Size = New System.Drawing.Size(356, 20)
+        Me.TxbEmail.TabIndex = 103
+        Me.TxbEmail.Text = "SuppliersAddress"
+        '
+        'TxbFirstname
+        '
+        Me.TxbFirstname.Location = New System.Drawing.Point(124, 119)
+        Me.TxbFirstname.Name = "TxbFirstname"
+        Me.TxbFirstname.Size = New System.Drawing.Size(356, 20)
+        Me.TxbFirstname.TabIndex = 102
+        Me.TxbFirstname.Text = "SuppliersName"
+        '
+        'btnlastcustomer
+        '
+        Me.btnlastcustomer.AutoSize = True
+        Me.btnlastcustomer.Location = New System.Drawing.Point(509, 250)
+        Me.btnlastcustomer.Name = "btnlastcustomer"
+        Me.btnlastcustomer.Size = New System.Drawing.Size(144, 41)
+        Me.btnlastcustomer.TabIndex = 101
+        Me.btnlastcustomer.Text = "Last Supplier Detalis"
+        Me.btnlastcustomer.UseVisualStyleBackColor = True
+        '
+        'btnfirstcustomer
+        '
+        Me.btnfirstcustomer.Location = New System.Drawing.Point(509, 108)
+        Me.btnfirstcustomer.Name = "btnfirstcustomer"
+        Me.btnfirstcustomer.Size = New System.Drawing.Size(144, 41)
+        Me.btnfirstcustomer.TabIndex = 100
+        Me.btnfirstcustomer.Text = "First Supplier Details"
+        Me.btnfirstcustomer.UseVisualStyleBackColor = True
+        '
+        'btndelete
+        '
+        Me.btndelete.Location = New System.Drawing.Point(177, 299)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(144, 41)
+        Me.btndelete.TabIndex = 99
+        Me.btndelete.Text = "Delete Supplier Detalis"
+        Me.btndelete.UseVisualStyleBackColor = True
+        '
+        'btnprev
+        '
+        Me.btnprev.Location = New System.Drawing.Point(509, 203)
+        Me.btnprev.Name = "btnprev"
+        Me.btnprev.Size = New System.Drawing.Size(144, 41)
+        Me.btnprev.TabIndex = 98
+        Me.btnprev.Text = "Prev Supplier"
+        Me.btnprev.UseVisualStyleBackColor = True
+        '
+        'btnadd
+        '
+        Me.btnadd.Location = New System.Drawing.Point(14, 299)
+        Me.btnadd.Name = "btnadd"
+        Me.btnadd.Size = New System.Drawing.Size(144, 41)
+        Me.btnadd.TabIndex = 97
+        Me.btnadd.Text = "Add Supplier Details "
+        Me.btnadd.UseVisualStyleBackColor = True
+        '
+        'btnnext
+        '
+        Me.btnnext.Location = New System.Drawing.Point(509, 156)
+        Me.btnnext.Name = "btnnext"
+        Me.btnnext.Size = New System.Drawing.Size(144, 41)
+        Me.btnnext.TabIndex = 96
+        Me.btnnext.Text = "Next Supplier"
+        Me.btnnext.UseVisualStyleBackColor = True
+        '
+        'btnupdate
+        '
+        Me.btnupdate.Location = New System.Drawing.Point(336, 299)
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(144, 41)
+        Me.btnupdate.TabIndex = 95
+        Me.btnupdate.Text = "Update Supplier Details"
+        Me.btnupdate.UseVisualStyleBackColor = True
+        '
+        'btnclear
+        '
+        Me.btnclear.Location = New System.Drawing.Point(509, 60)
+        Me.btnclear.Name = "btnclear"
+        Me.btnclear.Size = New System.Drawing.Size(144, 41)
+        Me.btnclear.TabIndex = 94
+        Me.btnclear.Text = "Clear Supplier Details"
+        Me.btnclear.UseVisualStyleBackColor = True
+        '
+        'btncancel
+        '
+        Me.btncancel.Location = New System.Drawing.Point(509, 13)
+        Me.btncancel.Name = "btncancel"
+        Me.btncancel.Size = New System.Drawing.Size(144, 41)
+        Me.btncancel.TabIndex = 93
+        Me.btncancel.Text = "Cancel Process "
+        Me.btncancel.UseVisualStyleBackColor = True
+        '
+        'TxbCustomerID
+        '
+        Me.TxbCustomerID.Location = New System.Drawing.Point(124, 60)
+        Me.TxbCustomerID.Name = "TxbCustomerID"
+        Me.TxbCustomerID.Size = New System.Drawing.Size(356, 20)
+        Me.TxbCustomerID.TabIndex = 92
+        Me.TxbCustomerID.Text = "SuppliersID"
+        '
+        'LblCustomerID
+        '
+        Me.LblCustomerID.AutoSize = True
+        Me.LblCustomerID.Location = New System.Drawing.Point(57, 63)
+        Me.LblCustomerID.Name = "LblCustomerID"
+        Me.LblCustomerID.Size = New System.Drawing.Size(61, 13)
+        Me.LblCustomerID.TabIndex = 91
+        Me.LblCustomerID.Text = "SuppliersID"
+        '
+        'SuppliersData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(667, 349)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.BtnBack)
-        Me.Controls.Add(Me.BtnSubmit)
-        Me.Name = "AddSupplier"
+        Me.Controls.Add(Me.LblCustomerEmail)
+        Me.Controls.Add(Me.LblCustomerSurname)
+        Me.Controls.Add(Me.LblCustomerFirstName)
+        Me.Controls.Add(Me.LblAddressError)
+        Me.Controls.Add(Me.lblSuppliersAddressError)
+        Me.Controls.Add(Me.LblSupplierNameError)
+        Me.Controls.Add(Me.LblSuppliersIDError)
+        Me.Controls.Add(Me.TxbSurname)
+        Me.Controls.Add(Me.TxbEmail)
+        Me.Controls.Add(Me.TxbFirstname)
+        Me.Controls.Add(Me.btnlastcustomer)
+        Me.Controls.Add(Me.btnfirstcustomer)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btnprev)
+        Me.Controls.Add(Me.btnadd)
+        Me.Controls.Add(Me.btnnext)
+        Me.Controls.Add(Me.btnupdate)
+        Me.Controls.Add(Me.btnclear)
+        Me.Controls.Add(Me.btncancel)
+        Me.Controls.Add(Me.TxbCustomerID)
+        Me.Controls.Add(Me.LblCustomerID)
+        Me.Controls.Add(Me.Label5)
+        Me.Name = "SuppliersData"
         Me.Text = "Form1"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents BtnSubmit As Button
-    Friend WithEvents BtnBack As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents BtnBack As Button
+    Friend WithEvents LblCustomerEmail As Label
+    Friend WithEvents LblCustomerSurname As Label
+    Friend WithEvents LblCustomerFirstName As Label
+    Friend WithEvents LblAddressError As Label
+    Friend WithEvents lblSuppliersAddressError As Label
+    Friend WithEvents LblSupplierNameError As Label
+    Friend WithEvents LblSuppliersIDError As Label
+    Friend WithEvents TxbSurname As TextBox
+    Friend WithEvents TxbEmail As TextBox
+    Friend WithEvents TxbFirstname As TextBox
+    Friend WithEvents btnlastcustomer As Button
+    Friend WithEvents btnfirstcustomer As Button
+    Friend WithEvents btndelete As Button
+    Friend WithEvents btnprev As Button
+    Friend WithEvents btnadd As Button
+    Friend WithEvents btnnext As Button
+    Friend WithEvents btnupdate As Button
+    Friend WithEvents btnclear As Button
+    Friend WithEvents btncancel As Button
+    Friend WithEvents TxbCustomerID As TextBox
+    Friend WithEvents LblCustomerID As Label
 End Class

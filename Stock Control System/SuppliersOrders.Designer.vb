@@ -22,89 +22,174 @@ Partial Class SuppliersOrders
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnUpdateOrders = New System.Windows.Forms.Button()
+        Me.BtnDeleteOrder = New System.Windows.Forms.Button()
+        Me.BtnAddOrder = New System.Windows.Forms.Button()
+        Me.BtnSortSupplierOrders = New System.Windows.Forms.Button()
+        Me.BtnSearchSupplyOrders = New System.Windows.Forms.Button()
+        Me.GrpSearch = New System.Windows.Forms.GroupBox()
+        Me.txbEmail = New System.Windows.Forms.TextBox()
+        Me.RadSuppliersEmail = New System.Windows.Forms.RadioButton()
+        Me.txbname = New System.Windows.Forms.TextBox()
+        Me.txbID = New System.Windows.Forms.TextBox()
+        Me.RadSuppliersId = New System.Windows.Forms.RadioButton()
+        Me.RadSuppliersName = New System.Windows.Forms.RadioButton()
+        Me.GrpSort = New System.Windows.Forms.GroupBox()
+        Me.LblChange = New System.Windows.Forms.Label()
+        Me.cbproductchange = New System.Windows.Forms.ComboBox()
+        Me.GrpSearch.SuspendLayout()
+        Me.GrpSort.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button1
+        'BtnUpdateOrders
         '
-        Me.Button1.Location = New System.Drawing.Point(101, 284)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 36)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Update Orders"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnUpdateOrders.Location = New System.Drawing.Point(29, 270)
+        Me.BtnUpdateOrders.Name = "BtnUpdateOrders"
+        Me.BtnUpdateOrders.Size = New System.Drawing.Size(110, 46)
+        Me.BtnUpdateOrders.TabIndex = 9
+        Me.BtnUpdateOrders.Text = "Update Orders"
+        Me.BtnUpdateOrders.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnDeleteOrder
         '
-        Me.Button2.Location = New System.Drawing.Point(101, 242)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 36)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Delete Order"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnDeleteOrder.Location = New System.Drawing.Point(138, 224)
+        Me.BtnDeleteOrder.Name = "BtnDeleteOrder"
+        Me.BtnDeleteOrder.Size = New System.Drawing.Size(113, 47)
+        Me.BtnDeleteOrder.TabIndex = 10
+        Me.BtnDeleteOrder.Text = "Delete Order"
+        Me.BtnDeleteOrder.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BtnAddOrder
         '
-        Me.Button3.Location = New System.Drawing.Point(270, 242)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(168, 36)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Add Order"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnAddOrder.Location = New System.Drawing.Point(29, 224)
+        Me.BtnAddOrder.Name = "BtnAddOrder"
+        Me.BtnAddOrder.Size = New System.Drawing.Size(110, 47)
+        Me.BtnAddOrder.TabIndex = 11
+        Me.BtnAddOrder.Text = "Add Order"
+        Me.BtnAddOrder.UseVisualStyleBackColor = True
         '
-        'Button4
+        'BtnSortSupplierOrders
         '
-        Me.Button4.Location = New System.Drawing.Point(444, 242)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(189, 36)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "Sort Supply Orders"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BtnSortSupplierOrders.Location = New System.Drawing.Point(245, 224)
+        Me.BtnSortSupplierOrders.Name = "BtnSortSupplierOrders"
+        Me.BtnSortSupplierOrders.Size = New System.Drawing.Size(123, 46)
+        Me.BtnSortSupplierOrders.TabIndex = 12
+        Me.BtnSortSupplierOrders.Text = "Sort Supply Orders"
+        Me.BtnSortSupplierOrders.UseVisualStyleBackColor = True
         '
-        'Button5
+        'BtnSearchSupplyOrders
         '
-        Me.Button5.Location = New System.Drawing.Point(444, 284)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(189, 36)
-        Me.Button5.TabIndex = 13
-        Me.Button5.Text = "Search Supply Orders"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.BtnSearchSupplyOrders.Location = New System.Drawing.Point(245, 269)
+        Me.BtnSearchSupplyOrders.Name = "BtnSearchSupplyOrders"
+        Me.BtnSearchSupplyOrders.Size = New System.Drawing.Size(123, 48)
+        Me.BtnSearchSupplyOrders.TabIndex = 13
+        Me.BtnSearchSupplyOrders.Text = "Search Supply Orders"
+        Me.BtnSearchSupplyOrders.UseVisualStyleBackColor = True
         '
-        'Label1
+        'GrpSearch
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(180, 166)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(142, 13)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Display Supplier Orders Here"
+        Me.GrpSearch.Controls.Add(Me.txbEmail)
+        Me.GrpSearch.Controls.Add(Me.RadSuppliersEmail)
+        Me.GrpSearch.Controls.Add(Me.txbname)
+        Me.GrpSearch.Controls.Add(Me.txbID)
+        Me.GrpSearch.Controls.Add(Me.RadSuppliersId)
+        Me.GrpSearch.Controls.Add(Me.RadSuppliersName)
+        Me.GrpSearch.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GrpSearch.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.GrpSearch.Location = New System.Drawing.Point(403, 127)
+        Me.GrpSearch.Name = "GrpSearch"
+        Me.GrpSearch.Size = New System.Drawing.Size(232, 210)
+        Me.GrpSearch.TabIndex = 70
+        Me.GrpSearch.TabStop = False
+        Me.GrpSearch.Text = "Search For:"
         '
-        'Label2
+        'txbEmail
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(508, 166)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(135, 13)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Sort / Search Results Here"
+        Me.txbEmail.Location = New System.Drawing.Point(6, 176)
+        Me.txbEmail.Name = "txbEmail"
+        Me.txbEmail.Size = New System.Drawing.Size(216, 32)
+        Me.txbEmail.TabIndex = 62
         '
-        'PictureBox2
+        'RadSuppliersEmail
         '
-        'Me.PictureBox2.Image = Global.Stock_Control_Suppliers.My.Resources.Resources.Screenshot_2023_03_07_125413
-        Me.PictureBox2.Location = New System.Drawing.Point(144, 36)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(442, 61)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 16
-        Me.PictureBox2.TabStop = False
+        Me.RadSuppliersEmail.AutoSize = True
+        Me.RadSuppliersEmail.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadSuppliersEmail.Location = New System.Drawing.Point(6, 154)
+        Me.RadSuppliersEmail.Name = "RadSuppliersEmail"
+        Me.RadSuppliersEmail.Size = New System.Drawing.Size(136, 22)
+        Me.RadSuppliersEmail.TabIndex = 61
+        Me.RadSuppliersEmail.TabStop = True
+        Me.RadSuppliersEmail.Text = "Suppliers Email"
+        Me.RadSuppliersEmail.UseVisualStyleBackColor = True
+        '
+        'txbname
+        '
+        Me.txbname.Location = New System.Drawing.Point(6, 121)
+        Me.txbname.Name = "txbname"
+        Me.txbname.Size = New System.Drawing.Size(216, 32)
+        Me.txbname.TabIndex = 60
+        '
+        'txbID
+        '
+        Me.txbID.Location = New System.Drawing.Point(9, 59)
+        Me.txbID.Name = "txbID"
+        Me.txbID.Size = New System.Drawing.Size(213, 32)
+        Me.txbID.TabIndex = 59
+        '
+        'RadSuppliersId
+        '
+        Me.RadSuppliersId.AutoSize = True
+        Me.RadSuppliersId.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadSuppliersId.Location = New System.Drawing.Point(6, 31)
+        Me.RadSuppliersId.Name = "RadSuppliersId"
+        Me.RadSuppliersId.Size = New System.Drawing.Size(111, 22)
+        Me.RadSuppliersId.TabIndex = 0
+        Me.RadSuppliersId.TabStop = True
+        Me.RadSuppliersId.Text = "Suppliers ID"
+        Me.RadSuppliersId.UseVisualStyleBackColor = True
+        '
+        'RadSuppliersName
+        '
+        Me.RadSuppliersName.AutoSize = True
+        Me.RadSuppliersName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadSuppliersName.Location = New System.Drawing.Point(6, 97)
+        Me.RadSuppliersName.Name = "RadSuppliersName"
+        Me.RadSuppliersName.Size = New System.Drawing.Size(138, 22)
+        Me.RadSuppliersName.TabIndex = 0
+        Me.RadSuppliersName.TabStop = True
+        Me.RadSuppliersName.Text = "Suppliers Name"
+        Me.RadSuppliersName.UseVisualStyleBackColor = True
+        '
+        'GrpSort
+        '
+        Me.GrpSort.Controls.Add(Me.LblChange)
+        Me.GrpSort.Controls.Add(Me.cbproductchange)
+        Me.GrpSort.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GrpSort.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.GrpSort.Location = New System.Drawing.Point(403, -4)
+        Me.GrpSort.Name = "GrpSort"
+        Me.GrpSort.Size = New System.Drawing.Size(232, 125)
+        Me.GrpSort.TabIndex = 71
+        Me.GrpSort.TabStop = False
+        Me.GrpSort.Text = "Sort By:"
+        '
+        'LblChange
+        '
+        Me.LblChange.AutoSize = True
+        Me.LblChange.Location = New System.Drawing.Point(32, 46)
+        Me.LblChange.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblChange.Name = "LblChange"
+        Me.LblChange.Size = New System.Drawing.Size(73, 24)
+        Me.LblChange.TabIndex = 59
+        Me.LblChange.Text = "Label1"
+        '
+        'cbproductchange
+        '
+        Me.cbproductchange.FormattingEnabled = True
+        Me.cbproductchange.Location = New System.Drawing.Point(10, 88)
+        Me.cbproductchange.Name = "cbproductchange"
+        Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
+        Me.cbproductchange.TabIndex = 58
         '
         'SuppliersOrders
         '
@@ -112,27 +197,35 @@ Partial Class SuppliersOrders
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(667, 349)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.GrpSort)
+        Me.Controls.Add(Me.GrpSearch)
+        Me.Controls.Add(Me.BtnSearchSupplyOrders)
+        Me.Controls.Add(Me.BtnSortSupplierOrders)
+        Me.Controls.Add(Me.BtnAddOrder)
+        Me.Controls.Add(Me.BtnDeleteOrder)
+        Me.Controls.Add(Me.BtnUpdateOrders)
         Me.Name = "SuppliersOrders"
         Me.Text = "Form2"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GrpSearch.ResumeLayout(False)
+        Me.GrpSearch.PerformLayout()
+        Me.GrpSort.ResumeLayout(False)
+        Me.GrpSort.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents BtnUpdateOrders As Button
+    Friend WithEvents BtnDeleteOrder As Button
+    Friend WithEvents BtnAddOrder As Button
+    Friend WithEvents BtnSortSupplierOrders As Button
+    Friend WithEvents BtnSearchSupplyOrders As Button
+    Friend WithEvents GrpSearch As GroupBox
+    Friend WithEvents txbEmail As TextBox
+    Friend WithEvents RadSuppliersEmail As RadioButton
+    Friend WithEvents txbname As TextBox
+    Friend WithEvents txbID As TextBox
+    Friend WithEvents RadSuppliersId As RadioButton
+    Friend WithEvents RadSuppliersName As RadioButton
+    Friend WithEvents GrpSort As GroupBox
+    Friend WithEvents LblChange As Label
+    Friend WithEvents cbproductchange As ComboBox
 End Class
