@@ -46,7 +46,7 @@ Partial Class ReportGraph
         '
         Me.CbxGraphType.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxGraphType.FormattingEnabled = True
-        Me.CbxGraphType.Items.AddRange(New Object() {"Pie Chart"})
+        Me.CbxGraphType.Items.AddRange(New Object() {"Pie Chart", "Bar Chart"})
         Me.CbxGraphType.Location = New System.Drawing.Point(602, 207)
         Me.CbxGraphType.Name = "CbxGraphType"
         Me.CbxGraphType.Size = New System.Drawing.Size(257, 33)

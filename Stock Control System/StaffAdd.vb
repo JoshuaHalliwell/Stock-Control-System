@@ -10,6 +10,8 @@
         LblStaffPasswordError.Text = ""
         LblAccessLevelError.Text = ""
 
+
+
         RoundCornerButton(BtnAddStaffDetails) 'Makes all button elements to have a rounded effect on them'
         RoundCornerButton(BtnDeleteStaffDetails)
         RoundCornerButton(BtnUpdateStaffDetails)

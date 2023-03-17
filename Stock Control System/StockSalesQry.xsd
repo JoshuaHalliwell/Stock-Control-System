@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StockSalesQry" targetNamespace="http://tempuri.org/StockSalesQry.xsd" xmlns:mstns="http://tempuri.org/StockSalesQry.xsd" xmlns="http://tempuri.org/StockSalesQry.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="StockDataBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StockDataBaseConnectionString (MySettings)" PropertyReference="ApplicationSettings.Stock_Control_System.My.MySettings.GlobalReference.Default.StockDataBaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QrySalesTableAdapter" GeneratorDataComponentClassName="QrySalesTableAdapter" Name="QrySales" UserDataComponentName="QrySalesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StockDataBaseConnectionString (MySettings)" DbObjectName="QrySales" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SaleID, StockID, ProductName, SaleQuantity, SaleTime, SaleDay, CustomerID, StaffID, SalePrice FROM QrySales</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StockSalesQry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="StockSalesQry" msprop:Generator_DataSetName="StockSalesQry">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QrySales" msprop:Generator_RowEvHandlerName="QrySalesRowChangeEventHandler" msprop:Generator_RowDeletedName="QrySalesRowDeleted" msprop:Generator_RowDeletingName="QrySalesRowDeleting" msprop:Generator_RowEvArgName="QrySalesRowChangeEvent" msprop:Generator_TablePropName="QrySales" msprop:Generator_RowChangedName="QrySalesRowChanged" msprop:Generator_RowChangingName="QrySalesRowChanging" msprop:Generator_TableClassName="QrySalesDataTable" msprop:Generator_RowClassName="QrySalesRow" msprop:Generator_TableVarName="tableQrySales" msprop:Generator_UserTableName="QrySales">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
