@@ -28,7 +28,7 @@ Partial Class SuppliersData
         Me.LblCustomerSurname = New System.Windows.Forms.Label()
         Me.LblCustomerFirstName = New System.Windows.Forms.Label()
         Me.LblAddressError = New System.Windows.Forms.Label()
-        Me.lblSuppliersAddressError = New System.Windows.Forms.Label()
+        Me.lblSuppliersEmailError = New System.Windows.Forms.Label()
         Me.LblSupplierNameError = New System.Windows.Forms.Label()
         Me.LblSuppliersIDError = New System.Windows.Forms.Label()
         Me.TxbSurname = New System.Windows.Forms.TextBox()
@@ -102,15 +102,15 @@ Partial Class SuppliersData
         Me.LblAddressError.TabIndex = 110
         Me.LblAddressError.Text = "AddressError"
         '
-        'lblSuppliersAddressError
+        'lblSuppliersEmailError
         '
-        Me.lblSuppliersAddressError.AutoSize = True
-        Me.lblSuppliersAddressError.ForeColor = System.Drawing.Color.Red
-        Me.lblSuppliersAddressError.Location = New System.Drawing.Point(125, 161)
-        Me.lblSuppliersAddressError.Name = "lblSuppliersAddressError"
-        Me.lblSuppliersAddressError.Size = New System.Drawing.Size(54, 13)
-        Me.lblSuppliersAddressError.TabIndex = 109
-        Me.lblSuppliersAddressError.Text = "EmailError"
+        Me.lblSuppliersEmailError.AutoSize = True
+        Me.lblSuppliersEmailError.ForeColor = System.Drawing.Color.Red
+        Me.lblSuppliersEmailError.Location = New System.Drawing.Point(125, 161)
+        Me.lblSuppliersEmailError.Name = "lblSuppliersEmailError"
+        Me.lblSuppliersEmailError.Size = New System.Drawing.Size(54, 13)
+        Me.lblSuppliersEmailError.TabIndex = 109
+        Me.lblSuppliersEmailError.Text = "EmailError"
         '
         'LblSupplierNameError
         '
@@ -266,7 +266,7 @@ Partial Class SuppliersData
         Me.Controls.Add(Me.LblCustomerSurname)
         Me.Controls.Add(Me.LblCustomerFirstName)
         Me.Controls.Add(Me.LblAddressError)
-        Me.Controls.Add(Me.lblSuppliersAddressError)
+        Me.Controls.Add(Me.lblSuppliersEmailError)
         Me.Controls.Add(Me.LblSupplierNameError)
         Me.Controls.Add(Me.LblSuppliersIDError)
         Me.Controls.Add(Me.TxbSurname)
@@ -296,7 +296,7 @@ Partial Class SuppliersData
     Friend WithEvents LblCustomerSurname As Label
     Friend WithEvents LblCustomerFirstName As Label
     Friend WithEvents LblAddressError As Label
-    Friend WithEvents lblSuppliersAddressError As Label
+    Friend WithEvents lblSuppliersEmailError As Label
     Friend WithEvents LblSupplierNameError As Label
     Friend WithEvents LblSuppliersIDError As Label
     Friend WithEvents TxbSurname As TextBox
