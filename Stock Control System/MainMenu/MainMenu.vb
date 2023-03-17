@@ -118,7 +118,7 @@ Public Class MainMenu
 
     Private Sub BtnProductSales_Click(sender As Object, e As EventArgs) Handles BtnProductSales.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        'OpenChildForm(New GameApplianceListForm)
+        OpenChildForm(New SalesView)
         LblFormName.Text = "Product Sales"
 
     End Sub
