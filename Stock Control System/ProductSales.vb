@@ -107,11 +107,6 @@
         NavigateRecords()
     End Sub
 
-    Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-        OpenChildForm(New Customers)                                                         ' opends the form in the open child form layout and closes this main form
-
-    End Sub
-
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         PresenceCheck()
         Dim cb As New OleDb.OleDbCommandBuilder(da) 'declares variable
@@ -185,6 +180,7 @@
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
+        OpenChildForm(New Customers)
 
     End Sub
 End Class
