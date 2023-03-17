@@ -10,4 +10,8 @@
     Private Sub ProductSalesDesign_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
+
+    End Sub
 End Class
