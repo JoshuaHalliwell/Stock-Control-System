@@ -20,7 +20,7 @@
         RoundCornerButton(BtnBack)
 
         con.Open()
-        sql = "SELECT * FROM TblSalesLine"
+        sql = "SELECT * FROM QrySales"
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblSalesLine") 'Fill whatever is in the data adapter to the DataSet'
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
@@ -30,27 +30,27 @@
     End Sub
 
     Private Sub NavigateRecords()
-        TxbSaleID.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(0)            'goes throght the table in the database to pick out all the data in the set current row
-        TxbSaleTime.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(1)
-        TxbSaleDay.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(2)
-        TxbStaffID.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(3)
-        TxbCustomerID.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(4)
+        TxbSaleID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(0)            'goes throght the table in the database to pick out all the data in the set current row
+        TxbSaleTime.Text = ds.Tables("TblQrySales").Rows(curRow).Item(1)
+        TxbSaleDay.Text = ds.Tables("TblQrySales").Rows(curRow).Item(2)
+        TxbStaffID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(3)
+        TxbCustomerID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(4)
     End Sub
 
     Private Sub PresenceCheck()
         Try
-            If TxbSaleID.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(0) Then          ' Checks to see if there is any data in the textboxes 
+            If TxbSaleID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(0) Then          ' Checks to see if there is any data in the textboxes 
                 LblSaleIDError.Text = "Sale ID field must be filled in with data"        ' if there is none then the realtive error text will
-            ElseIf TxbSaleTime.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(1) Then        '  appear next to the relative textbox
+            ElseIf TxbSaleTime.Text = ds.Tables("TblQrySales").Rows(curRow).Item(1) Then        '  appear next to the relative textbox
                 LblSaleTime.Text = "Sale Time field must be filled in with data"
 
-            ElseIf TxbSaleDay.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(2) Then
+            ElseIf TxbSaleDay.Text = ds.Tables("TblQrySales").Rows(curRow).Item(2) Then
                 lblSaleDayError.Text = "Sale Day field must be filled in with data"
 
-            ElseIf TxbStaffID.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(3) Then
+            ElseIf TxbStaffID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(3) Then
                 LblStaffError.Text = "Staff ID field must be filled in with data"
 
-            ElseIf TxbCustomerID.Text = ds.Tables("TblSalesLine").Rows(curRow).Item(4) Then
+            ElseIf TxbCustomerID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(4) Then
                 LblCustomerID.Text = "CustomerID field must be filled in with data"
                 'A try and catch statement is used to picked up the error  
                 'so that the application can break away from the sub processe
@@ -113,13 +113,13 @@
         cb.QuotePrefix = "["
         cb.QuoteSuffix = "]"
         'The system goes throught each row, and change/ upadate any data which doesn't equal the imput data' 
-        ds.Tables("TblSalesLine").Rows(curRow).Item(0) = TxbSaleID.Text 'fields called items 
-        ds.Tables("TblSalesLine").Rows(curRow).Item(1) = TxbSaleTime.Text 'ceells are just fields
-        ds.Tables("TblSalesLine").Rows(curRow).Item(2) = TxbSaleDay.Text
-        ds.Tables("TblSalesLine").Rows(curRow).Item(3) = TxbStaffID.Text
-        ds.Tables("TblSalesLine").Rows(curRow).Item(4) = TxbCustomerID.Text
+        ds.Tables("QrySales").Rows(curRow).Item(0) = TxbSaleID.Text 'fields called items 
+        ds.Tables("QrySales").Rows(curRow).Item(1) = TxbSaleTime.Text 'ceells are just fields
+        ds.Tables("QrySales").Rows(curRow).Item(2) = TxbSaleDay.Text
+        ds.Tables("QrySales").Rows(curRow).Item(3) = TxbStaffID.Text
+        ds.Tables("QrySales").Rows(curRow).Item(4) = TxbCustomerID.Text
 
-        da.Update(ds, "TblSalesLine") 'Updates the database with new set of student data
+        da.Update(ds, "QrySales") 'Updates the database with new set of student data
         MsgBox("Data Base has been Updated!")
     End Sub
 
@@ -134,12 +134,12 @@
             Try
                 cb.QuotePrefix = "["
                 cb.QuoteSuffix = "]"
-                ds.Tables("TblSalesLine").Rows(curRow).Delete()
+                ds.Tables("QrySales").Rows(curRow).Delete()
                 MaxRows = MaxRows - 1 'Set the MaxRow as a new vaule as there is now les rows in the table'
 
                 curRow = 0
                 NavigateRecords()
-                da.Update(ds, "TblSalesLine")
+                da.Update(ds, "QrySales")
             Catch ex As Exception
                 MsgBox("Delation was unsuccessful, make sure all data selected is correct and in the right format")
             End Try
@@ -154,7 +154,7 @@
             Dim cb As New OleDb.OleDbCommandBuilder(da) 'declares variable
             Dim dsNewRow As DataRow 'declares variable
 
-            dsNewRow = ds.Tables("TblSalesLine").NewRow()
+            dsNewRow = ds.Tables("QrySales").NewRow()
 
             dsNewRow.Item("SaleID") = TxbSaleID.Text
             dsNewRow.Item("SaleTime") = TxbSaleTime.Text
@@ -162,13 +162,13 @@
             dsNewRow.Item("StaffID") = TxbStaffID.Text
             dsNewRow.Item("CustomerID") = TxbCustomerID.Text
 
-            ds.Tables("TblSalesLine").Rows.Add(dsNewRow)
+            ds.Tables("QrySales").Rows.Add(dsNewRow)
 
             cb.QuotePrefix = "["
             cb.QuoteSuffix = "]"
 
             Try
-                da.Update(ds, "TblSalesLine") 'Updates the database with the new row
+                da.Update(ds, "QrySales") 'Updates the database with the new row
             Catch ex As Exception
                 MsgBox("This set of data is already in the database therefor can not be added")
                 Exit Sub
