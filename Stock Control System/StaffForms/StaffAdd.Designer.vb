@@ -397,7 +397,7 @@ Partial Class StaffAdd
         Me.Controls.Add(Me.LblStaffSurname)
         Me.Controls.Add(Me.LblStaffID)
         Me.Name = "StaffAdd"
-        Me.Text = "StaffAdd"
+        Me.Text = "vbcvc"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

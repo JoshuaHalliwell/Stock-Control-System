@@ -156,6 +156,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StaffForms\StaffView.Designer.vb">
+      <DependentUpon>StaffView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StaffForms\StaffView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SuppliersForms\AddSuppliers.Designer.vb">
       <DependentUpon>AddSuppliers.vb</DependentUpon>
     </Compile>
@@ -294,6 +300,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="StaffForms\StaffView.resx">
+      <DependentUpon>StaffView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuppliersForms\AddSuppliers.resx">
       <DependentUpon>AddSuppliers.vb</DependentUpon>
     </EmbeddedResource>

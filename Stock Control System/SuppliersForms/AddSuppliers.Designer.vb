@@ -23,7 +23,7 @@ Partial Class SuppliersData
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnBackMenu = New System.Windows.Forms.Button()
         Me.LblCustomerEmail = New System.Windows.Forms.Label()
         Me.LblCustomerSurname = New System.Windows.Forms.Label()
         Me.LblCustomerFirstName = New System.Windows.Forms.Label()
@@ -31,19 +31,19 @@ Partial Class SuppliersData
         Me.lblSuppliersEmailError = New System.Windows.Forms.Label()
         Me.LblSupplierNameError = New System.Windows.Forms.Label()
         Me.LblSuppliersIDError = New System.Windows.Forms.Label()
-        Me.TxbSurname = New System.Windows.Forms.TextBox()
-        Me.TxbEmail = New System.Windows.Forms.TextBox()
-        Me.TxbFirstname = New System.Windows.Forms.TextBox()
-        Me.btnlastcustomer = New System.Windows.Forms.Button()
-        Me.btnfirstcustomer = New System.Windows.Forms.Button()
-        Me.btndelete = New System.Windows.Forms.Button()
-        Me.btnprev = New System.Windows.Forms.Button()
-        Me.btnadd = New System.Windows.Forms.Button()
-        Me.btnnext = New System.Windows.Forms.Button()
-        Me.btnupdate = New System.Windows.Forms.Button()
+        Me.TxbSuppliersEmail = New System.Windows.Forms.TextBox()
+        Me.TxbSuppliersAddress = New System.Windows.Forms.TextBox()
+        Me.TxbSuppliersName = New System.Windows.Forms.TextBox()
+        Me.btnlastsupplier = New System.Windows.Forms.Button()
+        Me.btnfirstsupplier = New System.Windows.Forms.Button()
+        Me.btndeletesupplier = New System.Windows.Forms.Button()
+        Me.btnprevsupplier = New System.Windows.Forms.Button()
+        Me.btnaddsupplier = New System.Windows.Forms.Button()
+        Me.btnnextsupplier = New System.Windows.Forms.Button()
+        Me.btnupdatesupplier = New System.Windows.Forms.Button()
         Me.btnclear = New System.Windows.Forms.Button()
         Me.btncancel = New System.Windows.Forms.Button()
-        Me.TxbCustomerID = New System.Windows.Forms.TextBox()
+        Me.TxbSuppliersID = New System.Windows.Forms.TextBox()
         Me.LblCustomerID = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -55,15 +55,15 @@ Partial Class SuppliersData
         Me.Label5.Size = New System.Drawing.Size(0, 13)
         Me.Label5.TabIndex = 22
         '
-        'BtnBack
+        'BtnBackMenu
         '
-        Me.BtnBack.AutoSize = True
-        Me.BtnBack.Location = New System.Drawing.Point(509, 297)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(144, 41)
-        Me.BtnBack.TabIndex = 118
-        Me.BtnBack.Text = "Back to menu "
-        Me.BtnBack.UseVisualStyleBackColor = True
+        Me.BtnBackMenu.AutoSize = True
+        Me.BtnBackMenu.Location = New System.Drawing.Point(509, 297)
+        Me.BtnBackMenu.Name = "BtnBackMenu"
+        Me.BtnBackMenu.Size = New System.Drawing.Size(144, 41)
+        Me.BtnBackMenu.TabIndex = 118
+        Me.BtnBackMenu.Text = "Back to menu "
+        Me.BtnBackMenu.UseVisualStyleBackColor = True
         '
         'LblCustomerEmail
         '
@@ -132,93 +132,93 @@ Partial Class SuppliersData
         Me.LblSuppliersIDError.TabIndex = 107
         Me.LblSuppliersIDError.Text = "SupplierIDError"
         '
-        'TxbSurname
+        'TxbSuppliersEmail
         '
-        Me.TxbSurname.Location = New System.Drawing.Point(125, 177)
-        Me.TxbSurname.Name = "TxbSurname"
-        Me.TxbSurname.Size = New System.Drawing.Size(356, 20)
-        Me.TxbSurname.TabIndex = 104
-        Me.TxbSurname.Text = "SuppliersEmail"
+        Me.TxbSuppliersEmail.Location = New System.Drawing.Point(125, 177)
+        Me.TxbSuppliersEmail.Name = "TxbSuppliersEmail"
+        Me.TxbSuppliersEmail.Size = New System.Drawing.Size(356, 20)
+        Me.TxbSuppliersEmail.TabIndex = 104
+        Me.TxbSuppliersEmail.Text = "SuppliersEmail"
         '
-        'TxbEmail
+        'TxbSuppliersAddress
         '
-        Me.TxbEmail.Location = New System.Drawing.Point(125, 240)
-        Me.TxbEmail.Name = "TxbEmail"
-        Me.TxbEmail.Size = New System.Drawing.Size(356, 20)
-        Me.TxbEmail.TabIndex = 103
-        Me.TxbEmail.Text = "SuppliersAddress"
+        Me.TxbSuppliersAddress.Location = New System.Drawing.Point(125, 240)
+        Me.TxbSuppliersAddress.Name = "TxbSuppliersAddress"
+        Me.TxbSuppliersAddress.Size = New System.Drawing.Size(356, 20)
+        Me.TxbSuppliersAddress.TabIndex = 103
+        Me.TxbSuppliersAddress.Text = "SuppliersAddress"
         '
-        'TxbFirstname
+        'TxbSuppliersName
         '
-        Me.TxbFirstname.Location = New System.Drawing.Point(124, 119)
-        Me.TxbFirstname.Name = "TxbFirstname"
-        Me.TxbFirstname.Size = New System.Drawing.Size(356, 20)
-        Me.TxbFirstname.TabIndex = 102
-        Me.TxbFirstname.Text = "SuppliersName"
+        Me.TxbSuppliersName.Location = New System.Drawing.Point(124, 119)
+        Me.TxbSuppliersName.Name = "TxbSuppliersName"
+        Me.TxbSuppliersName.Size = New System.Drawing.Size(356, 20)
+        Me.TxbSuppliersName.TabIndex = 102
+        Me.TxbSuppliersName.Text = "SuppliersName"
         '
-        'btnlastcustomer
+        'btnlastsupplier
         '
-        Me.btnlastcustomer.AutoSize = True
-        Me.btnlastcustomer.Location = New System.Drawing.Point(509, 250)
-        Me.btnlastcustomer.Name = "btnlastcustomer"
-        Me.btnlastcustomer.Size = New System.Drawing.Size(144, 41)
-        Me.btnlastcustomer.TabIndex = 101
-        Me.btnlastcustomer.Text = "Last Supplier Detalis"
-        Me.btnlastcustomer.UseVisualStyleBackColor = True
+        Me.btnlastsupplier.AutoSize = True
+        Me.btnlastsupplier.Location = New System.Drawing.Point(509, 250)
+        Me.btnlastsupplier.Name = "btnlastsupplier"
+        Me.btnlastsupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btnlastsupplier.TabIndex = 101
+        Me.btnlastsupplier.Text = "Last Supplier Detalis"
+        Me.btnlastsupplier.UseVisualStyleBackColor = True
         '
-        'btnfirstcustomer
+        'btnfirstsupplier
         '
-        Me.btnfirstcustomer.Location = New System.Drawing.Point(509, 108)
-        Me.btnfirstcustomer.Name = "btnfirstcustomer"
-        Me.btnfirstcustomer.Size = New System.Drawing.Size(144, 41)
-        Me.btnfirstcustomer.TabIndex = 100
-        Me.btnfirstcustomer.Text = "First Supplier Details"
-        Me.btnfirstcustomer.UseVisualStyleBackColor = True
+        Me.btnfirstsupplier.Location = New System.Drawing.Point(509, 108)
+        Me.btnfirstsupplier.Name = "btnfirstsupplier"
+        Me.btnfirstsupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btnfirstsupplier.TabIndex = 100
+        Me.btnfirstsupplier.Text = "First Supplier Details"
+        Me.btnfirstsupplier.UseVisualStyleBackColor = True
         '
-        'btndelete
+        'btndeletesupplier
         '
-        Me.btndelete.Location = New System.Drawing.Point(177, 299)
-        Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(144, 41)
-        Me.btndelete.TabIndex = 99
-        Me.btndelete.Text = "Delete Supplier Detalis"
-        Me.btndelete.UseVisualStyleBackColor = True
+        Me.btndeletesupplier.Location = New System.Drawing.Point(177, 299)
+        Me.btndeletesupplier.Name = "btndeletesupplier"
+        Me.btndeletesupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btndeletesupplier.TabIndex = 99
+        Me.btndeletesupplier.Text = "Delete Supplier Detalis"
+        Me.btndeletesupplier.UseVisualStyleBackColor = True
         '
-        'btnprev
+        'btnprevsupplier
         '
-        Me.btnprev.Location = New System.Drawing.Point(509, 203)
-        Me.btnprev.Name = "btnprev"
-        Me.btnprev.Size = New System.Drawing.Size(144, 41)
-        Me.btnprev.TabIndex = 98
-        Me.btnprev.Text = "Prev Supplier"
-        Me.btnprev.UseVisualStyleBackColor = True
+        Me.btnprevsupplier.Location = New System.Drawing.Point(509, 203)
+        Me.btnprevsupplier.Name = "btnprevsupplier"
+        Me.btnprevsupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btnprevsupplier.TabIndex = 98
+        Me.btnprevsupplier.Text = "Prev Supplier"
+        Me.btnprevsupplier.UseVisualStyleBackColor = True
         '
-        'btnadd
+        'btnaddsupplier
         '
-        Me.btnadd.Location = New System.Drawing.Point(14, 299)
-        Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(144, 41)
-        Me.btnadd.TabIndex = 97
-        Me.btnadd.Text = "Add Supplier Details "
-        Me.btnadd.UseVisualStyleBackColor = True
+        Me.btnaddsupplier.Location = New System.Drawing.Point(14, 299)
+        Me.btnaddsupplier.Name = "btnaddsupplier"
+        Me.btnaddsupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btnaddsupplier.TabIndex = 97
+        Me.btnaddsupplier.Text = "Add Supplier Details "
+        Me.btnaddsupplier.UseVisualStyleBackColor = True
         '
-        'btnnext
+        'btnnextsupplier
         '
-        Me.btnnext.Location = New System.Drawing.Point(509, 156)
-        Me.btnnext.Name = "btnnext"
-        Me.btnnext.Size = New System.Drawing.Size(144, 41)
-        Me.btnnext.TabIndex = 96
-        Me.btnnext.Text = "Next Supplier"
-        Me.btnnext.UseVisualStyleBackColor = True
+        Me.btnnextsupplier.Location = New System.Drawing.Point(509, 156)
+        Me.btnnextsupplier.Name = "btnnextsupplier"
+        Me.btnnextsupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btnnextsupplier.TabIndex = 96
+        Me.btnnextsupplier.Text = "Next Supplier"
+        Me.btnnextsupplier.UseVisualStyleBackColor = True
         '
-        'btnupdate
+        'btnupdatesupplier
         '
-        Me.btnupdate.Location = New System.Drawing.Point(336, 299)
-        Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(144, 41)
-        Me.btnupdate.TabIndex = 95
-        Me.btnupdate.Text = "Update Supplier Details"
-        Me.btnupdate.UseVisualStyleBackColor = True
+        Me.btnupdatesupplier.Location = New System.Drawing.Point(336, 299)
+        Me.btnupdatesupplier.Name = "btnupdatesupplier"
+        Me.btnupdatesupplier.Size = New System.Drawing.Size(144, 41)
+        Me.btnupdatesupplier.TabIndex = 95
+        Me.btnupdatesupplier.Text = "Update Supplier Details"
+        Me.btnupdatesupplier.UseVisualStyleBackColor = True
         '
         'btnclear
         '
@@ -238,13 +238,13 @@ Partial Class SuppliersData
         Me.btncancel.Text = "Cancel Process "
         Me.btncancel.UseVisualStyleBackColor = True
         '
-        'TxbCustomerID
+        'TxbSuppliersID
         '
-        Me.TxbCustomerID.Location = New System.Drawing.Point(124, 60)
-        Me.TxbCustomerID.Name = "TxbCustomerID"
-        Me.TxbCustomerID.Size = New System.Drawing.Size(356, 20)
-        Me.TxbCustomerID.TabIndex = 92
-        Me.TxbCustomerID.Text = "SuppliersID"
+        Me.TxbSuppliersID.Location = New System.Drawing.Point(124, 60)
+        Me.TxbSuppliersID.Name = "TxbSuppliersID"
+        Me.TxbSuppliersID.Size = New System.Drawing.Size(356, 20)
+        Me.TxbSuppliersID.TabIndex = 92
+        Me.TxbSuppliersID.Text = "SuppliersID"
         '
         'LblCustomerID
         '
@@ -261,7 +261,7 @@ Partial Class SuppliersData
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(667, 349)
-        Me.Controls.Add(Me.BtnBack)
+        Me.Controls.Add(Me.BtnBackMenu)
         Me.Controls.Add(Me.LblCustomerEmail)
         Me.Controls.Add(Me.LblCustomerSurname)
         Me.Controls.Add(Me.LblCustomerFirstName)
@@ -269,19 +269,19 @@ Partial Class SuppliersData
         Me.Controls.Add(Me.lblSuppliersEmailError)
         Me.Controls.Add(Me.LblSupplierNameError)
         Me.Controls.Add(Me.LblSuppliersIDError)
-        Me.Controls.Add(Me.TxbSurname)
-        Me.Controls.Add(Me.TxbEmail)
-        Me.Controls.Add(Me.TxbFirstname)
-        Me.Controls.Add(Me.btnlastcustomer)
-        Me.Controls.Add(Me.btnfirstcustomer)
-        Me.Controls.Add(Me.btndelete)
-        Me.Controls.Add(Me.btnprev)
-        Me.Controls.Add(Me.btnadd)
-        Me.Controls.Add(Me.btnnext)
-        Me.Controls.Add(Me.btnupdate)
+        Me.Controls.Add(Me.TxbSuppliersEmail)
+        Me.Controls.Add(Me.TxbSuppliersAddress)
+        Me.Controls.Add(Me.TxbSuppliersName)
+        Me.Controls.Add(Me.btnlastsupplier)
+        Me.Controls.Add(Me.btnfirstsupplier)
+        Me.Controls.Add(Me.btndeletesupplier)
+        Me.Controls.Add(Me.btnprevsupplier)
+        Me.Controls.Add(Me.btnaddsupplier)
+        Me.Controls.Add(Me.btnnextsupplier)
+        Me.Controls.Add(Me.btnupdatesupplier)
         Me.Controls.Add(Me.btnclear)
         Me.Controls.Add(Me.btncancel)
-        Me.Controls.Add(Me.TxbCustomerID)
+        Me.Controls.Add(Me.TxbSuppliersID)
         Me.Controls.Add(Me.LblCustomerID)
         Me.Controls.Add(Me.Label5)
         Me.Name = "SuppliersData"
@@ -291,7 +291,7 @@ Partial Class SuppliersData
 
     End Sub
     Friend WithEvents Label5 As Label
-    Friend WithEvents BtnBack As Button
+    Friend WithEvents BtnBackMenu As Button
     Friend WithEvents LblCustomerEmail As Label
     Friend WithEvents LblCustomerSurname As Label
     Friend WithEvents LblCustomerFirstName As Label
@@ -299,18 +299,18 @@ Partial Class SuppliersData
     Friend WithEvents lblSuppliersEmailError As Label
     Friend WithEvents LblSupplierNameError As Label
     Friend WithEvents LblSuppliersIDError As Label
-    Friend WithEvents TxbSurname As TextBox
-    Friend WithEvents TxbEmail As TextBox
-    Friend WithEvents TxbFirstname As TextBox
-    Friend WithEvents btnlastcustomer As Button
-    Friend WithEvents btnfirstcustomer As Button
-    Friend WithEvents btndelete As Button
-    Friend WithEvents btnprev As Button
-    Friend WithEvents btnadd As Button
-    Friend WithEvents btnnext As Button
-    Friend WithEvents btnupdate As Button
+    Friend WithEvents TxbSuppliersEmail As TextBox
+    Friend WithEvents TxbSuppliersAddress As TextBox
+    Friend WithEvents TxbSuppliersName As TextBox
+    Friend WithEvents btnlastsupplier As Button
+    Friend WithEvents btnfirstsupplier As Button
+    Friend WithEvents btndeletesupplier As Button
+    Friend WithEvents btnprevsupplier As Button
+    Friend WithEvents btnaddsupplier As Button
+    Friend WithEvents btnnextsupplier As Button
+    Friend WithEvents btnupdatesupplier As Button
     Friend WithEvents btnclear As Button
     Friend WithEvents btncancel As Button
-    Friend WithEvents TxbCustomerID As TextBox
+    Friend WithEvents TxbSuppliersID As TextBox
     Friend WithEvents LblCustomerID As Label
 End Class
