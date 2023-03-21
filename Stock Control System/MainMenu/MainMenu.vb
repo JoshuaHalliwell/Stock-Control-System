@@ -102,7 +102,7 @@ Public Class MainMenu
 
     Private Sub BtnStaff_Click(sender As Object, e As EventArgs) Handles BtnStaff.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        OpenChildForm(New StaffAdd)
+        OpenChildForm(New StaffView)
         LblFormName.Text = "Staff Page"
 
 
