@@ -100,8 +100,6 @@ Public Class SuppliersOrders
         SandSconnection(DGVSuppliers, sql)                                                               'Sends the data grid to the connection opration 
     End Sub
 
-
-
     Private Sub cbSupplierActivity_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSupplierActivity.SelectedIndexChanged
         con.Open()
         If cbSupplierActivity.SelectedItem = "Active" Then

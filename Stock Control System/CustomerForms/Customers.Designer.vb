@@ -28,7 +28,7 @@ Partial Class Customers
         Me.TblCustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.Llbchange = New System.Windows.Forms.Label()
-        Me.cbproductchange = New System.Windows.Forms.ComboBox()
+        Me.cbCustomerID = New System.Windows.Forms.ComboBox()
         Me.GrpSearch = New System.Windows.Forms.GroupBox()
         Me.txbEmail = New System.Windows.Forms.TextBox()
         Me.RadCustomerEmail = New System.Windows.Forms.RadioButton()
@@ -70,7 +70,7 @@ Partial Class Customers
         'GrpSort
         '
         Me.GrpSort.Controls.Add(Me.Llbchange)
-        Me.GrpSort.Controls.Add(Me.cbproductchange)
+        Me.GrpSort.Controls.Add(Me.cbCustomerID)
         Me.GrpSort.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrpSort.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.GrpSort.Location = New System.Drawing.Point(439, 12)
@@ -86,17 +86,18 @@ Partial Class Customers
         Me.Llbchange.Location = New System.Drawing.Point(32, 46)
         Me.Llbchange.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Llbchange.Name = "Llbchange"
-        Me.Llbchange.Size = New System.Drawing.Size(73, 24)
+        Me.Llbchange.Size = New System.Drawing.Size(121, 24)
         Me.Llbchange.TabIndex = 59
-        Me.Llbchange.Text = "Label1"
+        Me.Llbchange.Text = "CustomerID"
         '
-        'cbproductchange
+        'cbCustomerID
         '
-        Me.cbproductchange.FormattingEnabled = True
-        Me.cbproductchange.Location = New System.Drawing.Point(10, 88)
-        Me.cbproductchange.Name = "cbproductchange"
-        Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
-        Me.cbproductchange.TabIndex = 58
+        Me.cbCustomerID.FormattingEnabled = True
+        Me.cbCustomerID.Items.AddRange(New Object() {"Ascending Order", "Desending Order"})
+        Me.cbCustomerID.Location = New System.Drawing.Point(10, 88)
+        Me.cbCustomerID.Name = "cbCustomerID"
+        Me.cbCustomerID.Size = New System.Drawing.Size(216, 32)
+        Me.cbCustomerID.TabIndex = 58
         '
         'GrpSearch
         '
@@ -238,7 +239,7 @@ Partial Class Customers
     Friend WithEvents DGVCustomers As DataGridView
     Friend WithEvents GrpSort As GroupBox
     Friend WithEvents Llbchange As Label
-    Friend WithEvents cbproductchange As ComboBox
+    Friend WithEvents cbCustomerID As ComboBox
     Friend WithEvents GrpSearch As GroupBox
     Friend WithEvents txbEmail As TextBox
     Friend WithEvents RadCustomerEmail As RadioButton
