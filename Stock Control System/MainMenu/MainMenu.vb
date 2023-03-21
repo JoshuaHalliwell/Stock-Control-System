@@ -1,5 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 Imports System.Threading
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class MainMenu
     Private CurrentChildForm As Form
@@ -38,7 +39,12 @@ Public Class MainMenu
         BtnSuppliersOrders.BackColor = ColourClass.Steelcolour
 
         With Form1
-            'access level 
+            'access level
+            If AccessLevel.Staff = 1 Then
+                BtnStaff.Hide()
+                BtnReports.Hide()
+                BtnSuppliersOrders.Hide()
+            End If
         End With
     End Sub
     Private Sub ActivateButton(senderBtn As Object, customColor As Color)
@@ -96,7 +102,7 @@ Public Class MainMenu
 
     Private Sub BtnStaff_Click(sender As Object, e As EventArgs) Handles BtnStaff.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        'OpenChildForm(New GameApplianceListForm)
+        OpenChildForm(New StaffAdd)
         LblFormName.Text = "Staff Page"
 
 
@@ -111,9 +117,8 @@ Public Class MainMenu
 
     Private Sub BtnSuppliersOrders_Click(sender As Object, e As EventArgs) Handles BtnSuppliersOrders.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        'OpenChildForm(New GameApplianceListForm)
-        LblFormName.Text = "Suppliers Order"
-
+        OpenChildForm(New SuppliersOrders)
+        LblFormName.Text = "Suppliers Order Page"
     End Sub
 
     Private Sub BtnProductSales_Click(sender As Object, e As EventArgs) Handles BtnProductSales.Click
@@ -125,7 +130,7 @@ Public Class MainMenu
 
     Private Sub BtnReports_Click(sender As Object, e As EventArgs) Handles BtnReports.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        'OpenChildForm(New GameApplianceListForm)
+        OpenChildForm(New ReportMenu)
         LblFormName.Text = "Report Page"
 
     End Sub
