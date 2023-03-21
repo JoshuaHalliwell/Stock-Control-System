@@ -26,7 +26,6 @@ Partial Class Customers
         Me.BtnSearchCustomer = New System.Windows.Forms.Button()
         Me.DGVCustomers = New System.Windows.Forms.DataGridView()
         Me.TblCustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        'Me.StockDataBase_copyDataSet = New Stock_Control_System.StockDataBase_copyDataSet()
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.Llbchange = New System.Windows.Forms.Label()
         Me.cbproductchange = New System.Windows.Forms.ComboBox()
@@ -41,10 +40,8 @@ Partial Class Customers
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.BtnSortCustomers = New System.Windows.Forms.Button()
-        'Me.TblCustomerTableAdapter = New Stock_Control_System.StockDataBase_copyDataSetTableAdapters.TblCustomerTableAdapter()
         CType(Me.DGVCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblCustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        'CType(Me.StockDataBase_copyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GrpSort.SuspendLayout()
         Me.GrpSearch.SuspendLayout()
         Me.SuspendLayout()
@@ -69,12 +66,6 @@ Partial Class Customers
         'TblCustomerBindingSource
         '
         Me.TblCustomerBindingSource.DataMember = "TblCustomer"
-        'Me.TblCustomerBindingSource.DataSource = Me.StockDataBase_copyDataSet
-        '
-        'StockDataBase_copyDataSet
-        '
-        'Me.StockDataBase_copyDataSet.DataSetName = "StockDataBase_copyDataSet"
-        'Me.StockDataBase_copyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GrpSort
         '
@@ -217,10 +208,6 @@ Partial Class Customers
         Me.BtnSortCustomers.Text = "Sort Customers"
         Me.BtnSortCustomers.UseVisualStyleBackColor = True
         '
-        'TblCustomerTableAdapter
-        '
-        'Me.TblCustomerTableAdapter.ClearBeforeFill = True
-        '
         'Customers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -240,7 +227,6 @@ Partial Class Customers
         Me.Text = "Customer"
         CType(Me.DGVCustomers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblCustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        'CType(Me.StockDataBase_copyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GrpSort.ResumeLayout(False)
         Me.GrpSort.PerformLayout()
         Me.GrpSearch.ResumeLayout(False)

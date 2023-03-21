@@ -79,25 +79,25 @@ Public Class MainMenu
         End Try
 
         OpenChildForm(New HomeForm)
-        LblFormName.Text = "Home"
+        LblFormName.Text = "Home Page"
     End Sub
     Private Sub Reset()                                                'Rest just turns all the icon to the home / blank form menu
         DisableButton()
         leftBorderBtn.Visible = False
-        LblFormName.Text = "Home"
+        LblFormName.Text = "Home Page"
     End Sub
 
     Private Sub BtnStock_Click(sender As Object, e As EventArgs) Handles BtnStock.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        OpenChildForm(New StockAdd)
-        LblFormName.Text = "Stock"
+        OpenChildForm(New Stock)
+        LblFormName.Text = "Stock Page"
 
     End Sub
 
     Private Sub BtnStaff_Click(sender As Object, e As EventArgs) Handles BtnStaff.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         'OpenChildForm(New GameApplianceListForm)
-        LblFormName.Text = "Staff"
+        LblFormName.Text = "Staff Page"
 
 
     End Sub
@@ -105,7 +105,7 @@ Public Class MainMenu
     Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         OpenChildForm(New Customers)
-        LblFormName.Text = "Customer"
+        LblFormName.Text = "Customer Page"
 
     End Sub
 
@@ -119,14 +119,14 @@ Public Class MainMenu
     Private Sub BtnProductSales_Click(sender As Object, e As EventArgs) Handles BtnProductSales.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         OpenChildForm(New SalesView)
-        LblFormName.Text = "Product Sales"
+        LblFormName.Text = "Product Sales Page"
 
     End Sub
 
     Private Sub BtnReports_Click(sender As Object, e As EventArgs) Handles BtnReports.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
         'OpenChildForm(New GameApplianceListForm)
-        LblFormName.Text = "Report"
+        LblFormName.Text = "Report Page"
 
     End Sub
 

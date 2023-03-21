@@ -37,10 +37,10 @@ Partial Class SuppliersOrders
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.LblChange = New System.Windows.Forms.Label()
         Me.cbproductchange = New System.Windows.Forms.ComboBox()
-        Me.DGVSuppliers = New System.Windows.Forms.DataGridView()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GrpSearch.SuspendLayout()
         Me.GrpSort.SuspendLayout()
-        CType(Me.DGVSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnUpdateOrders
@@ -193,13 +193,13 @@ Partial Class SuppliersOrders
         Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
         Me.cbproductchange.TabIndex = 58
         '
-        'DGVSuppliers
+        'DataGridView1
         '
-        Me.DGVSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVSuppliers.Location = New System.Drawing.Point(29, 13)
-        Me.DGVSuppliers.Name = "DGVSuppliers"
-        Me.DGVSuppliers.Size = New System.Drawing.Size(339, 186)
-        Me.DGVSuppliers.TabIndex = 72
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(29, 13)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(339, 186)
+        Me.DataGridView1.TabIndex = 72
         '
         'SuppliersOrders
         '
@@ -207,7 +207,7 @@ Partial Class SuppliersOrders
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(667, 349)
-        Me.Controls.Add(Me.DGVSuppliers)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GrpSort)
         Me.Controls.Add(Me.GrpSearch)
         Me.Controls.Add(Me.BtnSearchSupplyOrders)
@@ -221,7 +221,7 @@ Partial Class SuppliersOrders
         Me.GrpSearch.PerformLayout()
         Me.GrpSort.ResumeLayout(False)
         Me.GrpSort.PerformLayout()
-        CType(Me.DGVSuppliers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -240,5 +240,5 @@ Partial Class SuppliersOrders
     Friend WithEvents GrpSort As GroupBox
     Friend WithEvents LblChange As Label
     Friend WithEvents cbproductchange As ComboBox
-    Friend WithEvents DGVSuppliers As DataGridView
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

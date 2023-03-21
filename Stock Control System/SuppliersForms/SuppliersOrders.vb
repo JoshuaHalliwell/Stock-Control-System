@@ -25,8 +25,8 @@
         sql = "SELECT * FROM TblSuppliers"
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblSuppliers") 'Fill whatever is in the data adapter to the DataSet'
-        DGVSuppliers.DataSource = ds
-        DGVSuppliers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DataGridView1.DataSource = ds
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
 
         GrpSearch.Hide()

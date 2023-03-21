@@ -101,4 +101,8 @@
 
 
     End Sub
+
+    Private Sub cbproductchange_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbproductchange.SelectedIndexChanged
+
+    End Sub
 End Class

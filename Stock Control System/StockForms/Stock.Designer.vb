@@ -25,7 +25,7 @@ Partial Class Stock
         Me.components = New System.ComponentModel.Container()
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.Llbchange = New System.Windows.Forms.Label()
-        Me.cbproductchange = New System.Windows.Forms.ComboBox()
+        Me.CbStockCategory = New System.Windows.Forms.ComboBox()
         Me.GrpSearch = New System.Windows.Forms.GroupBox()
         Me.txbname = New System.Windows.Forms.TextBox()
         Me.txbID = New System.Windows.Forms.TextBox()
@@ -39,6 +39,7 @@ Partial Class Stock
         Me.BtnAddStock = New System.Windows.Forms.Button()
         Me.BtnUpdateStock = New System.Windows.Forms.Button()
         Me.BtnSortByStorageStock = New System.Windows.Forms.Button()
+        Me.BtnSortByCatgory = New System.Windows.Forms.Button()
         Me.GrpSort.SuspendLayout()
         Me.GrpSearch.SuspendLayout()
         CType(Me.DGVStock, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,7 +49,7 @@ Partial Class Stock
         'GrpSort
         '
         Me.GrpSort.Controls.Add(Me.Llbchange)
-        Me.GrpSort.Controls.Add(Me.cbproductchange)
+        Me.GrpSort.Controls.Add(Me.CbStockCategory)
         Me.GrpSort.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrpSort.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.GrpSort.Location = New System.Drawing.Point(431, 12)
@@ -64,17 +65,18 @@ Partial Class Stock
         Me.Llbchange.Location = New System.Drawing.Point(32, 46)
         Me.Llbchange.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Llbchange.Name = "Llbchange"
-        Me.Llbchange.Size = New System.Drawing.Size(73, 24)
+        Me.Llbchange.Size = New System.Drawing.Size(155, 24)
         Me.Llbchange.TabIndex = 59
-        Me.Llbchange.Text = "Label1"
+        Me.Llbchange.Text = "Stock Category"
         '
-        'cbproductchange
+        'CbStockCategory
         '
-        Me.cbproductchange.FormattingEnabled = True
-        Me.cbproductchange.Location = New System.Drawing.Point(0, 84)
-        Me.cbproductchange.Name = "cbproductchange"
-        Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
-        Me.cbproductchange.TabIndex = 58
+        Me.CbStockCategory.FormattingEnabled = True
+        Me.CbStockCategory.Items.AddRange(New Object() {"Sweets", "Crisps", "Chocolate", "Drink", "Biscuit"})
+        Me.CbStockCategory.Location = New System.Drawing.Point(0, 84)
+        Me.CbStockCategory.Name = "CbStockCategory"
+        Me.CbStockCategory.Size = New System.Drawing.Size(216, 32)
+        Me.CbStockCategory.TabIndex = 58
         '
         'GrpSearch
         '
@@ -134,12 +136,12 @@ Partial Class Stock
         Me.DGVStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVStock.Location = New System.Drawing.Point(-5, 12)
         Me.DGVStock.Name = "DGVStock"
-        Me.DGVStock.Size = New System.Drawing.Size(424, 191)
+        Me.DGVStock.Size = New System.Drawing.Size(424, 164)
         Me.DGVStock.TabIndex = 63
         '
         'BtnSearchStock
         '
-        Me.BtnSearchStock.Location = New System.Drawing.Point(285, 293)
+        Me.BtnSearchStock.Location = New System.Drawing.Point(151, 304)
         Me.BtnSearchStock.Name = "BtnSearchStock"
         Me.BtnSearchStock.Size = New System.Drawing.Size(112, 42)
         Me.BtnSearchStock.TabIndex = 75
@@ -148,7 +150,7 @@ Partial Class Stock
         '
         'BtnSortByDisplayStock
         '
-        Me.BtnSortByDisplayStock.Location = New System.Drawing.Point(12, 299)
+        Me.BtnSortByDisplayStock.Location = New System.Drawing.Point(12, 250)
         Me.BtnSortByDisplayStock.Name = "BtnSortByDisplayStock"
         Me.BtnSortByDisplayStock.Size = New System.Drawing.Size(112, 42)
         Me.BtnSortByDisplayStock.TabIndex = 76
@@ -157,7 +159,7 @@ Partial Class Stock
         '
         'BtnDeleteStock
         '
-        Me.BtnDeleteStock.Location = New System.Drawing.Point(151, 222)
+        Me.BtnDeleteStock.Location = New System.Drawing.Point(151, 193)
         Me.BtnDeleteStock.Name = "BtnDeleteStock"
         Me.BtnDeleteStock.Size = New System.Drawing.Size(112, 42)
         Me.BtnDeleteStock.TabIndex = 77
@@ -166,7 +168,7 @@ Partial Class Stock
         '
         'BtnAddStock
         '
-        Me.BtnAddStock.Location = New System.Drawing.Point(12, 222)
+        Me.BtnAddStock.Location = New System.Drawing.Point(12, 193)
         Me.BtnAddStock.Name = "BtnAddStock"
         Me.BtnAddStock.Size = New System.Drawing.Size(112, 42)
         Me.BtnAddStock.TabIndex = 78
@@ -175,7 +177,7 @@ Partial Class Stock
         '
         'BtnUpdateStock
         '
-        Me.BtnUpdateStock.Location = New System.Drawing.Point(285, 222)
+        Me.BtnUpdateStock.Location = New System.Drawing.Point(285, 193)
         Me.BtnUpdateStock.Name = "BtnUpdateStock"
         Me.BtnUpdateStock.Size = New System.Drawing.Size(112, 42)
         Me.BtnUpdateStock.TabIndex = 79
@@ -184,12 +186,21 @@ Partial Class Stock
         '
         'BtnSortByStorageStock
         '
-        Me.BtnSortByStorageStock.Location = New System.Drawing.Point(151, 293)
+        Me.BtnSortByStorageStock.Location = New System.Drawing.Point(151, 250)
         Me.BtnSortByStorageStock.Name = "BtnSortByStorageStock"
         Me.BtnSortByStorageStock.Size = New System.Drawing.Size(112, 42)
         Me.BtnSortByStorageStock.TabIndex = 80
         Me.BtnSortByStorageStock.Text = "Sort by Storage Stock"
         Me.BtnSortByStorageStock.UseVisualStyleBackColor = True
+        '
+        'BtnSortByCatgory
+        '
+        Me.BtnSortByCatgory.Location = New System.Drawing.Point(285, 250)
+        Me.BtnSortByCatgory.Name = "BtnSortByCatgory"
+        Me.BtnSortByCatgory.Size = New System.Drawing.Size(112, 42)
+        Me.BtnSortByCatgory.TabIndex = 81
+        Me.BtnSortByCatgory.Text = "Sort by Stock Category"
+        Me.BtnSortByCatgory.UseVisualStyleBackColor = True
         '
         'Stock
         '
@@ -197,6 +208,7 @@ Partial Class Stock
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(669, 348)
+        Me.Controls.Add(Me.BtnSortByCatgory)
         Me.Controls.Add(Me.BtnSortByStorageStock)
         Me.Controls.Add(Me.BtnUpdateStock)
         Me.Controls.Add(Me.BtnAddStock)
@@ -220,7 +232,7 @@ Partial Class Stock
 
     Friend WithEvents GrpSort As GroupBox
     Friend WithEvents Llbchange As Label
-    Friend WithEvents cbproductchange As ComboBox
+    Friend WithEvents CbStockCategory As ComboBox
     Friend WithEvents GrpSearch As GroupBox
     Friend WithEvents txbname As TextBox
     Friend WithEvents txbID As TextBox
@@ -244,5 +256,6 @@ Partial Class Stock
     Friend WithEvents BtnSortByStorageStock As Button
     'Friend WithEvents StockDataBaseStockViewing As StockDataBaseStockViewing
     Friend WithEvents TblStocksBindingSource1 As BindingSource
+    Friend WithEvents BtnSortByCatgory As Button
     'Friend WithEvents TblStocksTableAdapter1 As StockDataBaseStockViewingTableAdapters.TblStocksTableAdapter
 End Class
