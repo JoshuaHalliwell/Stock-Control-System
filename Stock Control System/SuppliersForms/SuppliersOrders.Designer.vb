@@ -36,16 +36,16 @@ Partial Class SuppliersOrders
         Me.RadSuppliersName = New System.Windows.Forms.RadioButton()
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.LblChange = New System.Windows.Forms.Label()
-        Me.cbproductchange = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.cbSupplierActivity = New System.Windows.Forms.ComboBox()
+        Me.DGVSuppliers = New System.Windows.Forms.DataGridView()
         Me.GrpSearch.SuspendLayout()
         Me.GrpSort.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnUpdateOrders
         '
-        Me.BtnUpdateOrders.Location = New System.Drawing.Point(29, 270)
+        Me.BtnUpdateOrders.Location = New System.Drawing.Point(274, 224)
         Me.BtnUpdateOrders.Name = "BtnUpdateOrders"
         Me.BtnUpdateOrders.Size = New System.Drawing.Size(110, 46)
         Me.BtnUpdateOrders.TabIndex = 9
@@ -54,7 +54,7 @@ Partial Class SuppliersOrders
         '
         'BtnDeleteOrder
         '
-        Me.BtnDeleteOrder.Location = New System.Drawing.Point(138, 224)
+        Me.BtnDeleteOrder.Location = New System.Drawing.Point(141, 224)
         Me.BtnDeleteOrder.Name = "BtnDeleteOrder"
         Me.BtnDeleteOrder.Size = New System.Drawing.Size(113, 47)
         Me.BtnDeleteOrder.TabIndex = 10
@@ -63,7 +63,7 @@ Partial Class SuppliersOrders
         '
         'BtnAddOrder
         '
-        Me.BtnAddOrder.Location = New System.Drawing.Point(29, 224)
+        Me.BtnAddOrder.Location = New System.Drawing.Point(12, 225)
         Me.BtnAddOrder.Name = "BtnAddOrder"
         Me.BtnAddOrder.Size = New System.Drawing.Size(110, 47)
         Me.BtnAddOrder.TabIndex = 11
@@ -72,7 +72,7 @@ Partial Class SuppliersOrders
         '
         'BtnSortSupplierOrders
         '
-        Me.BtnSortSupplierOrders.Location = New System.Drawing.Point(245, 224)
+        Me.BtnSortSupplierOrders.Location = New System.Drawing.Point(12, 296)
         Me.BtnSortSupplierOrders.Name = "BtnSortSupplierOrders"
         Me.BtnSortSupplierOrders.Size = New System.Drawing.Size(123, 46)
         Me.BtnSortSupplierOrders.TabIndex = 12
@@ -81,7 +81,7 @@ Partial Class SuppliersOrders
         '
         'BtnSearchSupplyOrders
         '
-        Me.BtnSearchSupplyOrders.Location = New System.Drawing.Point(245, 269)
+        Me.BtnSearchSupplyOrders.Location = New System.Drawing.Point(261, 296)
         Me.BtnSearchSupplyOrders.Name = "BtnSearchSupplyOrders"
         Me.BtnSearchSupplyOrders.Size = New System.Drawing.Size(123, 48)
         Me.BtnSearchSupplyOrders.TabIndex = 13
@@ -165,7 +165,7 @@ Partial Class SuppliersOrders
         'GrpSort
         '
         Me.GrpSort.Controls.Add(Me.LblChange)
-        Me.GrpSort.Controls.Add(Me.cbproductchange)
+        Me.GrpSort.Controls.Add(Me.cbSupplierActivity)
         Me.GrpSort.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrpSort.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.GrpSort.Location = New System.Drawing.Point(403, -4)
@@ -181,25 +181,26 @@ Partial Class SuppliersOrders
         Me.LblChange.Location = New System.Drawing.Point(32, 46)
         Me.LblChange.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblChange.Name = "LblChange"
-        Me.LblChange.Size = New System.Drawing.Size(73, 24)
+        Me.LblChange.Size = New System.Drawing.Size(158, 24)
         Me.LblChange.TabIndex = 59
-        Me.LblChange.Text = "Label1"
+        Me.LblChange.Text = "Supplier Activity"
         '
-        'cbproductchange
+        'cbSupplierActivity
         '
-        Me.cbproductchange.FormattingEnabled = True
-        Me.cbproductchange.Location = New System.Drawing.Point(10, 88)
-        Me.cbproductchange.Name = "cbproductchange"
-        Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
-        Me.cbproductchange.TabIndex = 58
+        Me.cbSupplierActivity.FormattingEnabled = True
+        Me.cbSupplierActivity.Items.AddRange(New Object() {"Active", "Non Active"})
+        Me.cbSupplierActivity.Location = New System.Drawing.Point(10, 88)
+        Me.cbSupplierActivity.Name = "cbSupplierActivity"
+        Me.cbSupplierActivity.Size = New System.Drawing.Size(216, 32)
+        Me.cbSupplierActivity.TabIndex = 58
         '
-        'DataGridView1
+        'DGVSuppliers
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 13)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(339, 186)
-        Me.DataGridView1.TabIndex = 72
+        Me.DGVSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVSuppliers.Location = New System.Drawing.Point(29, 13)
+        Me.DGVSuppliers.Name = "DGVSuppliers"
+        Me.DGVSuppliers.Size = New System.Drawing.Size(339, 186)
+        Me.DGVSuppliers.TabIndex = 72
         '
         'SuppliersOrders
         '
@@ -207,7 +208,7 @@ Partial Class SuppliersOrders
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(667, 349)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DGVSuppliers)
         Me.Controls.Add(Me.GrpSort)
         Me.Controls.Add(Me.GrpSearch)
         Me.Controls.Add(Me.BtnSearchSupplyOrders)
@@ -221,7 +222,7 @@ Partial Class SuppliersOrders
         Me.GrpSearch.PerformLayout()
         Me.GrpSort.ResumeLayout(False)
         Me.GrpSort.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVSuppliers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -239,6 +240,6 @@ Partial Class SuppliersOrders
     Friend WithEvents RadSuppliersName As RadioButton
     Friend WithEvents GrpSort As GroupBox
     Friend WithEvents LblChange As Label
-    Friend WithEvents cbproductchange As ComboBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGVSuppliers As DataGridView
+    Friend WithEvents cbSupplierActivity As ComboBox
 End Class

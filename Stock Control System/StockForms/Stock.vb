@@ -6,8 +6,10 @@ Public Class Stock
         sql = "SELECT * FROM TblStocks"
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblStocks") 'Fill whatever is in the data adapter to the DataSet'
-        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+        DGVStock.DataSource = ds
         DGVStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+
         GrpSearch.Hide()
         GrpSort.Hide()
 
@@ -25,6 +27,7 @@ Public Class Stock
         RoundCornerButton(BtnAddStock)
         RoundCornerButton(BtnDeleteStock)
         RoundCornerButton(BtnUpdateStock)
+        RoundCornerButton(BtnSortByCatgory)
         Llbchange.Hide()
         CbStockCategory.Hide()
 

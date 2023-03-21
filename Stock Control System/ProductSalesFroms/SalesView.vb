@@ -40,7 +40,7 @@
     Private Sub txbID_TextChanged(sender As Object, e As EventArgs) Handles txbID.TextChanged
         con.Open()
         sql = "SELECT * FROM QrySales WHERE SalesID LIKE '%" & txbID.Text & "%'"             ' Sql checks to find a simular result in the database  
-        SandSconnection(DGVSales)
+        SandSconnection(DGVSales, sql)
     End Sub
 
     Private Sub BtnSearchSalesLine_Click(sender As Object, e As EventArgs) Handles BtnSearchSalesLine.Click
@@ -77,13 +77,13 @@
     Private Sub txbname_TextChanged(sender As Object, e As EventArgs) Handles txbname.TextChanged
         con.Open()
         sql = "SELECT * FROM QrySales WHERE StockID LIKE '%" & txbname.Text & "%' OR WHERE SaleID LIKE '%" & txbname.Text & "%' "            ' Sql checks to find a simular result in the database  
-        SandSconnection(DGVSales)
+        SandSconnection(DGVSales, sql)
     End Sub
 
     Private Sub txbquantity_TextChanged(sender As Object, e As EventArgs) Handles txbquantity.TextChanged
         con.Open()
         sql = "SELECT * FROM QrySales WHERE SaleQuantity LIKE '%" & txbquantity.Text & "%'"            ' Sql checks to find a simular result in the database  
-        SandSconnection(DGVSales)
+        SandSconnection(DGVSales, sql)
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
