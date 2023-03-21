@@ -16,7 +16,7 @@
         RoundCornerButton(btncancel)
         RoundCornerButton(btnclear)
         RoundCornerButton(btndelete)
-        RoundCornerButton(btnfirstSupplierDetails)
+        RoundCornerButton(btnfirstcustomer)
         RoundCornerButton(btnlastcustomer)
         RoundCornerButton(btnnext)
         RoundCornerButton(btnprev)

@@ -5,8 +5,10 @@
         sql = "SELECT * FROM TblCustomer"
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblCustomer") 'Fill whatever is in the data adapter to the DataSet'
-        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+        DGVCustomers.DataSource = ds
         DGVCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+
         GrpSearch.Hide()
         GrpSort.Hide()
         If radID.Checked = False Then

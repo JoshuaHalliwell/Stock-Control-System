@@ -37,8 +37,10 @@ Partial Class SuppliersOrders
         Me.GrpSort = New System.Windows.Forms.GroupBox()
         Me.LblChange = New System.Windows.Forms.Label()
         Me.cbproductchange = New System.Windows.Forms.ComboBox()
+        Me.DGVSuppliers = New System.Windows.Forms.DataGridView()
         Me.GrpSearch.SuspendLayout()
         Me.GrpSort.SuspendLayout()
+        CType(Me.DGVSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnUpdateOrders
@@ -191,12 +193,21 @@ Partial Class SuppliersOrders
         Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
         Me.cbproductchange.TabIndex = 58
         '
+        'DGVSuppliers
+        '
+        Me.DGVSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVSuppliers.Location = New System.Drawing.Point(29, 13)
+        Me.DGVSuppliers.Name = "DGVSuppliers"
+        Me.DGVSuppliers.Size = New System.Drawing.Size(339, 186)
+        Me.DGVSuppliers.TabIndex = 72
+        '
         'SuppliersOrders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(667, 349)
+        Me.Controls.Add(Me.DGVSuppliers)
         Me.Controls.Add(Me.GrpSort)
         Me.Controls.Add(Me.GrpSearch)
         Me.Controls.Add(Me.BtnSearchSupplyOrders)
@@ -210,6 +221,7 @@ Partial Class SuppliersOrders
         Me.GrpSearch.PerformLayout()
         Me.GrpSort.ResumeLayout(False)
         Me.GrpSort.PerformLayout()
+        CType(Me.DGVSuppliers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -228,4 +240,5 @@ Partial Class SuppliersOrders
     Friend WithEvents GrpSort As GroupBox
     Friend WithEvents LblChange As Label
     Friend WithEvents cbproductchange As ComboBox
+    Friend WithEvents DGVSuppliers As DataGridView
 End Class

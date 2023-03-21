@@ -21,7 +21,16 @@
     End Sub
 
     Private Sub SuppliersOrders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        con.Open()
+        sql = "SELECT * FROM TblSuppliers"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "TblSuppliers") 'Fill whatever is in the data adapter to the DataSet'
+        DGVSuppliers.DataSource = ds
+        DGVSuppliers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
 
+        GrpSearch.Hide()
+        GrpSort.Hide()
 
     End Sub
 

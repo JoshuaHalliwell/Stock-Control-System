@@ -61,243 +61,217 @@ Partial Class StaffAdd
         'LblStaffID
         '
         Me.LblStaffID.AutoSize = True
-        Me.LblStaffID.Location = New System.Drawing.Point(123, 32)
-        Me.LblStaffID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffID.Location = New System.Drawing.Point(36, 22)
         Me.LblStaffID.Name = "LblStaffID"
-        Me.LblStaffID.Size = New System.Drawing.Size(46, 16)
+        Me.LblStaffID.Size = New System.Drawing.Size(40, 13)
         Me.LblStaffID.TabIndex = 0
         Me.LblStaffID.Text = "StaffID"
         '
         'LblStaffSurname
         '
         Me.LblStaffSurname.AutoSize = True
-        Me.LblStaffSurname.Location = New System.Drawing.Point(123, 128)
-        Me.LblStaffSurname.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffSurname.Location = New System.Drawing.Point(36, 100)
         Me.LblStaffSurname.Name = "LblStaffSurname"
-        Me.LblStaffSurname.Size = New System.Drawing.Size(87, 16)
+        Me.LblStaffSurname.Size = New System.Drawing.Size(71, 13)
         Me.LblStaffSurname.TabIndex = 1
         Me.LblStaffSurname.Text = "StaffSurname"
         '
         'LblStaffEmail
         '
         Me.LblStaffEmail.AutoSize = True
-        Me.LblStaffEmail.Location = New System.Drawing.Point(123, 171)
-        Me.LblStaffEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffEmail.Location = New System.Drawing.Point(36, 135)
         Me.LblStaffEmail.Name = "LblStaffEmail"
-        Me.LblStaffEmail.Size = New System.Drawing.Size(67, 16)
+        Me.LblStaffEmail.Size = New System.Drawing.Size(54, 13)
         Me.LblStaffEmail.TabIndex = 2
         Me.LblStaffEmail.Text = "StaffEmail"
         '
         'LblStaffPassword
         '
         Me.LblStaffPassword.AutoSize = True
-        Me.LblStaffPassword.Location = New System.Drawing.Point(123, 305)
-        Me.LblStaffPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffPassword.Location = New System.Drawing.Point(36, 244)
         Me.LblStaffPassword.Name = "LblStaffPassword"
-        Me.LblStaffPassword.Size = New System.Drawing.Size(93, 16)
+        Me.LblStaffPassword.Size = New System.Drawing.Size(75, 13)
         Me.LblStaffPassword.TabIndex = 3
         Me.LblStaffPassword.Text = "StaffPassword"
         '
         'LblStaffUsername
         '
         Me.LblStaffUsername.AutoSize = True
-        Me.LblStaffUsername.Location = New System.Drawing.Point(123, 261)
-        Me.LblStaffUsername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffUsername.Location = New System.Drawing.Point(36, 208)
         Me.LblStaffUsername.Name = "LblStaffUsername"
-        Me.LblStaffUsername.Size = New System.Drawing.Size(96, 16)
+        Me.LblStaffUsername.Size = New System.Drawing.Size(77, 13)
         Me.LblStaffUsername.TabIndex = 4
         Me.LblStaffUsername.Text = "StaffUsername"
         '
         'LblStaffFirstName
         '
         Me.LblStaffFirstName.AutoSize = True
-        Me.LblStaffFirstName.Location = New System.Drawing.Point(123, 79)
-        Me.LblStaffFirstName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffFirstName.Location = New System.Drawing.Point(36, 60)
         Me.LblStaffFirstName.Name = "LblStaffFirstName"
-        Me.LblStaffFirstName.Size = New System.Drawing.Size(95, 16)
+        Me.LblStaffFirstName.Size = New System.Drawing.Size(76, 13)
         Me.LblStaffFirstName.TabIndex = 9
         Me.LblStaffFirstName.Text = "StaffFirstName"
         '
         'LblAccessLevel
         '
         Me.LblAccessLevel.AutoSize = True
-        Me.LblAccessLevel.Location = New System.Drawing.Point(123, 352)
-        Me.LblAccessLevel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAccessLevel.Location = New System.Drawing.Point(36, 282)
         Me.LblAccessLevel.Name = "LblAccessLevel"
-        Me.LblAccessLevel.Size = New System.Drawing.Size(78, 16)
+        Me.LblAccessLevel.Size = New System.Drawing.Size(63, 13)
         Me.LblAccessLevel.TabIndex = 10
         Me.LblAccessLevel.Text = "AccesLevel"
         '
         'LblStaffTelephone
         '
         Me.LblStaffTelephone.AutoSize = True
-        Me.LblStaffTelephone.Location = New System.Drawing.Point(123, 217)
-        Me.LblStaffTelephone.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffTelephone.Location = New System.Drawing.Point(36, 172)
         Me.LblStaffTelephone.Name = "LblStaffTelephone"
-        Me.LblStaffTelephone.Size = New System.Drawing.Size(99, 16)
+        Me.LblStaffTelephone.Size = New System.Drawing.Size(80, 13)
         Me.LblStaffTelephone.TabIndex = 11
         Me.LblStaffTelephone.Text = "StaffTelephone"
         '
         'TbxStaffID
         '
-        Me.TbxStaffID.Location = New System.Drawing.Point(329, 23)
-        Me.TbxStaffID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffID.Location = New System.Drawing.Point(195, 19)
         Me.TbxStaffID.Name = "TbxStaffID"
-        Me.TbxStaffID.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffID.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffID.TabIndex = 14
         '
         'TbxStaffFirstName
         '
-        Me.TbxStaffFirstName.Location = New System.Drawing.Point(329, 75)
-        Me.TbxStaffFirstName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffFirstName.Location = New System.Drawing.Point(195, 61)
         Me.TbxStaffFirstName.Name = "TbxStaffFirstName"
-        Me.TbxStaffFirstName.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffFirstName.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffFirstName.TabIndex = 15
         '
         'TbxStaffTelephone
         '
-        Me.TbxStaffTelephone.Location = New System.Drawing.Point(329, 208)
-        Me.TbxStaffTelephone.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffTelephone.Location = New System.Drawing.Point(195, 169)
         Me.TbxStaffTelephone.Name = "TbxStaffTelephone"
-        Me.TbxStaffTelephone.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffTelephone.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffTelephone.TabIndex = 16
         '
         'TbxStaffSurname
         '
-        Me.TbxStaffSurname.Location = New System.Drawing.Point(329, 119)
-        Me.TbxStaffSurname.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffSurname.Location = New System.Drawing.Point(195, 97)
         Me.TbxStaffSurname.Name = "TbxStaffSurname"
-        Me.TbxStaffSurname.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffSurname.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffSurname.TabIndex = 17
         '
         'TbxStaffEmail
         '
-        Me.TbxStaffEmail.Location = New System.Drawing.Point(329, 162)
-        Me.TbxStaffEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffEmail.Location = New System.Drawing.Point(195, 132)
         Me.TbxStaffEmail.Name = "TbxStaffEmail"
-        Me.TbxStaffEmail.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffEmail.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffEmail.TabIndex = 18
         '
         'TbxAccessLevel
         '
-        Me.TbxAccessLevel.Location = New System.Drawing.Point(329, 343)
-        Me.TbxAccessLevel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxAccessLevel.Location = New System.Drawing.Point(195, 279)
         Me.TbxAccessLevel.Name = "TbxAccessLevel"
-        Me.TbxAccessLevel.Size = New System.Drawing.Size(347, 22)
+        Me.TbxAccessLevel.Size = New System.Drawing.Size(261, 20)
         Me.TbxAccessLevel.TabIndex = 19
         '
         'TbxStaffUsername
         '
-        Me.TbxStaffUsername.Location = New System.Drawing.Point(329, 252)
-        Me.TbxStaffUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffUsername.Location = New System.Drawing.Point(195, 205)
         Me.TbxStaffUsername.Name = "TbxStaffUsername"
-        Me.TbxStaffUsername.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffUsername.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffUsername.TabIndex = 20
         '
         'TbxStaffPassword
         '
-        Me.TbxStaffPassword.Location = New System.Drawing.Point(329, 297)
-        Me.TbxStaffPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbxStaffPassword.Location = New System.Drawing.Point(195, 241)
         Me.TbxStaffPassword.Name = "TbxStaffPassword"
-        Me.TbxStaffPassword.Size = New System.Drawing.Size(347, 22)
+        Me.TbxStaffPassword.Size = New System.Drawing.Size(261, 20)
         Me.TbxStaffPassword.TabIndex = 21
         '
         'BtnUpdateStaffDetails
         '
-        Me.BtnUpdateStaffDetails.Location = New System.Drawing.Point(485, 375)
-        Me.BtnUpdateStaffDetails.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnUpdateStaffDetails.Location = New System.Drawing.Point(353, 305)
         Me.BtnUpdateStaffDetails.Name = "BtnUpdateStaffDetails"
-        Me.BtnUpdateStaffDetails.Size = New System.Drawing.Size(192, 50)
+        Me.BtnUpdateStaffDetails.Size = New System.Drawing.Size(144, 41)
         Me.BtnUpdateStaffDetails.TabIndex = 73
         Me.BtnUpdateStaffDetails.Text = "Update Staff Details"
         Me.BtnUpdateStaffDetails.UseVisualStyleBackColor = True
         '
         'BtnAddStaffDetails
         '
-        Me.BtnAddStaffDetails.Location = New System.Drawing.Point(52, 375)
-        Me.BtnAddStaffDetails.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnAddStaffDetails.Location = New System.Drawing.Point(12, 305)
         Me.BtnAddStaffDetails.Name = "BtnAddStaffDetails"
-        Me.BtnAddStaffDetails.Size = New System.Drawing.Size(192, 50)
+        Me.BtnAddStaffDetails.Size = New System.Drawing.Size(144, 41)
         Me.BtnAddStaffDetails.TabIndex = 74
         Me.BtnAddStaffDetails.Text = "Add Staff Details"
         Me.BtnAddStaffDetails.UseVisualStyleBackColor = True
         '
         'BtnDeleteStaffDetails
         '
-        Me.BtnDeleteStaffDetails.Location = New System.Drawing.Point(265, 375)
-        Me.BtnDeleteStaffDetails.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnDeleteStaffDetails.Location = New System.Drawing.Point(185, 305)
         Me.BtnDeleteStaffDetails.Name = "BtnDeleteStaffDetails"
-        Me.BtnDeleteStaffDetails.Size = New System.Drawing.Size(192, 50)
+        Me.BtnDeleteStaffDetails.Size = New System.Drawing.Size(144, 41)
         Me.BtnDeleteStaffDetails.TabIndex = 75
         Me.BtnDeleteStaffDetails.Text = "Delete Staff Details"
         Me.BtnDeleteStaffDetails.UseVisualStyleBackColor = True
         '
         'BtnBackToMenu
         '
-        Me.BtnBackToMenu.Location = New System.Drawing.Point(711, 375)
-        Me.BtnBackToMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnBackToMenu.Location = New System.Drawing.Point(515, 305)
         Me.BtnBackToMenu.Name = "BtnBackToMenu"
-        Me.BtnBackToMenu.Size = New System.Drawing.Size(165, 50)
+        Me.BtnBackToMenu.Size = New System.Drawing.Size(124, 41)
         Me.BtnBackToMenu.TabIndex = 76
         Me.BtnBackToMenu.Text = "Back To Menu"
         Me.BtnBackToMenu.UseVisualStyleBackColor = True
         '
         'BtnLastStaffDetails
         '
-        Me.BtnLastStaffDetails.Location = New System.Drawing.Point(711, 318)
-        Me.BtnLastStaffDetails.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnLastStaffDetails.Location = New System.Drawing.Point(515, 258)
         Me.BtnLastStaffDetails.Name = "BtnLastStaffDetails"
-        Me.BtnLastStaffDetails.Size = New System.Drawing.Size(165, 50)
+        Me.BtnLastStaffDetails.Size = New System.Drawing.Size(124, 41)
         Me.BtnLastStaffDetails.TabIndex = 77
         Me.BtnLastStaffDetails.Text = "Last Staff Details"
         Me.BtnLastStaffDetails.UseVisualStyleBackColor = True
         '
         'BtnPreviousStaff
         '
-        Me.BtnPreviousStaff.Location = New System.Drawing.Point(711, 260)
-        Me.BtnPreviousStaff.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnPreviousStaff.Location = New System.Drawing.Point(515, 211)
         Me.BtnPreviousStaff.Name = "BtnPreviousStaff"
-        Me.BtnPreviousStaff.Size = New System.Drawing.Size(165, 50)
+        Me.BtnPreviousStaff.Size = New System.Drawing.Size(124, 41)
         Me.BtnPreviousStaff.TabIndex = 78
         Me.BtnPreviousStaff.Text = "Previous Staff"
         Me.BtnPreviousStaff.UseVisualStyleBackColor = True
         '
         'BtnNextStaff
         '
-        Me.BtnNextStaff.Location = New System.Drawing.Point(711, 202)
-        Me.BtnNextStaff.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnNextStaff.Location = New System.Drawing.Point(515, 164)
         Me.BtnNextStaff.Name = "BtnNextStaff"
-        Me.BtnNextStaff.Size = New System.Drawing.Size(165, 50)
+        Me.BtnNextStaff.Size = New System.Drawing.Size(124, 41)
         Me.BtnNextStaff.TabIndex = 79
         Me.BtnNextStaff.Text = "Next Staff"
         Me.BtnNextStaff.UseVisualStyleBackColor = True
         '
         'BtnFirstStaffDetails
         '
-        Me.BtnFirstStaffDetails.Location = New System.Drawing.Point(711, 143)
-        Me.BtnFirstStaffDetails.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnFirstStaffDetails.Location = New System.Drawing.Point(515, 116)
         Me.BtnFirstStaffDetails.Name = "BtnFirstStaffDetails"
-        Me.BtnFirstStaffDetails.Size = New System.Drawing.Size(165, 50)
+        Me.BtnFirstStaffDetails.Size = New System.Drawing.Size(124, 41)
         Me.BtnFirstStaffDetails.TabIndex = 80
         Me.BtnFirstStaffDetails.Text = "First Staff Details"
         Me.BtnFirstStaffDetails.UseVisualStyleBackColor = True
         '
         'BtnClearStaffDetails
         '
-        Me.BtnClearStaffDetails.Location = New System.Drawing.Point(711, 85)
-        Me.BtnClearStaffDetails.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnClearStaffDetails.Location = New System.Drawing.Point(515, 69)
         Me.BtnClearStaffDetails.Name = "BtnClearStaffDetails"
-        Me.BtnClearStaffDetails.Size = New System.Drawing.Size(165, 50)
+        Me.BtnClearStaffDetails.Size = New System.Drawing.Size(124, 41)
         Me.BtnClearStaffDetails.TabIndex = 81
         Me.BtnClearStaffDetails.Text = "Clear Staff Details"
         Me.BtnClearStaffDetails.UseVisualStyleBackColor = True
         '
         'BtnCancelProcess
         '
-        Me.BtnCancelProcess.Location = New System.Drawing.Point(711, 27)
-        Me.BtnCancelProcess.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCancelProcess.Location = New System.Drawing.Point(515, 22)
         Me.BtnCancelProcess.Name = "BtnCancelProcess"
-        Me.BtnCancelProcess.Size = New System.Drawing.Size(165, 50)
+        Me.BtnCancelProcess.Size = New System.Drawing.Size(124, 41)
         Me.BtnCancelProcess.TabIndex = 82
         Me.BtnCancelProcess.Text = "Cancel Process"
         Me.BtnCancelProcess.UseVisualStyleBackColor = True
@@ -306,10 +280,9 @@ Partial Class StaffAdd
         '
         Me.LblStaffIDError.AutoSize = True
         Me.LblStaffIDError.ForeColor = System.Drawing.Color.Red
-        Me.LblStaffIDError.Location = New System.Drawing.Point(325, 4)
-        Me.LblStaffIDError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffIDError.Location = New System.Drawing.Point(192, 3)
         Me.LblStaffIDError.Name = "LblStaffIDError"
-        Me.LblStaffIDError.Size = New System.Drawing.Size(75, 16)
+        Me.LblStaffIDError.Size = New System.Drawing.Size(62, 13)
         Me.LblStaffIDError.TabIndex = 83
         Me.LblStaffIDError.Text = "StaffIDError"
         '
@@ -317,10 +290,9 @@ Partial Class StaffAdd
         '
         Me.LblFirstnameError.AutoSize = True
         Me.LblFirstnameError.ForeColor = System.Drawing.Color.Red
-        Me.LblFirstnameError.Location = New System.Drawing.Point(325, 55)
-        Me.LblFirstnameError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblFirstnameError.Location = New System.Drawing.Point(192, 45)
         Me.LblFirstnameError.Name = "LblFirstnameError"
-        Me.LblFirstnameError.Size = New System.Drawing.Size(95, 16)
+        Me.LblFirstnameError.Size = New System.Drawing.Size(74, 13)
         Me.LblFirstnameError.TabIndex = 84
         Me.LblFirstnameError.Text = "FirstnameError"
         '
@@ -328,10 +300,9 @@ Partial Class StaffAdd
         '
         Me.LblSurnameError.AutoSize = True
         Me.LblSurnameError.ForeColor = System.Drawing.Color.Red
-        Me.LblSurnameError.Location = New System.Drawing.Point(325, 100)
-        Me.LblSurnameError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSurnameError.Location = New System.Drawing.Point(192, 81)
         Me.LblSurnameError.Name = "LblSurnameError"
-        Me.LblSurnameError.Size = New System.Drawing.Size(90, 16)
+        Me.LblSurnameError.Size = New System.Drawing.Size(71, 13)
         Me.LblSurnameError.TabIndex = 85
         Me.LblSurnameError.Text = "SurnameError"
         '
@@ -339,10 +310,9 @@ Partial Class StaffAdd
         '
         Me.LblStaffEmailError.AutoSize = True
         Me.LblStaffEmailError.ForeColor = System.Drawing.Color.Red
-        Me.LblStaffEmailError.Location = New System.Drawing.Point(325, 143)
-        Me.LblStaffEmailError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffEmailError.Location = New System.Drawing.Point(192, 116)
         Me.LblStaffEmailError.Name = "LblStaffEmailError"
-        Me.LblStaffEmailError.Size = New System.Drawing.Size(96, 16)
+        Me.LblStaffEmailError.Size = New System.Drawing.Size(76, 13)
         Me.LblStaffEmailError.TabIndex = 86
         Me.LblStaffEmailError.Text = "StaffEmailError"
         '
@@ -350,10 +320,9 @@ Partial Class StaffAdd
         '
         Me.LblTelephoneError.AutoSize = True
         Me.LblTelephoneError.ForeColor = System.Drawing.Color.Red
-        Me.LblTelephoneError.Location = New System.Drawing.Point(325, 191)
-        Me.LblTelephoneError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTelephoneError.Location = New System.Drawing.Point(192, 155)
         Me.LblTelephoneError.Name = "LblTelephoneError"
-        Me.LblTelephoneError.Size = New System.Drawing.Size(102, 16)
+        Me.LblTelephoneError.Size = New System.Drawing.Size(80, 13)
         Me.LblTelephoneError.TabIndex = 87
         Me.LblTelephoneError.Text = "TelephoneError"
         '
@@ -361,10 +330,9 @@ Partial Class StaffAdd
         '
         Me.LblStaffUsernameError.AutoSize = True
         Me.LblStaffUsernameError.ForeColor = System.Drawing.Color.Red
-        Me.LblStaffUsernameError.Location = New System.Drawing.Point(325, 236)
-        Me.LblStaffUsernameError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffUsernameError.Location = New System.Drawing.Point(192, 192)
         Me.LblStaffUsernameError.Name = "LblStaffUsernameError"
-        Me.LblStaffUsernameError.Size = New System.Drawing.Size(125, 16)
+        Me.LblStaffUsernameError.Size = New System.Drawing.Size(99, 13)
         Me.LblStaffUsernameError.TabIndex = 88
         Me.LblStaffUsernameError.Text = "StaffUsernameError"
         '
@@ -372,10 +340,9 @@ Partial Class StaffAdd
         '
         Me.LblStaffPasswordError.AutoSize = True
         Me.LblStaffPasswordError.ForeColor = System.Drawing.Color.Red
-        Me.LblStaffPasswordError.Location = New System.Drawing.Point(325, 277)
-        Me.LblStaffPasswordError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblStaffPasswordError.Location = New System.Drawing.Point(192, 225)
         Me.LblStaffPasswordError.Name = "LblStaffPasswordError"
-        Me.LblStaffPasswordError.Size = New System.Drawing.Size(122, 16)
+        Me.LblStaffPasswordError.Size = New System.Drawing.Size(97, 13)
         Me.LblStaffPasswordError.TabIndex = 89
         Me.LblStaffPasswordError.Text = "StaffPasswordError"
         '
@@ -383,19 +350,18 @@ Partial Class StaffAdd
         '
         Me.LblAccessLevelError.AutoSize = True
         Me.LblAccessLevelError.ForeColor = System.Drawing.Color.Red
-        Me.LblAccessLevelError.Location = New System.Drawing.Point(325, 324)
-        Me.LblAccessLevelError.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAccessLevelError.Location = New System.Drawing.Point(192, 263)
         Me.LblAccessLevelError.Name = "LblAccessLevelError"
-        Me.LblAccessLevelError.Size = New System.Drawing.Size(114, 16)
+        Me.LblAccessLevelError.Size = New System.Drawing.Size(90, 13)
         Me.LblAccessLevelError.TabIndex = 90
         Me.LblAccessLevelError.Text = "AccessLevelError"
         '
         'StaffAdd
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(892, 428)
+        Me.ClientSize = New System.Drawing.Size(669, 348)
         Me.Controls.Add(Me.LblAccessLevelError)
         Me.Controls.Add(Me.LblStaffPasswordError)
         Me.Controls.Add(Me.LblStaffUsernameError)
@@ -430,7 +396,6 @@ Partial Class StaffAdd
         Me.Controls.Add(Me.LblStaffEmail)
         Me.Controls.Add(Me.LblStaffSurname)
         Me.Controls.Add(Me.LblStaffID)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "StaffAdd"
         Me.Text = "StaffAdd"
         Me.ResumeLayout(False)

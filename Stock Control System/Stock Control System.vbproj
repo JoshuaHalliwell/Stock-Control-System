@@ -106,7 +106,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -156,78 +156,78 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddSuppliers.Designer.vb">
+    <Compile Include="SuppliersForms\AddSuppliers.Designer.vb">
       <DependentUpon>AddSuppliers.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddSuppliers.vb">
+    <Compile Include="SuppliersForms\AddSuppliers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerData.Designer.vb">
+    <Compile Include="CustomerForms\CustomerData.Designer.vb">
       <DependentUpon>CustomerData.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerData.vb">
+    <Compile Include="CustomerForms\CustomerData.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers.Designer.vb">
+    <Compile Include="CustomerForms\Customers.Designer.vb">
       <DependentUpon>Customers.vb</DependentUpon>
     </Compile>
-    <Compile Include="Customers.vb">
+    <Compile Include="CustomerForms\Customers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GobalModule\ExportToPDF.vb" />
     <Compile Include="GobalModule\ShareByEmail.vb" />
-    <Compile Include="ProductSales.Designer.vb">
+    <Compile Include="ProductSalesFroms\ProductSales.Designer.vb">
       <DependentUpon>ProductSales.vb</DependentUpon>
     </Compile>
-    <Compile Include="ProductSales.vb">
+    <Compile Include="ProductSalesFroms\ProductSales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportDatabaseTable.Designer.vb">
+    <Compile Include="ReportForms\ReportDatabaseTable.Designer.vb">
       <DependentUpon>ReportDatabaseTable.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReportDatabaseTable.vb">
+    <Compile Include="ReportForms\ReportDatabaseTable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportGraph.Designer.vb">
+    <Compile Include="ReportForms\ReportGraph.Designer.vb">
       <DependentUpon>ReportGraph.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReportGraph.vb">
+    <Compile Include="ReportForms\ReportGraph.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeForm.Designer.vb">
+    <Compile Include="MainMenu\HomeForm.Designer.vb">
       <DependentUpon>HomeForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="HomeForm.vb">
+    <Compile Include="MainMenu\HomeForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportMenu.Designer.vb">
+    <Compile Include="ReportForms\ReportMenu.Designer.vb">
       <DependentUpon>ReportMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReportMenu.vb">
+    <Compile Include="ReportForms\ReportMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesView.Designer.vb">
+    <Compile Include="ProductSalesFroms\SalesView.Designer.vb">
       <DependentUpon>SalesView.vb</DependentUpon>
     </Compile>
-    <Compile Include="SalesView.vb">
+    <Compile Include="ProductSalesFroms\SalesView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffAdd.Designer.vb">
+    <Compile Include="StaffForms\StaffAdd.Designer.vb">
       <DependentUpon>StaffAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="StaffAdd.vb">
+    <Compile Include="StaffForms\StaffAdd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock.Designer.vb">
+    <Compile Include="StockForms\Stock.Designer.vb">
       <DependentUpon>Stock.vb</DependentUpon>
     </Compile>
-    <Compile Include="Stock.vb">
+    <Compile Include="StockForms\Stock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockAdd.Designer.vb">
+    <Compile Include="StockForms\StockAdd.Designer.vb">
       <DependentUpon>StockAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="StockAdd.vb">
+    <Compile Include="StockForms\StockAdd.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GobalModule\ChildForm.vb" />
@@ -286,66 +286,51 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockDataBaseDataSetSales.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StockDataBaseStockViewing.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockDataBaseStockViewing.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StockDataBase_copyDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockDataBase_copyDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StockDataBase_copyDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockDataBase_copyDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SuppliersOrders.Designer.vb">
+    <Compile Include="SuppliersForms\SuppliersOrders.Designer.vb">
       <DependentUpon>SuppliersOrders.vb</DependentUpon>
     </Compile>
-    <Compile Include="SuppliersOrders.vb">
+    <Compile Include="SuppliersForms\SuppliersOrders.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddSuppliers.resx">
+    <EmbeddedResource Include="SuppliersForms\AddSuppliers.resx">
       <DependentUpon>AddSuppliers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerData.resx">
+    <EmbeddedResource Include="CustomerForms\CustomerData.resx">
       <DependentUpon>CustomerData.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers.resx">
+    <EmbeddedResource Include="CustomerForms\Customers.resx">
       <DependentUpon>Customers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductSales.resx">
+    <EmbeddedResource Include="ProductSalesFroms\ProductSales.resx">
       <DependentUpon>ProductSales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportDatabaseTable.resx">
+    <EmbeddedResource Include="ReportForms\ReportDatabaseTable.resx">
       <DependentUpon>ReportDatabaseTable.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportGraph.resx">
+    <EmbeddedResource Include="ReportForms\ReportGraph.resx">
       <DependentUpon>ReportGraph.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeForm.resx">
+    <EmbeddedResource Include="MainMenu\HomeForm.resx">
       <DependentUpon>HomeForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms\ForgottenPassword.resx">
       <DependentUpon>ForgottenPassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportMenu.resx">
+    <EmbeddedResource Include="ReportForms\ReportMenu.resx">
       <DependentUpon>ReportMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalesView.resx">
+    <EmbeddedResource Include="ProductSalesFroms\SalesView.resx">
       <DependentUpon>SalesView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffAdd.resx">
+    <EmbeddedResource Include="StaffForms\StaffAdd.resx">
       <DependentUpon>StaffAdd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock.resx">
+    <EmbeddedResource Include="StockForms\Stock.resx">
       <DependentUpon>Stock.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockAdd.resx">
+    <EmbeddedResource Include="StockForms\StockAdd.resx">
       <DependentUpon>StockAdd.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms\Form1.resx">
@@ -360,7 +345,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SuppliersOrders.resx">
+    <EmbeddedResource Include="SuppliersForms\SuppliersOrders.resx">
       <DependentUpon>SuppliersOrders.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -408,39 +393,6 @@
     </None>
     <None Include="StockDataBaseDataSetSales.xss">
       <DependentUpon>StockDataBaseDataSetSales.xsd</DependentUpon>
-    </None>
-    <None Include="StockDataBaseStockViewing.xsc">
-      <DependentUpon>StockDataBaseStockViewing.xsd</DependentUpon>
-    </None>
-    <None Include="StockDataBaseStockViewing.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockDataBaseStockViewing.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockDataBaseStockViewing.xss">
-      <DependentUpon>StockDataBaseStockViewing.xsd</DependentUpon>
-    </None>
-    <None Include="StockDataBase_copyDataSet.xsc">
-      <DependentUpon>StockDataBase_copyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StockDataBase_copyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockDataBase_copyDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockDataBase_copyDataSet.xss">
-      <DependentUpon>StockDataBase_copyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StockDataBase_copyDataSet1.xsc">
-      <DependentUpon>StockDataBase_copyDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="StockDataBase_copyDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StockDataBase_copyDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StockDataBase_copyDataSet1.xss">
-      <DependentUpon>StockDataBase_copyDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
