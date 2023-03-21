@@ -19,7 +19,7 @@ Public Class SuppliersOrders
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles BtnAddOrder.Click
-
+        OpenChildForm(SuppliersData)
     End Sub
 
     Private Sub SuppliersOrders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -109,5 +109,14 @@ Public Class SuppliersOrders
             sql = "SELECT * FROM TblSuppliers WHERE SupplierActivity = 0"
             SandSconnection(DGVSuppliers, sql)
         End If
+    End Sub
+
+    Private Sub BtnDeleteOrder_Click(sender As Object, e As EventArgs) Handles BtnDeleteOrder.Click
+        OpenChildForm(SuppliersData)
+
+    End Sub
+
+    Private Sub BtnUpdateOrders_Click(sender As Object, e As EventArgs) Handles BtnUpdateOrders.Click
+        OpenChildForm(SuppliersData)
     End Sub
 End Class

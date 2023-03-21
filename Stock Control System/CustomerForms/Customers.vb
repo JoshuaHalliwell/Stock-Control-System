@@ -99,15 +99,12 @@
 
     Private Sub cbproductchange_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCustomerID.SelectedIndexChanged
         If cbCustomerID.SelectedItem = "Ascending Order" Then
-            sql = "SELECT * FROM TblCustomer WHERE CustomerID ORDERBY ASC "
+            sql = "SELECT TblCustomer.CustomerID, TblCustomer.CustomerFirstname, TblCustomer.CustomerSurname, TblCustomer.CustomerEmail, TblCustomer.CustomerPhoneNumber, TblCustomer.CustomerPostcode From TblCustomer Order By TblCustomer.CustomerID;"
             SandSconnection(DGVCustomers, sql)                                                               'Sends the data grid to the connection opration 
         ElseIf cbCustomerID.SelectedItem = "Desending Order" Then
-            sql = "SELECT * FROM TblCustomer WHERE CustomerID ORDERBY DES "
+            sql = "SELECT TblCustomer.CustomerID, TblCustomer.CustomerFirstname, TblCustomer.CustomerSurname, TblCustomer.CustomerEmail, TblCustomer.CustomerPhoneNumber, TblCustomer.CustomerPostcode FROM TblCustomer ORDER BY TblCustomer.CustomerID DESC;"
             SandSconnection(DGVCustomers, sql)
         End If
     End Sub
 
-    Private Sub GrpSort_Enter(sender As Object, e As EventArgs) Handles GrpSort.Enter
-
-    End Sub
 End Class

@@ -65,9 +65,9 @@ Partial Class StaffView
         Me.Llbchange.Location = New System.Drawing.Point(32, 46)
         Me.Llbchange.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Llbchange.Name = "Llbchange"
-        Me.Llbchange.Size = New System.Drawing.Size(73, 24)
+        Me.Llbchange.Size = New System.Drawing.Size(75, 24)
         Me.Llbchange.TabIndex = 59
-        Me.Llbchange.Text = "Label1"
+        Me.Llbchange.Text = "StaffID"
         '
         'GrpSort
         '
