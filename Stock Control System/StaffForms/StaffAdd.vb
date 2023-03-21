@@ -34,7 +34,7 @@
         TbxStaffID.Text = ds.Tables("TblStaff").Rows(curRow).Item(0)
         TbxStaffFirstName.Text = ds.Tables("TblStaff").Rows(curRow).Item(1)
         TbxStaffSurname.Text = ds.Tables("TblStaff").Rows(curRow).Item(2)
-        TbxStaffEmail.Text = ds.Tables("TblStaf").Rows(curRow).Item(3)
+        TbxStaffEmail.Text = ds.Tables("TblStaff").Rows(curRow).Item(3)
         TbxStaffTelephone.Text = ds.Tables("TblStaff").Rows(curRow).Item(4)
         TbxStaffUsername.Text = ds.Tables("TblStaff").Rows(curRow).Item(5)
         TbxStaffPassword.Text = ds.Tables("TblStaff").Rows(curRow).Item(6)
