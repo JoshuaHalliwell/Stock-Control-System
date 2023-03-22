@@ -1,21 +1,9 @@
 ﻿Imports iText.Kernel.Pdf.Colorspace.PdfShading
 
 Public Class SuppliersOrders
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnSortSupplierOrders.Click
         GrpSearch.Hide()
         GrpSort.Show()
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) 
-
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles BtnAddOrder.Click
@@ -28,6 +16,7 @@ Public Class SuppliersOrders
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblSuppliers") 'Fill whatever is in the data adapter to the DataSet'
         DGVSuppliers.DataSource = ds
+        DGVSuppliers.DataMember = "TblSuppliers" 'Specify the table to be displayed in the DataGridView
         DGVSuppliers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
 

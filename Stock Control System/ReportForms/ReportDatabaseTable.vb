@@ -35,6 +35,7 @@ Public Class ReportDatabaseTable
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, Tablename) 'Fill whatever is in the data adapter to the DataSet'
         DGVDataTable.DataSource = ds
+        DGVDataTable.DataMember = Tablename
         con.Close()
     End Sub
 

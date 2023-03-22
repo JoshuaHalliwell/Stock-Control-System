@@ -7,6 +7,7 @@ Public Class Stock
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "TblStocks") 'Fill whatever is in the data adapter to the DataSet'
         DGVStock.DataSource = ds
+        DGVStock.DataMember = "TblStocks" 'Specify the table to be displayed in the DataGridView
         DGVStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
 

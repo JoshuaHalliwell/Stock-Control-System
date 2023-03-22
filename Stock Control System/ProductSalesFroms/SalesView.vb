@@ -9,6 +9,7 @@
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, "QrySales") 'Fill whatever is in the data adapter to the DataSet'
         DGVSales.DataSource = ds
+        DGVSales.DataMember = "QrySales"
         DGVSales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)
 
