@@ -1,6 +1,6 @@
 ﻿Imports iText.Kernel.Pdf.Colorspace.PdfShading
 
-Public Class SuppliersOrders
+Public Class Suppliers
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnSortSupplierOrders.Click
         GrpSearch.Hide()
         GrpSort.Show()

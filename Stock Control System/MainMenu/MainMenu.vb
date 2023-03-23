@@ -117,7 +117,7 @@ Public Class MainMenu
 
     Private Sub BtnSuppliersOrders_Click(sender As Object, e As EventArgs) Handles BtnSuppliersOrders.Click
         ActivateButton(sender, ColourClass.whitecolour)                    'simple opening the form in the child form loadout  by the active button
-        OpenChildForm(New SuppliersOrders)
+        OpenChildForm(New Suppliers)
         LblFormName.Text = "Suppliers Order Page"
     End Sub
 

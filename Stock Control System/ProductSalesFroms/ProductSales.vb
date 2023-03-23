@@ -30,11 +30,11 @@
     End Sub
 
     Private Sub NavigateRecords()
-        TxbSaleID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(0)            'goes throght the table in the database to pick out all the data in the set current row
-        TxbSaleTime.Text = ds.Tables("TblQrySales").Rows(curRow).Item(1)
-        TxbSaleDay.Text = ds.Tables("TblQrySales").Rows(curRow).Item(2)
-        TxbStaffID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(3)
-        TxbCustomerID.Text = ds.Tables("TblQrySales").Rows(curRow).Item(4)
+        TxbSaleID.Text = ds.Tables("QrySales").Rows(curRow).Item(0)            'goes throght the table in the database to pick out all the data in the set current row
+        TxbSaleTime.Text = ds.Tables("QrySales").Rows(curRow).Item(1)
+        TxbSaleDay.Text = ds.Tables("QrySales").Rows(curRow).Item(2)
+        TxbStaffID.Text = ds.Tables("QrySales").Rows(curRow).Item(3)
+        TxbCustomerID.Text = ds.Tables("QrySales").Rows(curRow).Item(4)
     End Sub
 
     Private Sub PresenceCheck()

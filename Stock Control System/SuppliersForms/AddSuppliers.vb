@@ -182,7 +182,7 @@
 
             dsNewRow = ds.Tables("TblSuppliers").NewRow()
 
-            dsNewRow.Item("SuppliersID") = TxbSuppliersID.Text
+            dsNewRow.Item("SupplierID") = TxbSuppliersID.Text
             dsNewRow.Item("SuppliersName") = TxbSuppliersName.Text
             dsNewRow.Item("SuppliersEmail") = TxbSuppliersEmail.Text
             dsNewRow.Item("SuppliersAddress") = TxbSuppliersAddress.Text
@@ -196,7 +196,7 @@
             Try
                 da.Update(ds, "TblSuppliers") 'Updates the database with the new row
             Catch ex As Exception
-                MsgBox("This set of data is already in the database therefor can not be added")
+                MsgBox(ex)
                 Exit Sub
             End Try
             MsgBox("New Supplier has been added to the Database") 'display a message box with the following message 
