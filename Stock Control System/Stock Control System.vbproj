@@ -157,10 +157,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GobalModule\SalesDetail.vb" />
-    <Compile Include="ListProductOrders.Designer.vb">
+    <Compile Include="ProductSalesFroms\ListProductOrders.Designer.vb">
       <DependentUpon>ListProductOrders.vb</DependentUpon>
     </Compile>
-    <Compile Include="ListProductOrders.vb">
+    <Compile Include="ProductSalesFroms\ListProductOrders.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StaffForms\StaffView.Designer.vb">
@@ -307,7 +307,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ListProductOrders.resx">
+    <EmbeddedResource Include="ProductSalesFroms\ListProductOrders.resx">
       <DependentUpon>ListProductOrders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffForms\StaffView.resx">

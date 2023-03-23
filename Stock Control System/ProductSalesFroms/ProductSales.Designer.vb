@@ -199,9 +199,9 @@ Partial Class ProductSales
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(213, 286)
+        Me.btndelete.Location = New System.Drawing.Point(263, 295)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(144, 41)
+        Me.btndelete.Size = New System.Drawing.Size(103, 41)
         Me.btndelete.TabIndex = 127
         Me.btndelete.Text = "Delete Stock Detalis"
         Me.btndelete.UseVisualStyleBackColor = True
@@ -217,7 +217,7 @@ Partial Class ProductSales
         '
         'btnadd
         '
-        Me.btnadd.Location = New System.Drawing.Point(98, 286)
+        Me.btnadd.Location = New System.Drawing.Point(138, 295)
         Me.btnadd.Name = "btnadd"
         Me.btnadd.Size = New System.Drawing.Size(103, 41)
         Me.btnadd.TabIndex = 125
@@ -235,9 +235,9 @@ Partial Class ProductSales
         '
         'btnupdate
         '
-        Me.btnupdate.Location = New System.Drawing.Point(363, 286)
+        Me.btnupdate.Location = New System.Drawing.Point(391, 295)
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(144, 41)
+        Me.btnupdate.Size = New System.Drawing.Size(103, 41)
         Me.btnupdate.TabIndex = 123
         Me.btnupdate.Text = "Update Stock Details"
         Me.btnupdate.UseVisualStyleBackColor = True
@@ -279,7 +279,7 @@ Partial Class ProductSales
         '
         'BtnMakeOrder
         '
-        Me.BtnMakeOrder.Location = New System.Drawing.Point(-3, 286)
+        Me.BtnMakeOrder.Location = New System.Drawing.Point(12, 295)
         Me.BtnMakeOrder.Name = "BtnMakeOrder"
         Me.BtnMakeOrder.Size = New System.Drawing.Size(95, 41)
         Me.BtnMakeOrder.TabIndex = 147

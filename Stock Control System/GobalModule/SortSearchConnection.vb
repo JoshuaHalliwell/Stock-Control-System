@@ -9,6 +9,8 @@ Module SortSearchConnection
             DataGridName.DataSource = ds
             DataGridName.DataMember = Tablename
         Catch ex As Exception
+            MsgBox(ex)
+
         End Try
         con.Close()
     End Sub
