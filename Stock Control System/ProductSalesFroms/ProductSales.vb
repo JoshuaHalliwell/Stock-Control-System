@@ -180,7 +180,14 @@
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
-        OpenChildForm(New Customers)
+        OpenChildForm(New SalesView)
+
+    End Sub
+
+    Private Sub BtnMakeOrder_Click(sender As Object, e As EventArgs) Handles BtnMakeOrder.Click
+        SaleCustomerID = TxbCustomerID.Text
+        SaleStaffID = TxbStaffID.Text
+        OpenChildForm(New ListProductOrders)
 
     End Sub
 End Class
