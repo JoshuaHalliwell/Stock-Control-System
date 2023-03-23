@@ -47,6 +47,7 @@ Partial Class ProductSales
         Me.btncancel = New System.Windows.Forms.Button()
         Me.TxbSaleID = New System.Windows.Forms.TextBox()
         Me.LblSaleID = New System.Windows.Forms.Label()
+        Me.BtnMakeOrder = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BtnBack
@@ -198,7 +199,7 @@ Partial Class ProductSales
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(174, 286)
+        Me.btndelete.Location = New System.Drawing.Point(213, 286)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(144, 41)
         Me.btndelete.TabIndex = 127
@@ -216,9 +217,9 @@ Partial Class ProductSales
         '
         'btnadd
         '
-        Me.btnadd.Location = New System.Drawing.Point(12, 286)
+        Me.btnadd.Location = New System.Drawing.Point(98, 286)
         Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(144, 41)
+        Me.btnadd.Size = New System.Drawing.Size(103, 41)
         Me.btnadd.TabIndex = 125
         Me.btnadd.Text = "Add Stock Details "
         Me.btnadd.UseVisualStyleBackColor = True
@@ -234,7 +235,7 @@ Partial Class ProductSales
         '
         'btnupdate
         '
-        Me.btnupdate.Location = New System.Drawing.Point(337, 286)
+        Me.btnupdate.Location = New System.Drawing.Point(363, 286)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(144, 41)
         Me.btnupdate.TabIndex = 123
@@ -276,12 +277,22 @@ Partial Class ProductSales
         Me.LblSaleID.TabIndex = 119
         Me.LblSaleID.Text = "SaleID"
         '
+        'BtnMakeOrder
+        '
+        Me.BtnMakeOrder.Location = New System.Drawing.Point(-3, 286)
+        Me.BtnMakeOrder.Name = "BtnMakeOrder"
+        Me.BtnMakeOrder.Size = New System.Drawing.Size(95, 41)
+        Me.BtnMakeOrder.TabIndex = 147
+        Me.BtnMakeOrder.Text = "Make order"
+        Me.BtnMakeOrder.UseVisualStyleBackColor = True
+        '
         'ProductSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(669, 348)
+        Me.Controls.Add(Me.BtnMakeOrder)
         Me.Controls.Add(Me.BtnBack)
         Me.Controls.Add(Me.LblCustomerID)
         Me.Controls.Add(Me.LblStaffID)
@@ -339,4 +350,5 @@ Partial Class ProductSales
     Friend WithEvents btncancel As Button
     Friend WithEvents TxbSaleID As TextBox
     Friend WithEvents LblSaleID As Label
+    Friend WithEvents BtnMakeOrder As Button
 End Class
