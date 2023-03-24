@@ -45,6 +45,13 @@ Public Class ListProductOrders
         CbxProductName.DataSource = ds.Tables("TblStocks")
         CbxProductName.DisplayMember = "ProductName"
         CbxProductName.ValueMember = "StockID"
+
+        con.Open()
+        sql = "SELECT StaffID FROM TblStaff WHERE StaffUsername = '" & MainMenu.LblUsername.Text & "'"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "TblStaff") 'Fill whatever is in the data adapter to the DataSet'
+        con.Close()
+        'LblStaffID.Text = ds.Tables("
     End Sub
     Private Function GetLastSalesID() As String
         ' This function retrieves the last sales ID from the table and returns it as a string
@@ -68,6 +75,7 @@ Public Class ListProductOrders
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
         If Regex.IsMatch(TbxSalesID.Text, regexPattern) Then
             ' Input matches the format "SOK001"
+
         Else
             ' Input does not match the format "SOK001"
         End If

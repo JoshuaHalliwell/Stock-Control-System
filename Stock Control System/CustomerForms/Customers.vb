@@ -52,12 +52,17 @@
     Private Sub txbID_TextChanged(sender As Object, e As EventArgs) Handles txbID.TextChanged
         con.Open()
         sql = "SELECT * FROM TblCustomer WHERE CustomerID LIKE '%" & txbID.Text & "%'"             ' Sql checks to find a simular result in the database  
+        Dim Results As New DataTable                                                                                                                                                                                                                                                                                                                                                        ' Declare data table
+        ' Declare and populate varaible
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-        da.Fill(ds, Tablename) 'Fill whatever is in the data adapter to the DataSet'
-        DGVCustomers.DataSource = ds
-        DGVCustomers.DataMember = Tablename
-
+        da.Fill(Results) 'Fill whatever is in the data adapter to the DataSet'
+        DGVCustomers.DataSource = Results                                                                                                                                                                                                                                                                                                                                                      ' Populate data grid using data table
         con.Close() 'Sends the data grid to the connection opration 
+        'da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        'da.Fill(ds, Tablename) 'Fill whatever is in the data adapter to the DataSet'
+        'DGVCustomers.DataSource = ds
+        'DGVCustomers.DataMember = Tablename
+
     End Sub
 
     Private Sub BtnSearchCustomer_Click(sender As Object, e As EventArgs) Handles BtnSearchCustomer.Click
@@ -93,11 +98,17 @@
         Try
 
             con.Open()
-            sql = "SELECT * FROM TblCustomer WHERE CustomerFirstname LIKE '%" & txbname.Text & "%' OR WHERE CustomerSurname LIKE '%" & txbname.Text & "%' "            ' Sql checks to find a simular result in the database  
+            sql = "SELECT * FROM TblCustomer WHERE (((TblCustomer.CustomerFirstname) LIKE'%" & txbname.Text & "%'))"            ' Sql checks to find a simular result in the database  
+            Dim Results As New DataTable                                                                                                                                                                                                                                                                                                                                                        ' Declare data table
+            ' Declare and populate varaible
             da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-            da.Fill(ds, Tablename) 'Fill whatever is in the data adapter to the DataSet'
-            DGVCustomers.DataSource = ds
-            DGVCustomers.DataMember = Tablename
+            da.Fill(Results) 'Fill whatever is in the data adapter to the DataSet'
+            DGVCustomers.DataSource = Results                                                                                                                                                                                                                                                                                                                                                      ' Populate data grid using data table
+            con.Close() 'Sends the data grid to the connection opration 
+            'da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+            'da.Fill(ds, Tablename) 'Fill whatever is in the data adapter to the DataSet'
+            'DGVCustomers.DataSource = ds
+            'DGVCustomers.DataMember = Tablename
         Catch ex As Exception
             MsgBox(ex)
 
@@ -107,7 +118,7 @@
 
     Private Sub txbEmail_TextChanged(sender As Object, e As EventArgs) Handles txbEmail.TextChanged
         con.Open()
-        sql = "SELECT * FROM TblCustomer WHERE CustomerEmail LIKE '%" & txbEmail.Text & "%'"             ' Sql checks to find a simular result in the database  
+        sql = "Select * FROM TblCustomer WHERE CustomerEmail Like '%" & txbEmail.Text & "%'"             ' Sql checks to find a simular result in the database  
         SandSconnection(DGVCustomers, sql)                                                               'Sends the data grid to the connection opration 
     End Sub
 
