@@ -118,11 +118,15 @@ Public Class Stock
     End Sub
 
     Private Sub BtnSortByDisplayStock_Click(sender As Object, e As EventArgs) Handles BtnSortByDisplayStock.Click
+        GrpSort.Show()
+        GrpSearch.Hide()
         sql = "SELECT ProductName QuantityOfDisplayStock FROM TblStocks"
         SortAndSearchConnection()
     End Sub
 
     Private Sub BtnSortByStorageStock_Click(sender As Object, e As EventArgs) Handles BtnSortByStorageStock.Click
+        GrpSort.Show()
+        GrpSearch.Hide()
         sql = "SELECT ProductName QuantityOfStorageStock FROM TblStocks"
         SortAndSearchConnection()
 
