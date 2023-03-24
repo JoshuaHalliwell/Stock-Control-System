@@ -149,7 +149,31 @@ Public Class ListProductOrders
             MessageBox.Show("Please select an item to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+    Private Sub SalesLine()
+        con.Open()
+        sql = "SELECT * FROM TblSalesLine"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "TblSalesLine") 'Fill whatever is in the data adapter to the DataSet'
+        cb = New OleDb.OleDbCommandBuilder(da)
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+        Dim dsNewRow As DataRow 'declares variable
+        'For count = 0 To NewItemCount - 1
 
+        '    dsNewRow = ds.Tables("TblCustomer").NewRow()
+
+        '    dsNewRow.Item("CustomerID") = TxbCustomerID.Text
+        '    dsNewRow.Item("CustomerFirstname") = TxbFirstname.Text
+        '    dsNewRow.Item("CustomerSurname") = TxbSurname.Text
+        '    dsNewRow.Item("CustomerEmail") = TxbEmail.Text
+        '    dsNewRow.Item("CustomerPhoneNumber") = TxbMobileNumber.Text
+        '    dsNewRow.Item("CustomerPostcode") = TxbPostcode.Text
+
+        '    ds.Tables("TblCustomer").Rows.Add(dsNewRow)
+
+        '    cb.QuotePrefix = "["
+        '    cb.QuoteSuffix = "]"
+        'Next
+    End Sub
     Private Sub LbxOrder_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LbxOrder.SelectedIndexChanged
 
     End Sub

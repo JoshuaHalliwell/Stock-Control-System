@@ -4,6 +4,7 @@ Public Class Suppliers
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnSortSupplierOrders.Click
         GrpSearch.Hide()
         GrpSort.Show()
+        cbSupplierActivity.Show()
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles BtnAddOrder.Click

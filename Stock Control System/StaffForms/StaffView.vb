@@ -19,6 +19,7 @@
     Private Sub BtnSortStaff_Click(sender As Object, e As EventArgs) Handles BtnSortStaff.Click
         GrpSearch.Hide()
         GrpSort.Show()
+        cbSaffsales.Show()
     End Sub
 
     Private Sub StaffView_Load(sender As Object, e As EventArgs) Handles MyBase.Load

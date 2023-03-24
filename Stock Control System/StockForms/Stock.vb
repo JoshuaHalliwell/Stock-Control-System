@@ -58,6 +58,7 @@ Public Class Stock
     Private Sub BtnSortByCatgory_Click(sender As Object, e As EventArgs) Handles BtnSortByCatgory.Click
         GrpSort.Show()
         GrpSearch.Hide()
+        CbStockCategory.Show()
 
     End Sub
 

@@ -185,16 +185,16 @@ Partial Class ProductSales
         Me.btnlastStock.Name = "btnlastStock"
         Me.btnlastStock.Size = New System.Drawing.Size(144, 41)
         Me.btnlastStock.TabIndex = 129
-        Me.btnlastStock.Text = "Last Stock Detalis"
+        Me.btnlastStock.Text = "Last Sale Detalis"
         Me.btnlastStock.UseVisualStyleBackColor = True
         '
         'btnfirstStock
         '
-        Me.btnfirstStock.Location = New System.Drawing.Point(513, 107)
+        Me.btnfirstStock.Location = New System.Drawing.Point(513, 104)
         Me.btnfirstStock.Name = "btnfirstStock"
         Me.btnfirstStock.Size = New System.Drawing.Size(144, 41)
         Me.btnfirstStock.TabIndex = 128
-        Me.btnfirstStock.Text = "First Stock Details"
+        Me.btnfirstStock.Text = "First Sale Details"
         Me.btnfirstStock.UseVisualStyleBackColor = True
         '
         'btndelete
@@ -203,7 +203,7 @@ Partial Class ProductSales
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(103, 41)
         Me.btndelete.TabIndex = 127
-        Me.btndelete.Text = "Delete Stock Detalis"
+        Me.btndelete.Text = "Delete Sale Detalis"
         Me.btndelete.UseVisualStyleBackColor = True
         '
         'btnprev
@@ -212,7 +212,7 @@ Partial Class ProductSales
         Me.btnprev.Name = "btnprev"
         Me.btnprev.Size = New System.Drawing.Size(144, 41)
         Me.btnprev.TabIndex = 126
-        Me.btnprev.Text = "Prev Stock"
+        Me.btnprev.Text = "Prev Sale"
         Me.btnprev.UseVisualStyleBackColor = True
         '
         'btnadd
@@ -221,7 +221,7 @@ Partial Class ProductSales
         Me.btnadd.Name = "btnadd"
         Me.btnadd.Size = New System.Drawing.Size(103, 41)
         Me.btnadd.TabIndex = 125
-        Me.btnadd.Text = "Add Stock Details "
+        Me.btnadd.Text = "Add Sale Details "
         Me.btnadd.UseVisualStyleBackColor = True
         '
         'btnnext
@@ -230,7 +230,7 @@ Partial Class ProductSales
         Me.btnnext.Name = "btnnext"
         Me.btnnext.Size = New System.Drawing.Size(144, 41)
         Me.btnnext.TabIndex = 124
-        Me.btnnext.Text = "Next Stock"
+        Me.btnnext.Text = "Next Sale"
         Me.btnnext.UseVisualStyleBackColor = True
         '
         'btnupdate
@@ -239,7 +239,7 @@ Partial Class ProductSales
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(103, 41)
         Me.btnupdate.TabIndex = 123
-        Me.btnupdate.Text = "Update Stock Details"
+        Me.btnupdate.Text = "Update Sale Details"
         Me.btnupdate.UseVisualStyleBackColor = True
         '
         'btnclear
@@ -248,7 +248,7 @@ Partial Class ProductSales
         Me.btnclear.Name = "btnclear"
         Me.btnclear.Size = New System.Drawing.Size(144, 41)
         Me.btnclear.TabIndex = 122
-        Me.btnclear.Text = "Clear Stock Details"
+        Me.btnclear.Text = "Clear Sale Details"
         Me.btnclear.UseVisualStyleBackColor = True
         '
         'btncancel

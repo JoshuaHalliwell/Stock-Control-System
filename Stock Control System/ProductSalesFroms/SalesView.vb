@@ -44,15 +44,7 @@
         SandSconnection(DGVSales, sql)
     End Sub
 
-    Private Sub BtnSearchSalesLine_Click(sender As Object, e As EventArgs) Handles BtnSearchSalesLine.Click
-        GrpSearch.Show()
-        GrpSort.Hide()
-    End Sub
 
-    Private Sub BtnSortSalesLine_Click(sender As Object, e As EventArgs) Handles BtnSearchSalesLine.Click
-        GrpSearch.Hide()
-        GrpSort.Show()
-    End Sub
 
     Private Sub radID_CheckedChanged(sender As Object, e As EventArgs) Handles radID.CheckedChanged
         If radID.Checked = True Then                                                                                                                                                                                                                                                                                                                                                        ' Selection to determine whether to disable field
@@ -93,5 +85,20 @@
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         OpenChildForm(New ProductSales)
+    End Sub
+
+    Private Sub BtnSortCustomers_Click(sender As Object, e As EventArgs) Handles BtnSortCustomers.Click
+        GrpSort.Show()
+        cbproductchange.Show()
+    End Sub
+
+    Private Sub cbproductchange_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbproductchange.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub BtnSearchSalesLine_Click(sender As Object, e As EventArgs) Handles BtnSearchSalesLine.Click
+        GrpSearch.Show()
+        GrpSort.Hide()
+
     End Sub
 End Class

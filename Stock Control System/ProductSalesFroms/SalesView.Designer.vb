@@ -45,40 +45,36 @@ Partial Class SalesView
         '
         'BtnSortCustomers
         '
-        Me.BtnSortCustomers.Location = New System.Drawing.Point(-1, 356)
-        Me.BtnSortCustomers.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSortCustomers.Location = New System.Drawing.Point(-1, 289)
         Me.BtnSortCustomers.Name = "BtnSortCustomers"
-        Me.BtnSortCustomers.Size = New System.Drawing.Size(188, 52)
+        Me.BtnSortCustomers.Size = New System.Drawing.Size(141, 42)
         Me.BtnSortCustomers.TabIndex = 83
         Me.BtnSortCustomers.Text = "Sort Product Sales"
         Me.BtnSortCustomers.UseVisualStyleBackColor = True
         '
         'BtnAdd
         '
-        Me.BtnAdd.Location = New System.Drawing.Point(-1, 287)
-        Me.BtnAdd.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnAdd.Location = New System.Drawing.Point(-1, 233)
         Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(188, 52)
+        Me.BtnAdd.Size = New System.Drawing.Size(141, 42)
         Me.BtnAdd.TabIndex = 82
         Me.BtnAdd.Text = "Add Product Sales"
         Me.BtnAdd.UseVisualStyleBackColor = True
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(192, 286)
-        Me.BtnEdit.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEdit.Location = New System.Drawing.Point(144, 232)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(188, 52)
+        Me.BtnEdit.Size = New System.Drawing.Size(141, 42)
         Me.BtnEdit.TabIndex = 81
         Me.BtnEdit.Text = "Edit Product Sales"
         Me.BtnEdit.UseVisualStyleBackColor = True
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(388, 287)
-        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnDelete.Location = New System.Drawing.Point(291, 233)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(188, 52)
+        Me.BtnDelete.Size = New System.Drawing.Size(141, 42)
         Me.BtnDelete.TabIndex = 80
         Me.BtnDelete.Text = "Delete Product Sales"
         Me.BtnDelete.UseVisualStyleBackColor = True
@@ -93,31 +89,27 @@ Partial Class SalesView
         Me.GrpSearch.Controls.Add(Me.radName)
         Me.GrpSearch.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrpSearch.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GrpSearch.Location = New System.Drawing.Point(584, 166)
-        Me.GrpSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.GrpSearch.Location = New System.Drawing.Point(438, 135)
         Me.GrpSearch.Name = "GrpSearch"
-        Me.GrpSearch.Padding = New System.Windows.Forms.Padding(4)
-        Me.GrpSearch.Size = New System.Drawing.Size(309, 258)
+        Me.GrpSearch.Size = New System.Drawing.Size(232, 210)
         Me.GrpSearch.TabIndex = 79
         Me.GrpSearch.TabStop = False
         Me.GrpSearch.Text = "Search For:"
         '
         'txbquantity
         '
-        Me.txbquantity.Location = New System.Drawing.Point(8, 217)
-        Me.txbquantity.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbquantity.Location = New System.Drawing.Point(6, 176)
         Me.txbquantity.Name = "txbquantity"
-        Me.txbquantity.Size = New System.Drawing.Size(287, 38)
+        Me.txbquantity.Size = New System.Drawing.Size(216, 32)
         Me.txbquantity.TabIndex = 62
         '
         'RadQuantity
         '
         Me.RadQuantity.AutoSize = True
         Me.RadQuantity.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadQuantity.Location = New System.Drawing.Point(8, 190)
-        Me.RadQuantity.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadQuantity.Location = New System.Drawing.Point(6, 154)
         Me.RadQuantity.Name = "RadQuantity"
-        Me.RadQuantity.Size = New System.Drawing.Size(104, 27)
+        Me.RadQuantity.Size = New System.Drawing.Size(82, 22)
         Me.RadQuantity.TabIndex = 61
         Me.RadQuantity.TabStop = True
         Me.RadQuantity.Text = "Quantity"
@@ -125,28 +117,25 @@ Partial Class SalesView
         '
         'txbname
         '
-        Me.txbname.Location = New System.Drawing.Point(8, 149)
-        Me.txbname.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbname.Location = New System.Drawing.Point(6, 121)
         Me.txbname.Name = "txbname"
-        Me.txbname.Size = New System.Drawing.Size(287, 38)
+        Me.txbname.Size = New System.Drawing.Size(216, 32)
         Me.txbname.TabIndex = 60
         '
         'txbID
         '
-        Me.txbID.Location = New System.Drawing.Point(12, 73)
-        Me.txbID.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbID.Location = New System.Drawing.Point(9, 59)
         Me.txbID.Name = "txbID"
-        Me.txbID.Size = New System.Drawing.Size(283, 38)
+        Me.txbID.Size = New System.Drawing.Size(213, 32)
         Me.txbID.TabIndex = 59
         '
         'radID
         '
         Me.radID.AutoSize = True
         Me.radID.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radID.Location = New System.Drawing.Point(8, 38)
-        Me.radID.Margin = New System.Windows.Forms.Padding(4)
+        Me.radID.Location = New System.Drawing.Point(6, 31)
         Me.radID.Name = "radID"
-        Me.radID.Size = New System.Drawing.Size(90, 27)
+        Me.radID.Size = New System.Drawing.Size(73, 22)
         Me.radID.TabIndex = 0
         Me.radID.TabStop = True
         Me.radID.Text = "SaleID"
@@ -156,10 +145,9 @@ Partial Class SalesView
         '
         Me.radName.AutoSize = True
         Me.radName.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radName.Location = New System.Drawing.Point(8, 119)
-        Me.radName.Margin = New System.Windows.Forms.Padding(4)
+        Me.radName.Location = New System.Drawing.Point(6, 97)
         Me.radName.Name = "radName"
-        Me.radName.Size = New System.Drawing.Size(101, 27)
+        Me.radName.Size = New System.Drawing.Size(81, 22)
         Me.radName.TabIndex = 0
         Me.radName.TabStop = True
         Me.radName.Text = "StockID"
@@ -171,11 +159,9 @@ Partial Class SalesView
         Me.GrpSort.Controls.Add(Me.cbproductchange)
         Me.GrpSort.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrpSort.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.GrpSort.Location = New System.Drawing.Point(584, 4)
-        Me.GrpSort.Margin = New System.Windows.Forms.Padding(4)
+        Me.GrpSort.Location = New System.Drawing.Point(438, 3)
         Me.GrpSort.Name = "GrpSort"
-        Me.GrpSort.Padding = New System.Windows.Forms.Padding(4)
-        Me.GrpSort.Size = New System.Drawing.Size(309, 155)
+        Me.GrpSort.Size = New System.Drawing.Size(232, 126)
         Me.GrpSort.TabIndex = 78
         Me.GrpSort.TabStop = False
         Me.GrpSort.Text = "Sort By:"
@@ -183,47 +169,45 @@ Partial Class SalesView
         'Llbchange
         '
         Me.Llbchange.AutoSize = True
-        Me.Llbchange.Location = New System.Drawing.Point(43, 57)
+        Me.Llbchange.Location = New System.Drawing.Point(32, 46)
+        Me.Llbchange.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Llbchange.Name = "Llbchange"
-        Me.Llbchange.Size = New System.Drawing.Size(170, 32)
+        Me.Llbchange.Size = New System.Drawing.Size(130, 24)
         Me.Llbchange.TabIndex = 59
         Me.Llbchange.Text = "Date or Time"
         '
         'cbproductchange
         '
         Me.cbproductchange.FormattingEnabled = True
-        Me.cbproductchange.Location = New System.Drawing.Point(13, 108)
-        Me.cbproductchange.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbproductchange.Location = New System.Drawing.Point(10, 88)
         Me.cbproductchange.Name = "cbproductchange"
-        Me.cbproductchange.Size = New System.Drawing.Size(287, 39)
+        Me.cbproductchange.Size = New System.Drawing.Size(216, 32)
         Me.cbproductchange.TabIndex = 58
         '
         'DGVSales
         '
         Me.DGVSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVSales.Location = New System.Drawing.Point(-1, 4)
-        Me.DGVSales.Margin = New System.Windows.Forms.Padding(4)
+        Me.DGVSales.Location = New System.Drawing.Point(-1, 3)
         Me.DGVSales.Name = "DGVSales"
         Me.DGVSales.RowHeadersWidth = 51
-        Me.DGVSales.Size = New System.Drawing.Size(577, 267)
+        Me.DGVSales.Size = New System.Drawing.Size(433, 217)
         Me.DGVSales.TabIndex = 77
         '
         'BtnSearchSalesLine
         '
-        Me.BtnSearchSalesLine.Location = New System.Drawing.Point(388, 356)
-        Me.BtnSearchSalesLine.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSearchSalesLine.Location = New System.Drawing.Point(291, 289)
         Me.BtnSearchSalesLine.Name = "BtnSearchSalesLine"
-        Me.BtnSearchSalesLine.Size = New System.Drawing.Size(188, 52)
+        Me.BtnSearchSalesLine.Size = New System.Drawing.Size(141, 42)
         Me.BtnSearchSalesLine.TabIndex = 76
         Me.BtnSearchSalesLine.Text = "Search Product Sales"
         Me.BtnSearchSalesLine.UseVisualStyleBackColor = True
         '
         'SalesView
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(892, 428)
+        Me.ClientSize = New System.Drawing.Size(669, 348)
         Me.Controls.Add(Me.BtnSortCustomers)
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.BtnEdit)
@@ -232,7 +216,6 @@ Partial Class SalesView
         Me.Controls.Add(Me.GrpSort)
         Me.Controls.Add(Me.DGVSales)
         Me.Controls.Add(Me.BtnSearchSalesLine)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "SalesView"
         Me.Text = "SalesView"
         Me.GrpSearch.ResumeLayout(False)
