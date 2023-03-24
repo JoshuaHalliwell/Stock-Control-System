@@ -13,7 +13,7 @@ Public Class ReportGraph
         End If
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
         da.Fill(ds, Tablename) 'Fill whatever is in the data adapter to the DataSet'
-
+        con.Close()
     End Sub
 
     Private Sub CbxGraphType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxGraphType.SelectedIndexChanged

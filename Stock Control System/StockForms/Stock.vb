@@ -51,7 +51,7 @@ Public Class Stock
     End Sub
 
     Private Sub txbID_TextChanged(sender As Object, e As EventArgs) Handles txbID.TextChanged
-        sql = "SELECT * FROM TblStocks WHERE StockID LIKE '%" & txbID.Text & "%'"
+        sql = "SELECT * FROM TblStocks WHERE (((TblStocks.StockID)LIKE'%" & txbID.Text & "%'))"
         SortAndSearchConnection()
     End Sub
 
@@ -87,11 +87,15 @@ Public Class Stock
     End Sub
 
     Private Sub SortAndSearchConnection()
+
+        Dim Results As New DataTable                                                                                                                                                                                                                                                                                                                                                        ' Declare data table
+        ' Declare and populate varaible
         da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-        da.Fill(ds, "TblStocks") 'Fill whatever is in the data adapter to the DataSet'
-        DGVStock.DataSource = ds
+        da.Fill(Results) 'Fill whatever is in the data adapter to the DataSet'
+        DGVStock.DataSource = Results                                                                                                                                                                                                                                                                                                                                                      ' Populate data grid using data table
         DGVStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+        con.Close() 'Sends the data grid to the connection opration 
+
     End Sub
 
     Private Sub radID_CheckedChanged(sender As Object, e As EventArgs) Handles radID.CheckedChanged
