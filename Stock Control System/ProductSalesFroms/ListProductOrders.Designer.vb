@@ -22,17 +22,18 @@ Partial Class ListProductOrders
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TbxCustomerID = New System.Windows.Forms.TextBox()
         Me.TbxStaffID = New System.Windows.Forms.TextBox()
         Me.TbxSalesID = New System.Windows.Forms.TextBox()
-        Me.CbxStockID = New System.Windows.Forms.ComboBox()
+        Me.CbxProductName = New System.Windows.Forms.ComboBox()
         Me.TbxQuantity = New System.Windows.Forms.TextBox()
         Me.TbxPricePerItem = New System.Windows.Forms.TextBox()
         Me.TbxTotalPrice = New System.Windows.Forms.TextBox()
         Me.LblCustomerID = New System.Windows.Forms.Label()
         Me.LblStaffID = New System.Windows.Forms.Label()
         Me.LblSalesID = New System.Windows.Forms.Label()
-        Me.LblStockID = New System.Windows.Forms.Label()
+        Me.LblProductName = New System.Windows.Forms.Label()
         Me.LblPricePerItem = New System.Windows.Forms.Label()
         Me.LblTotalPrice = New System.Windows.Forms.Label()
         Me.LbxOrder = New System.Windows.Forms.ListBox()
@@ -40,149 +41,178 @@ Partial Class ListProductOrders
         Me.BtnDeleteItem = New System.Windows.Forms.Button()
         Me.BtnSubmit = New System.Windows.Forms.Button()
         Me.LblQuantity = New System.Windows.Forms.Label()
+        Me.StockDataBaseDSProductName = New Stock_Control_System.StockDataBaseDSProductName()
+        Me.QryProductNameSaleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.QryProductNameSaleTableAdapter = New Stock_Control_System.StockDataBaseDSProductNameTableAdapters.QryProductNameSaleTableAdapter()
+        Me.TbxStockID = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblSaleTime = New System.Windows.Forms.Label()
+        Me.TbxSaleTime = New System.Windows.Forms.TextBox()
+        Me.LblSaleDay = New System.Windows.Forms.Label()
+        Me.TbxSaleDay = New System.Windows.Forms.TextBox()
+        CType(Me.StockDataBaseDSProductName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.QryProductNameSaleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TbxCustomerID
         '
-        Me.TbxCustomerID.Location = New System.Drawing.Point(156, 38)
+        Me.TbxCustomerID.Location = New System.Drawing.Point(209, 13)
+        Me.TbxCustomerID.Margin = New System.Windows.Forms.Padding(4)
         Me.TbxCustomerID.Name = "TbxCustomerID"
-        Me.TbxCustomerID.Size = New System.Drawing.Size(224, 20)
+        Me.TbxCustomerID.Size = New System.Drawing.Size(297, 22)
         Me.TbxCustomerID.TabIndex = 0
         Me.TbxCustomerID.Text = "TbxStockID"
         '
         'TbxStaffID
         '
-        Me.TbxStaffID.Location = New System.Drawing.Point(156, 73)
+        Me.TbxStaffID.Location = New System.Drawing.Point(210, 43)
+        Me.TbxStaffID.Margin = New System.Windows.Forms.Padding(4)
         Me.TbxStaffID.Name = "TbxStaffID"
-        Me.TbxStaffID.Size = New System.Drawing.Size(224, 20)
+        Me.TbxStaffID.Size = New System.Drawing.Size(297, 22)
         Me.TbxStaffID.TabIndex = 1
         Me.TbxStaffID.Text = "TbxStaffID"
         '
         'TbxSalesID
         '
-        Me.TbxSalesID.Location = New System.Drawing.Point(156, 108)
+        Me.TbxSalesID.Location = New System.Drawing.Point(209, 73)
+        Me.TbxSalesID.Margin = New System.Windows.Forms.Padding(4)
         Me.TbxSalesID.Name = "TbxSalesID"
-        Me.TbxSalesID.Size = New System.Drawing.Size(224, 20)
+        Me.TbxSalesID.Size = New System.Drawing.Size(297, 22)
         Me.TbxSalesID.TabIndex = 2
         Me.TbxSalesID.Text = "TbxSalesID"
         '
-        'CbxStockID
+        'CbxProductName
         '
-        Me.CbxStockID.FormattingEnabled = True
-        Me.CbxStockID.Location = New System.Drawing.Point(156, 139)
-        Me.CbxStockID.Name = "CbxStockID"
-        Me.CbxStockID.Size = New System.Drawing.Size(224, 21)
-        Me.CbxStockID.TabIndex = 3
+        Me.CbxProductName.FormattingEnabled = True
+        Me.CbxProductName.Location = New System.Drawing.Point(209, 163)
+        Me.CbxProductName.Margin = New System.Windows.Forms.Padding(4)
+        Me.CbxProductName.Name = "CbxProductName"
+        Me.CbxProductName.Size = New System.Drawing.Size(297, 24)
+        Me.CbxProductName.TabIndex = 3
         '
         'TbxQuantity
         '
-        Me.TbxQuantity.Location = New System.Drawing.Point(156, 177)
+        Me.TbxQuantity.Location = New System.Drawing.Point(209, 225)
+        Me.TbxQuantity.Margin = New System.Windows.Forms.Padding(4)
         Me.TbxQuantity.Name = "TbxQuantity"
-        Me.TbxQuantity.Size = New System.Drawing.Size(224, 20)
+        Me.TbxQuantity.Size = New System.Drawing.Size(297, 22)
         Me.TbxQuantity.TabIndex = 4
         Me.TbxQuantity.Text = "TbxQuantity"
         '
         'TbxPricePerItem
         '
-        Me.TbxPricePerItem.Location = New System.Drawing.Point(156, 207)
+        Me.TbxPricePerItem.Location = New System.Drawing.Point(209, 259)
+        Me.TbxPricePerItem.Margin = New System.Windows.Forms.Padding(4)
         Me.TbxPricePerItem.Name = "TbxPricePerItem"
-        Me.TbxPricePerItem.Size = New System.Drawing.Size(224, 20)
+        Me.TbxPricePerItem.Size = New System.Drawing.Size(297, 22)
         Me.TbxPricePerItem.TabIndex = 5
         Me.TbxPricePerItem.Text = "TbxPricePerItem"
         '
         'TbxTotalPrice
         '
-        Me.TbxTotalPrice.Location = New System.Drawing.Point(156, 236)
+        Me.TbxTotalPrice.Location = New System.Drawing.Point(209, 290)
+        Me.TbxTotalPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.TbxTotalPrice.Name = "TbxTotalPrice"
-        Me.TbxTotalPrice.Size = New System.Drawing.Size(224, 20)
+        Me.TbxTotalPrice.Size = New System.Drawing.Size(297, 22)
         Me.TbxTotalPrice.TabIndex = 6
         Me.TbxTotalPrice.Text = "TbxTotalPrice"
         '
         'LblCustomerID
         '
         Me.LblCustomerID.AutoSize = True
-        Me.LblCustomerID.Location = New System.Drawing.Point(37, 41)
+        Me.LblCustomerID.Location = New System.Drawing.Point(58, 16)
+        Me.LblCustomerID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblCustomerID.Name = "LblCustomerID"
-        Me.LblCustomerID.Size = New System.Drawing.Size(62, 13)
+        Me.LblCustomerID.Size = New System.Drawing.Size(77, 16)
         Me.LblCustomerID.TabIndex = 7
         Me.LblCustomerID.Text = "CustomerID"
         '
         'LblStaffID
         '
         Me.LblStaffID.AutoSize = True
-        Me.LblStaffID.Location = New System.Drawing.Point(37, 80)
+        Me.LblStaffID.Location = New System.Drawing.Point(68, 43)
+        Me.LblStaffID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblStaffID.Name = "LblStaffID"
-        Me.LblStaffID.Size = New System.Drawing.Size(40, 13)
+        Me.LblStaffID.Size = New System.Drawing.Size(46, 16)
         Me.LblStaffID.TabIndex = 8
         Me.LblStaffID.Text = "StaffID"
         '
         'LblSalesID
         '
         Me.LblSalesID.AutoSize = True
-        Me.LblSalesID.Location = New System.Drawing.Point(37, 115)
+        Me.LblSalesID.Location = New System.Drawing.Point(68, 76)
+        Me.LblSalesID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblSalesID.Name = "LblSalesID"
-        Me.LblSalesID.Size = New System.Drawing.Size(44, 13)
+        Me.LblSalesID.Size = New System.Drawing.Size(55, 16)
         Me.LblSalesID.TabIndex = 9
         Me.LblSalesID.Text = "SalesID"
         '
-        'LblStockID
+        'LblProductName
         '
-        Me.LblStockID.AutoSize = True
-        Me.LblStockID.Location = New System.Drawing.Point(37, 147)
-        Me.LblStockID.Name = "LblStockID"
-        Me.LblStockID.Size = New System.Drawing.Size(46, 13)
-        Me.LblStockID.TabIndex = 10
-        Me.LblStockID.Text = "StockID"
+        Me.LblProductName.AutoSize = True
+        Me.LblProductName.Location = New System.Drawing.Point(58, 166)
+        Me.LblProductName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblProductName.Name = "LblProductName"
+        Me.LblProductName.Size = New System.Drawing.Size(90, 16)
+        Me.LblProductName.TabIndex = 10
+        Me.LblProductName.Text = "ProductName"
         '
         'LblPricePerItem
         '
         Me.LblPricePerItem.AutoSize = True
-        Me.LblPricePerItem.Location = New System.Drawing.Point(32, 210)
+        Me.LblPricePerItem.Location = New System.Drawing.Point(68, 265)
+        Me.LblPricePerItem.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPricePerItem.Name = "LblPricePerItem"
-        Me.LblPricePerItem.Size = New System.Drawing.Size(67, 13)
+        Me.LblPricePerItem.Size = New System.Drawing.Size(84, 16)
         Me.LblPricePerItem.TabIndex = 12
         Me.LblPricePerItem.Text = "PricePerItem"
         '
         'LblTotalPrice
         '
         Me.LblTotalPrice.AutoSize = True
-        Me.LblTotalPrice.Location = New System.Drawing.Point(37, 243)
+        Me.LblTotalPrice.Location = New System.Drawing.Point(68, 296)
+        Me.LblTotalPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTotalPrice.Name = "LblTotalPrice"
-        Me.LblTotalPrice.Size = New System.Drawing.Size(55, 13)
+        Me.LblTotalPrice.Size = New System.Drawing.Size(69, 16)
         Me.LblTotalPrice.TabIndex = 13
         Me.LblTotalPrice.Text = "TotalPrice"
         '
         'LbxOrder
         '
         Me.LbxOrder.FormattingEnabled = True
-        Me.LbxOrder.Location = New System.Drawing.Point(406, 39)
+        Me.LbxOrder.ItemHeight = 16
+        Me.LbxOrder.Location = New System.Drawing.Point(537, 13)
+        Me.LbxOrder.Margin = New System.Windows.Forms.Padding(4)
         Me.LbxOrder.Name = "LbxOrder"
-        Me.LbxOrder.Size = New System.Drawing.Size(235, 277)
+        Me.LbxOrder.Size = New System.Drawing.Size(312, 340)
         Me.LbxOrder.TabIndex = 14
         '
         'BtnAddItem
         '
-        Me.BtnAddItem.Location = New System.Drawing.Point(12, 262)
+        Me.BtnAddItem.Location = New System.Drawing.Point(3, 334)
+        Me.BtnAddItem.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnAddItem.Name = "BtnAddItem"
-        Me.BtnAddItem.Size = New System.Drawing.Size(178, 37)
+        Me.BtnAddItem.Size = New System.Drawing.Size(237, 34)
         Me.BtnAddItem.TabIndex = 15
         Me.BtnAddItem.Text = "Add Item"
         Me.BtnAddItem.UseVisualStyleBackColor = True
         '
         'BtnDeleteItem
         '
-        Me.BtnDeleteItem.Location = New System.Drawing.Point(202, 262)
+        Me.BtnDeleteItem.Location = New System.Drawing.Point(270, 334)
+        Me.BtnDeleteItem.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnDeleteItem.Name = "BtnDeleteItem"
-        Me.BtnDeleteItem.Size = New System.Drawing.Size(178, 37)
+        Me.BtnDeleteItem.Size = New System.Drawing.Size(237, 34)
         Me.BtnDeleteItem.TabIndex = 16
         Me.BtnDeleteItem.Text = "Delete Item"
         Me.BtnDeleteItem.UseVisualStyleBackColor = True
         '
         'BtnSubmit
         '
-        Me.BtnSubmit.Location = New System.Drawing.Point(89, 305)
+        Me.BtnSubmit.Location = New System.Drawing.Point(149, 383)
+        Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSubmit.Name = "BtnSubmit"
-        Me.BtnSubmit.Size = New System.Drawing.Size(213, 34)
+        Me.BtnSubmit.Size = New System.Drawing.Size(237, 34)
         Me.BtnSubmit.TabIndex = 17
         Me.BtnSubmit.Text = "Submit"
         Me.BtnSubmit.UseVisualStyleBackColor = True
@@ -190,18 +220,96 @@ Partial Class ListProductOrders
         'LblQuantity
         '
         Me.LblQuantity.AutoSize = True
-        Me.LblQuantity.Location = New System.Drawing.Point(37, 180)
+        Me.LblQuantity.Location = New System.Drawing.Point(68, 231)
+        Me.LblQuantity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblQuantity.Name = "LblQuantity"
-        Me.LblQuantity.Size = New System.Drawing.Size(46, 13)
+        Me.LblQuantity.Size = New System.Drawing.Size(55, 16)
         Me.LblQuantity.TabIndex = 11
         Me.LblQuantity.Text = "Quantity"
         '
+        'StockDataBaseDSProductName
+        '
+        Me.StockDataBaseDSProductName.DataSetName = "StockDataBaseDSProductName"
+        Me.StockDataBaseDSProductName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'QryProductNameSaleBindingSource
+        '
+        Me.QryProductNameSaleBindingSource.DataMember = "QryProductNameSale"
+        Me.QryProductNameSaleBindingSource.DataSource = Me.StockDataBaseDSProductName
+        '
+        'QryProductNameSaleTableAdapter
+        '
+        Me.QryProductNameSaleTableAdapter.ClearBeforeFill = True
+        '
+        'TbxStockID
+        '
+        Me.TbxStockID.Location = New System.Drawing.Point(209, 195)
+        Me.TbxStockID.Margin = New System.Windows.Forms.Padding(4)
+        Me.TbxStockID.Name = "TbxStockID"
+        Me.TbxStockID.Size = New System.Drawing.Size(297, 22)
+        Me.TbxStockID.TabIndex = 18
+        Me.TbxStockID.Text = "TbxStockID"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(68, 201)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 16)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "StockID"
+        '
+        'LblSaleTime
+        '
+        Me.LblSaleTime.AutoSize = True
+        Me.LblSaleTime.Location = New System.Drawing.Point(62, 136)
+        Me.LblSaleTime.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSaleTime.Name = "LblSaleTime"
+        Me.LblSaleTime.Size = New System.Drawing.Size(66, 16)
+        Me.LblSaleTime.TabIndex = 142
+        Me.LblSaleTime.Text = "SaleTime"
+        '
+        'TbxSaleTime
+        '
+        Me.TbxSaleTime.Location = New System.Drawing.Point(210, 133)
+        Me.TbxSaleTime.Margin = New System.Windows.Forms.Padding(4)
+        Me.TbxSaleTime.Name = "TbxSaleTime"
+        Me.TbxSaleTime.Size = New System.Drawing.Size(297, 22)
+        Me.TbxSaleTime.TabIndex = 143
+        Me.TbxSaleTime.Text = "SaleTime"
+        '
+        'LblSaleDay
+        '
+        Me.LblSaleDay.AutoSize = True
+        Me.LblSaleDay.Location = New System.Drawing.Point(68, 103)
+        Me.LblSaleDay.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSaleDay.Name = "LblSaleDay"
+        Me.LblSaleDay.Size = New System.Drawing.Size(60, 16)
+        Me.LblSaleDay.TabIndex = 144
+        Me.LblSaleDay.Text = "SaleDay"
+        '
+        'TbxSaleDay
+        '
+        Me.TbxSaleDay.Location = New System.Drawing.Point(210, 103)
+        Me.TbxSaleDay.Margin = New System.Windows.Forms.Padding(4)
+        Me.TbxSaleDay.Name = "TbxSaleDay"
+        Me.TbxSaleDay.Size = New System.Drawing.Size(297, 22)
+        Me.TbxSaleDay.TabIndex = 145
+        Me.TbxSaleDay.Text = "SaleDay"
+        '
         'ListProductOrders
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(667, 349)
+        Me.ClientSize = New System.Drawing.Size(889, 430)
+        Me.Controls.Add(Me.TbxSaleDay)
+        Me.Controls.Add(Me.LblSaleDay)
+        Me.Controls.Add(Me.TbxSaleTime)
+        Me.Controls.Add(Me.LblSaleTime)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TbxStockID)
         Me.Controls.Add(Me.TbxPricePerItem)
         Me.Controls.Add(Me.LblPricePerItem)
         Me.Controls.Add(Me.BtnSubmit)
@@ -210,18 +318,21 @@ Partial Class ListProductOrders
         Me.Controls.Add(Me.LbxOrder)
         Me.Controls.Add(Me.LblTotalPrice)
         Me.Controls.Add(Me.LblQuantity)
-        Me.Controls.Add(Me.LblStockID)
+        Me.Controls.Add(Me.LblProductName)
         Me.Controls.Add(Me.LblSalesID)
         Me.Controls.Add(Me.LblStaffID)
         Me.Controls.Add(Me.LblCustomerID)
         Me.Controls.Add(Me.TbxTotalPrice)
         Me.Controls.Add(Me.TbxQuantity)
-        Me.Controls.Add(Me.CbxStockID)
+        Me.Controls.Add(Me.CbxProductName)
         Me.Controls.Add(Me.TbxSalesID)
         Me.Controls.Add(Me.TbxStaffID)
         Me.Controls.Add(Me.TbxCustomerID)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ListProductOrders"
         Me.Text = "ListProductOrders"
+        CType(Me.StockDataBaseDSProductName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.QryProductNameSaleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -230,14 +341,14 @@ Partial Class ListProductOrders
     Friend WithEvents TbxCustomerID As TextBox
     Friend WithEvents TbxStaffID As TextBox
     Friend WithEvents TbxSalesID As TextBox
-    Friend WithEvents CbxStockID As ComboBox
+    Friend WithEvents CbxProductName As ComboBox
     Friend WithEvents TbxQuantity As TextBox
     Friend WithEvents TbxPricePerItem As TextBox
     Friend WithEvents TbxTotalPrice As TextBox
     Friend WithEvents LblCustomerID As Label
     Friend WithEvents LblStaffID As Label
     Friend WithEvents LblSalesID As Label
-    Friend WithEvents LblStockID As Label
+    Friend WithEvents LblProductName As Label
     Friend WithEvents LblPricePerItem As Label
     Friend WithEvents LblTotalPrice As Label
     Friend WithEvents LbxOrder As ListBox
@@ -245,4 +356,13 @@ Partial Class ListProductOrders
     Friend WithEvents BtnDeleteItem As Button
     Friend WithEvents BtnSubmit As Button
     Friend WithEvents LblQuantity As Label
+    Friend WithEvents StockDataBaseDSProductName As StockDataBaseDSProductName
+    Friend WithEvents QryProductNameSaleBindingSource As BindingSource
+    Friend WithEvents QryProductNameSaleTableAdapter As StockDataBaseDSProductNameTableAdapters.QryProductNameSaleTableAdapter
+    Friend WithEvents TbxStockID As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblSaleTime As Label
+    Friend WithEvents TbxSaleTime As TextBox
+    Friend WithEvents LblSaleDay As Label
+    Friend WithEvents TbxSaleDay As TextBox
 End Class

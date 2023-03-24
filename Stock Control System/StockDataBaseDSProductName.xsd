@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StockDataBaseDSProductName" targetNamespace="http://tempuri.org/StockDataBaseDSProductName.xsd" xmlns:mstns="http://tempuri.org/StockDataBaseDSProductName.xsd" xmlns="http://tempuri.org/StockDataBaseDSProductName.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="StockDataBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StockDataBaseConnectionString (MySettings)" PropertyReference="ApplicationSettings.Stock_Control_System.My.MySettings.GlobalReference.Default.StockDataBaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QryProductNameSaleTableAdapter" GeneratorDataComponentClassName="QryProductNameSaleTableAdapter" Name="QryProductNameSale" UserDataComponentName="QryProductNameSaleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StockDataBaseConnectionString (MySettings)" DbObjectName="QryProductNameSale" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT StockID, ProductName, PricePerItem FROM QryProductNameSale</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StockID" DataSetColumn="StockID" />
+              <Mapping SourceColumn="ProductName" DataSetColumn="ProductName" />
+              <Mapping SourceColumn="PricePerItem" DataSetColumn="PricePerItem" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StockDataBaseDSProductName" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="StockDataBaseDSProductName" msprop:Generator_DataSetName="StockDataBaseDSProductName">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QryProductNameSale" msprop:Generator_RowEvHandlerName="QryProductNameSaleRowChangeEventHandler" msprop:Generator_RowDeletedName="QryProductNameSaleRowDeleted" msprop:Generator_RowDeletingName="QryProductNameSaleRowDeleting" msprop:Generator_RowEvArgName="QryProductNameSaleRowChangeEvent" msprop:Generator_TablePropName="QryProductNameSale" msprop:Generator_RowChangedName="QryProductNameSaleRowChanged" msprop:Generator_RowChangingName="QryProductNameSaleRowChanging" msprop:Generator_TableClassName="QryProductNameSaleDataTable" msprop:Generator_RowClassName="QryProductNameSaleRow" msprop:Generator_TableVarName="tableQryProductNameSale" msprop:Generator_UserTableName="QryProductNameSale">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockID" msprop:Generator_ColumnPropNameInRow="StockID" msprop:Generator_ColumnPropNameInTable="StockIDColumn" msprop:Generator_ColumnVarNameInTable="columnStockID" msprop:Generator_UserColumnName="StockID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_UserColumnName="ProductName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PricePerItem" msprop:Generator_ColumnPropNameInRow="PricePerItem" msprop:Generator_ColumnPropNameInTable="PricePerItemColumn" msprop:Generator_ColumnVarNameInTable="columnPricePerItem" msprop:Generator_UserColumnName="PricePerItem" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:QryProductNameSale" />
+      <xs:field xpath="mstns:StockID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
