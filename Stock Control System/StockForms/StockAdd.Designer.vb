@@ -23,7 +23,7 @@ Partial Class StockAdd
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.BtnBackToStockPage = New System.Windows.Forms.Button()
+        Me.BtnAddToStock = New System.Windows.Forms.Button()
         Me.LblStockID = New System.Windows.Forms.Label()
         Me.LblProductName = New System.Windows.Forms.Label()
         Me.LblQuantityOfDisplayStock = New System.Windows.Forms.Label()
@@ -53,14 +53,14 @@ Partial Class StockAdd
         Me.Lbltotalstockerror = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'BtnBackToStockPage
+        'BtnAddToStock
         '
-        Me.BtnBackToStockPage.Location = New System.Drawing.Point(155, 292)
-        Me.BtnBackToStockPage.Name = "BtnBackToStockPage"
-        Me.BtnBackToStockPage.Size = New System.Drawing.Size(111, 28)
-        Me.BtnBackToStockPage.TabIndex = 8
-        Me.BtnBackToStockPage.Text = "Add stock details"
-        Me.BtnBackToStockPage.UseVisualStyleBackColor = True
+        Me.BtnAddToStock.Location = New System.Drawing.Point(155, 292)
+        Me.BtnAddToStock.Name = "BtnAddToStock"
+        Me.BtnAddToStock.Size = New System.Drawing.Size(111, 28)
+        Me.BtnAddToStock.TabIndex = 8
+        Me.BtnAddToStock.Text = "Add stock details"
+        Me.BtnAddToStock.UseVisualStyleBackColor = True
         '
         'LblStockID
         '
@@ -338,7 +338,7 @@ Partial Class StockAdd
         Me.Controls.Add(Me.LblQuantityOfDisplayStock)
         Me.Controls.Add(Me.LblProductName)
         Me.Controls.Add(Me.LblStockID)
-        Me.Controls.Add(Me.BtnBackToStockPage)
+        Me.Controls.Add(Me.BtnAddToStock)
         Me.Name = "StockAdd"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
@@ -346,7 +346,7 @@ Partial Class StockAdd
 
     End Sub
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents BtnBackToStockPage As Button
+    Friend WithEvents BtnAddToStock As Button
     Friend WithEvents LblStockID As Label
     Friend WithEvents LblProductName As Label
     Friend WithEvents LblQuantityOfDisplayStock As Label

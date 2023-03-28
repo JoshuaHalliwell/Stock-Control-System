@@ -4,14 +4,14 @@
     End Sub
 
     Private Sub SalesView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ''con.Open()
-        ''sql = "SELECT TblSales.SaleID, TblStocks.StockID, TblStocks.ProductName, TblSalesLine.SaleQuantity, TblSales.SaleTime, TblSales.SaleDay, TblSales.CustomerID, TblSales.StaffID, [SaleQuantity]*[PricePerIteam] AS SalePrice FROM TblStocks INNER Join (TblSales INNER Join TblSalesLine On TblSales.SaleID = TblSalesLine.SaleID) ON TblStocks.StockID = TblSalesLine.StockID"
-        ''da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-        ''da.Fill(ds, "QrySales") 'Fill whatever is in the data adapter to the DataSet'
-        ''DGVSales.DataSource = ds
-        ''DGVSales.DataMember = "QrySales"
-        ''DGVSales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        ''con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)
+        con.Open()
+        sql = "SELECT TblSales.SaleID, TblStocks.StockID, TblStocks.ProductName, TblSalesLine.SaleQuantity, TblSales.SaleTime, TblSales.SaleDay, TblSales.CustomerID, TblSales.StaffID, [SaleQuantity]*[PricePerItem] AS SalePrice From TblStocks INNER Join (TblSales INNER Join TblSalesLine On TblSales.SaleID = TblSalesLine.SaleID) ON TblStocks.StockID = TblSalesLine.StockID"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "QrySales") 'Fill whatever is in the data adapter to the DataSet'
+        DGVSales.DataSource = ds
+        DGVSales.DataMember = "QrySales"
+        DGVSales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)
 
         GrpSearch.Hide()
         GrpSort.Hide()
@@ -40,7 +40,7 @@
 
     Private Sub txbID_TextChanged(sender As Object, e As EventArgs) Handles txbID.TextChanged
         con.Open()
-        sql = "SELECT * FROM QrySales WHERE SalesID LIKE '%" & txbID.Text & "%'"             ' Sql checks to find a simular result in the database  
+        sql = "SELECT * FROM QrySales WHERE SalesID like '%" & txbID.Text & "%'"             ' Sql checks to find a simular result in the database  
         SandSconnection(DGVSales, sql)
     End Sub
 
@@ -99,6 +99,10 @@
     Private Sub BtnSearchSalesLine_Click(sender As Object, e As EventArgs) Handles BtnSearchSalesLine.Click
         GrpSearch.Show()
         GrpSort.Hide()
+
+    End Sub
+
+    Private Sub DGVSales_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVSales.CellContentClick
 
     End Sub
 End Class

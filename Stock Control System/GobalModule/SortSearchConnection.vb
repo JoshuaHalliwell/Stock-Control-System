@@ -17,7 +17,7 @@ Module SortSearchConnection
             DataGridName.DataSource = Results                                                                                                                                                                                                                                                                                                                                                      ' Populate data grid using data table
             con.Close() ' ^   
         Catch ex As Exception
-            MsgBox(ex)
+            'MsgBox(ex)
 
         End Try
         con.Close()

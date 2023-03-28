@@ -39,6 +39,7 @@ Public Class ListProductOrders
         ' Set the new ID as the text of the TextBox
         TbxSalesID.Text = newID
 
+        TbxCustomerID.Text = ""
         TbxQuantity.Text = ""
         TbxPricePerItem.Text = ""
         TbxTotalPrice.Text = ""
@@ -268,22 +269,22 @@ Public Class ListProductOrders
         receiptText.AppendLine($"Stock ID: {StockID}")
         receiptText.AppendLine("===============================")
 
-        'For Each item As String In LbxOrder.Items
-        '    ' Parse the item details from the string
-        '    Dim parts As String() = item.Split("-")
-        '    Dim productName As String = parts(0).Trim()
-        '    Dim quantity As Integer = Integer.Parse(parts(1).Trim().Split(" ")(0))
-        '    Dim pricePerItem As Decimal = Decimal.Parse(parts(2).Trim().Split(" ")(0))
-        '    Dim price As Decimal = Decimal.Parse(parts(3).Trim())
+        For Each item As String In LbxOrder.Items
+            ' Parse the item details from the string
+            Dim parts As String() = item.Split("-")
+            Dim productName As String = parts(0).Trim()
+            Dim quantity As Integer = Integer.Parse(parts(1).Trim().Split(" ")(0))
+            Dim pricePerItem As Decimal = Decimal.Parse(parts(2).Trim().Split(" ")(0))
+            Dim price As Decimal = Decimal.Parse(parts(3).Trim())
 
-        '    receiptText.AppendLine(productName)
-        '    receiptText.AppendLine($"Quantity: {quantity}")
-        '    receiptText.AppendLine($"Price per item: {pricePerItem:C2}")
-        '    receiptText.AppendLine($"Total price: {price:C2}")
-        '    receiptText.AppendLine("-----------------------------")
-        '    '' Add the item details to the receipt
-        '    'receiptText.AppendLine($"{productName} x {quantity} @ {pricePerItem.ToString("C")} = {price.ToString("C")}")
-        'Next
+            receiptText.AppendLine(productName)
+            receiptText.AppendLine($"Quantity: {quantity}")
+            receiptText.AppendLine($"Price per item: {pricePerItem:C2}")
+            receiptText.AppendLine($"Total price: {price:C2}")
+            receiptText.AppendLine("-----------------------------")
+            ' Add the item details to the receipt
+            receiptText.AppendLine($"{productName} x {quantity} @ {pricePerItem.ToString("C")} = {price.ToString("C")}")
+        Next
 
         ' Add the total price to the receipt
         Dim totalPrice As Decimal = CDec(TbxTotalPrice.Text)

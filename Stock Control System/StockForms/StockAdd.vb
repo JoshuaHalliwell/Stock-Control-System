@@ -1,18 +1,13 @@
-﻿Public Class StockAdd
+﻿Imports Org.BouncyCastle.Crypto.Engines
+
+Public Class StockAdd
     Private Sub StockAdd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LblStockID.Text = "" 'Hides the on screen error messages by making the text to be empty so that they only appear when needed
-
-        Lblproductnameerror.Text = ""
-
-        Lblstoragestockerror.Text = ""
-
-        Lbltotalstockerror.Text = ""
-
-        Lblpriceperitemerror.Text = ""
+        'Hides the on screen error messages by making the text to be empty so that they only appear when needed
+        ErrorClear()
 
         RoundCornerButton(Btnbacktomenu) 'Makes all button elements to have a rounded effect on them
 
-        RoundCornerButton(BtnBackToStockPage)
+        RoundCornerButton(BtnAddToStock)
 
         RoundCornerButton(Btnupdatestock)
 
@@ -27,6 +22,10 @@
         RoundCornerButton(Btnprevioustock)
 
         RoundCornerButton(Btnlaststock)
+
+        RoundCornerButton(BtnAddToStock)
+
+        RoundCornerButton(Btndeletestockpage)
 
         con.Open()
 
@@ -53,8 +52,25 @@
         Txtstockid.Text = ds.Tables("TblStocks").Rows(curRow).Item(4)
         Txttotalstock.Text = ds.Tables("TblStocks").Rows(curRow).Item(5)
     End Sub
+    Private Sub ErrorClear()
 
-    Private Sub BtnBackToStockPage_Click(sender As Object, e As EventArgs) Handles BtnBackToStockPage.Click
+        Lblproductnameerror.Text = ""
+
+        Lblstoragestockerror.Text = ""
+
+        Lbltotalstockerror.Text = ""
+
+        Lblpriceperitemerror.Text = ""
+
+        LblstockError.Text = ""
+
+        Lbldisplaystockerror.Text = ""
+    End Sub
+    Private Sub BtnBackToStockPage_Click(sender As Object, e As EventArgs) Handles BtnAddToStock.Click
+        If Txtstockid.Text = "" Then
+            LblstockError.Text = "A stock id must be present and be in the format of SOK111"
+
+        End If
         If curRow <> -1 Then 'If the variable doesn't equal to -1 the execute the below
 
             Dim cb As New OleDb.OleDbCommandBuilder(da) 'declares variable
@@ -177,20 +193,12 @@
         NavigateRecords()
     End Sub
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    Private Sub Btnclear_Click(sender As Object, e As EventArgs) Handles Btnclear.Click
+        Txtpriceperitem.Text = ""
+        Txtproductname.Text = ""
+        Txtquantityofstorage.Text = ""
+        Txtquantitystock.Text = ""
+        Txtstockid.Text = ""
+        Txttotalstock.Text = ""
+    End Sub
 End Class

@@ -128,6 +128,7 @@
         If cbCustomerID.SelectedItem = "Ascending Order" Then
             sql = "SELECT TblCustomer.CustomerID, TblCustomer.CustomerFirstname, TblCustomer.CustomerSurname, TblCustomer.CustomerEmail, TblCustomer.CustomerPhoneNumber, TblCustomer.CustomerPostcode From TblCustomer Order By TblCustomer.CustomerID;"
             SandSconnection(DGVCustomers, sql)                                                               'Sends the data grid to the connection opration 
+
         ElseIf cbCustomerID.SelectedItem = "Desending Order" Then
             sql = "SELECT TblCustomer.CustomerID, TblCustomer.CustomerFirstname, TblCustomer.CustomerSurname, TblCustomer.CustomerEmail, TblCustomer.CustomerPhoneNumber, TblCustomer.CustomerPostcode FROM TblCustomer ORDER BY TblCustomer.CustomerID DESC;"
             SandSconnection(DGVCustomers, sql)
