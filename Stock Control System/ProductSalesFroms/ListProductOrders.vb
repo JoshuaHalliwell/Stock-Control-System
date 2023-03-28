@@ -1,18 +1,31 @@
 ﻿Imports System.Globalization
+Imports System.IO
 Imports System.Runtime.InteropServices
+Imports System.Text
 Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class ListProductOrders
-    Dim regexPattern As String = "^SOK\d{3}$"
+    ' Dim regexPattern As String = "^SOK\d{3}$"
     Dim TotalOrderPrice As Decimal
+    Dim count As Integer = 0
+    Dim staffid As String = MainMenu.LblUsername.Text
+
+
     Private Sub ListProductOrders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'StockDataBaseDataSetCustomerName.TblCustomer' table. You can move, or remove it, as needed.
+        Me.TblCustomerTableAdapter.Fill(Me.StockDataBaseDataSetCustomerName.TblCustomer)
         'TODO: This line of code loads data into the 'StockDataBaseDSProductName.QryProductNameSale' table. You can move, or remove it, as needed.
         Me.QryProductNameSaleTableAdapter.Fill(Me.StockDataBaseDSProductName.QryProductNameSale)
+        
         LbxOrder.ClearSelected()
-
-        TbxCustomerID.Text = SaleCustomerID
-        TbxStaffID.Text = SaleStaffID
+        con.Open()
+        sql = "SELECT StaffID FROM TblStaff WHERE StaffUsername = '" & staffid & "'"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "TblStaff") 'Fill whatever is in the data adapter to the DataSet'
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+        TbxStaffID.Text = ds.Tables("TblStaff").Rows(1)("StaffID").ToString()
 
         ' Get the last sales ID from the table
         Dim LastID As String = GetLastSalesID()
@@ -46,12 +59,7 @@ Public Class ListProductOrders
         CbxProductName.DisplayMember = "ProductName"
         CbxProductName.ValueMember = "StockID"
 
-        con.Open()
-        sql = "SELECT StaffID FROM TblStaff WHERE StaffUsername = '" & MainMenu.LblUsername.Text & "'"
-        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-        da.Fill(ds, "TblStaff") 'Fill whatever is in the data adapter to the DataSet'
-        con.Close()
-        'LblStaffID.Text = ds.Tables("
+
     End Sub
     Private Function GetLastSalesID() As String
         ' This function retrieves the last sales ID from the table and returns it as a string
@@ -68,17 +76,28 @@ Public Class ListProductOrders
 
         Return lastID
     End Function
-    Private Sub TbxSalesID_TextChanged(sender As Object, e As EventArgs) Handles TbxSalesID.TextChanged
 
-    End Sub
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-        If Regex.IsMatch(TbxSalesID.Text, regexPattern) Then
-            ' Input matches the format "SOK001"
+        Try
+            da.Update(ds, "TblSalesLine") 'Updates the database with the new row
+        Catch ex As Exception
+            'MsgBox("This set of data is already in the database therefor can not be added")
+            Exit Sub
+        End Try
+        MsgBox("New sale data has been added to the Database") 'display a message box with the following message 
 
-        Else
-            ' Input does not match the format "SOK001"
+        ' Display a SaveFileDialog to allow the user to choose where to save the file
+        Dim saveFileDialog As New SaveFileDialog()
+        saveFileDialog.Filter = "Text Files|*.txt|All Files|*.*"
+        If saveFileDialog.ShowDialog() = DialogResult.OK Then
+            ' Create a new StreamWriter object to write the receipt text to the file
+            Using writer As New StreamWriter(saveFileDialog.FileName)
+                ' Write the receipt text to the file
+                writer.Write(GetReceiptText())
+            End Using
         End If
+
     End Sub
 
     Private Sub CbxStockID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxProductName.SelectedIndexChanged
@@ -92,6 +111,13 @@ Public Class ListProductOrders
     End Sub
 
     Private Sub BtnAddItem_Click(sender As Object, e As EventArgs) Handles BtnAddItem.Click
+        PresenceCheck()
+        If count < 1 Then
+            SalesDetail()
+            SalesLine()
+        Else
+            SalesLine()
+        End If
         Try
             Dim productName As String = CbxProductName.Text
             Dim quantity As Integer = CInt(TbxQuantity.Text)
@@ -149,6 +175,40 @@ Public Class ListProductOrders
             MessageBox.Show("Please select an item to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
+    Private Sub SalesDetail()
+        con.Open()
+        sql = "SELECT * FROM TblSales"
+        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+        da.Fill(ds, "TblSales") 'Fill whatever is in the data adapter to the DataSet'
+        cb = New OleDb.OleDbCommandBuilder(da)
+        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+        Dim dsNewRow As DataRow 'declares variable
+        If curRow <> -1 Then 'If the variable doesn't equal to -1 the execute the below 
+
+            dsNewRow = ds.Tables("TblSales").NewRow()
+
+            dsNewRow.Item("SaleID") = TbxSalesID.Text
+            dsNewRow.Item("SaleTime") = TbxSaleTime.Text
+            dsNewRow.Item("SaleDay") = TbxSaleDay.Text
+            dsNewRow.Item("StaffID") = TbxStaffID.Text
+            dsNewRow.Item("CustomerID") = TbxCustomerID.Text
+
+            ds.Tables("TblSales").Rows.Add(dsNewRow)
+            cb.QuotePrefix = "["
+            cb.QuoteSuffix = "]"
+            Try
+                da.Update(ds, "TblSales") 'Updates the database with the new row
+            Catch ex As Exception
+                ' MsgBox("This set of data is already in the database therefor can not be added")
+                Exit Sub
+            End Try
+            '  MsgBox("New sale data has been added to the Database") 'display a message box with the following message 
+            count = 1
+        Else
+            '  MsgBox("Data can not be added to the database, please ensure that all the information is correct")
+        End If
+    End Sub
     Private Sub SalesLine()
         con.Open()
         sql = "SELECT * FROM TblSalesLine"
@@ -157,24 +217,80 @@ Public Class ListProductOrders
         cb = New OleDb.OleDbCommandBuilder(da)
         con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
         Dim dsNewRow As DataRow 'declares variable
-        'For count = 0 To NewItemCount - 1
+        Try
+            dsNewRow = ds.Tables("TblSalesLine").NewRow()
 
-        '    dsNewRow = ds.Tables("TblCustomer").NewRow()
+            dsNewRow.Item("StockID") = TbxStockID.Text
+            dsNewRow.Item("SaleID") = TbxSalesID.Text
+            dsNewRow.Item("SaleQuantity") = TbxQuantity.Text
+            ds.Tables("TblSalesLine").Rows.Add(dsNewRow)
+            cb.QuotePrefix = "["
+            cb.QuoteSuffix = "]"
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+        '
+    End Sub
+    Private Sub PresenceCheck()
+        If TbxQuantity.Text = "" Then
+            MsgBox("There must be a qunatity amount for each iteam")
+        End If
+    End Sub
 
-        '    dsNewRow.Item("CustomerID") = TxbCustomerID.Text
-        '    dsNewRow.Item("CustomerFirstname") = TxbFirstname.Text
-        '    dsNewRow.Item("CustomerSurname") = TxbSurname.Text
-        '    dsNewRow.Item("CustomerEmail") = TxbEmail.Text
-        '    dsNewRow.Item("CustomerPhoneNumber") = TxbMobileNumber.Text
-        '    dsNewRow.Item("CustomerPostcode") = TxbPostcode.Text
+    Private Sub CbCustomerName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxCustomerName.SelectedIndexChanged
+        Dim selectedRow As DataRowView = CbxCustomerName.SelectedItem
+        If CbxCustomerName.SelectedIndex <> -1 Then 'Check if an item is selected in the ComboBox'
+            TbxCustomerID.Text = selectedRow("CustomerID").ToString()
+        End If
+    End Sub
+    Private Function GetReceiptText() As String
+        ' Get the sales details from the form controls
+        Dim saleID As String = TbxSalesID.Text
+        Dim saleTime As String = TbxSaleTime.Text
+        Dim saleDay As String = TbxSaleDay.Text
+        Dim customerID As String = TbxCustomerID.Text
+        Dim customerName As String = CbxCustomerName.Text
+        Dim staffID As String = TbxStaffID.Text
+        Dim StockID As String = TbxStockID.Text
 
-        '    ds.Tables("TblCustomer").Rows.Add(dsNewRow)
+        ' Create a StringBuilder object to build the receipt text
+        Dim receiptText As New StringBuilder()
 
-        '    cb.QuotePrefix = "["
-        '    cb.QuoteSuffix = "]"
+        ' Add the header information to the receipt
+        receiptText.AppendLine("Sale Receipt")
+        receiptText.AppendLine("===============================")
+        receiptText.AppendLine($"Sale ID: {saleID}")
+        receiptText.AppendLine($"Sale Time: {saleTime}")
+        receiptText.AppendLine($"Sale Day: {saleDay}")
+        receiptText.AppendLine($"Customer ID: {customerID}")
+        receiptText.AppendLine($"Customer Name: {customerName}")
+        receiptText.AppendLine($"Staff ID: {staffID}")
+        receiptText.AppendLine($"Stock ID: {StockID}")
+        receiptText.AppendLine("===============================")
+
+        'For Each item As String In LbxOrder.Items
+        '    ' Parse the item details from the string
+        '    Dim parts As String() = item.Split("-")
+        '    Dim productName As String = parts(0).Trim()
+        '    Dim quantity As Integer = Integer.Parse(parts(1).Trim().Split(" ")(0))
+        '    Dim pricePerItem As Decimal = Decimal.Parse(parts(2).Trim().Split(" ")(0))
+        '    Dim price As Decimal = Decimal.Parse(parts(3).Trim())
+
+        '    receiptText.AppendLine(productName)
+        '    receiptText.AppendLine($"Quantity: {quantity}")
+        '    receiptText.AppendLine($"Price per item: {pricePerItem:C2}")
+        '    receiptText.AppendLine($"Total price: {price:C2}")
+        '    receiptText.AppendLine("-----------------------------")
+        '    '' Add the item details to the receipt
+        '    'receiptText.AppendLine($"{productName} x {quantity} @ {pricePerItem.ToString("C")} = {price.ToString("C")}")
         'Next
-    End Sub
-    Private Sub LbxOrder_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LbxOrder.SelectedIndexChanged
 
-    End Sub
+        ' Add the total price to the receipt
+        Dim totalPrice As Decimal = CDec(TbxTotalPrice.Text)
+            receiptText.AppendLine("===============================")
+            receiptText.AppendLine($"Total Price: {totalPrice.ToString("C")}")
+
+        ' Return the receipt text
+        Return receiptText.ToString()
+    End Function
 End Class

@@ -169,6 +169,11 @@
     <Compile Include="StaffForms\StaffView.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StockDataBaseDataSetCustomerName.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockDataBaseDataSetCustomerName.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StockDataBaseDSProductName.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -406,6 +411,17 @@
     </None>
     <None Include="StockDataBaseDataSet1.xss">
       <DependentUpon>StockDataBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StockDataBaseDataSetCustomerName.xsc">
+      <DependentUpon>StockDataBaseDataSetCustomerName.xsd</DependentUpon>
+    </None>
+    <None Include="StockDataBaseDataSetCustomerName.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockDataBaseDataSetCustomerName.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockDataBaseDataSetCustomerName.xss">
+      <DependentUpon>StockDataBaseDataSetCustomerName.xsd</DependentUpon>
     </None>
     <None Include="StockDataBaseDataSetSales.xsc">
       <DependentUpon>StockDataBaseDataSetSales.xsd</DependentUpon>
