@@ -5,6 +5,7 @@ Imports System.Text
 Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports Org.BouncyCastle.Math
 
 Public Class ListProductOrders
     ' Dim regexPattern As String = "^SOK\d{3}$"
@@ -18,15 +19,18 @@ Public Class ListProductOrders
         Me.TblCustomerTableAdapter.Fill(Me.StockDataBaseDataSetCustomerName.TblCustomer)
         'TODO: This line of code loads data into the 'StockDataBaseDSProductName.QryProductNameSale' table. You can move, or remove it, as needed.
         Me.QryProductNameSaleTableAdapter.Fill(Me.StockDataBaseDSProductName.QryProductNameSale)
-        
-        LbxOrder.ClearSelected()
-        con.Open()
-        sql = "SELECT StaffID FROM TblStaff WHERE StaffUsername = '" & staffid & "'"
-        da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
-        da.Fill(ds, "TblStaff") 'Fill whatever is in the data adapter to the DataSet'
-        con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
-        TbxStaffID.Text = ds.Tables("TblStaff").Rows(1)("StaffID").ToString()
 
+        LbxOrder.ClearSelected()
+        Try
+            con.Open()
+            sql = "SELECT StaffID FROM TblStaff WHERE StaffUsername = '" & staffid & "'"
+            da = New OleDb.OleDbDataAdapter(sql, con) 'Pass the sql commad to the connection (database)' 
+            da.Fill(ds, "TblStaff") 'Fill whatever is in the data adapter to the DataSet'
+            con.Close() 'Close the connection with the database(leavering it open can cause errors such as lag)'
+            TbxStaffID.Text = ds.Tables("TblStaff").Rows(1)("StaffID").ToString()
+        Catch ex As Exception
+            MsgBox("StaffID is needed")
+        End Try
         ' Get the last sales ID from the table
         Dim LastID As String = GetLastSalesID()
 
@@ -81,10 +85,11 @@ Public Class ListProductOrders
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
         Try
+
             da.Update(ds, "TblSalesLine") 'Updates the database with the new row
         Catch ex As Exception
             'MsgBox("This set of data is already in the database therefor can not be added")
-            Exit Sub
+            'Exit Sub
         End Try
         MsgBox("New sale data has been added to the Database") 'display a message box with the following message 
 
@@ -106,8 +111,8 @@ Public Class ListProductOrders
         Dim selectedRow As DataRowView = CbxProductName.SelectedItem
         If CbxProductName.SelectedIndex <> -1 Then 'Check if an item is selected in the ComboBox'
             TbxStockID.Text = selectedRow("StockID").ToString()
-            TbxPricePerItem.Text = selectedRow("PricePerItem").ToString()
-        End If '
+            TbxPricePerItem.Text = String.Format("£{0:0.00}", (selectedRow("PricePerItem")))
+        End If
 
     End Sub
 
@@ -147,7 +152,7 @@ Public Class ListProductOrders
             '    End If
             'Next
             TotalOrderPrice = TotalOrderPrice + price
-            TbxTotalPrice.Text = TotalOrderPrice 'Set the total price in the TextBox'
+            TbxTotalPrice.Text = String.Format("£{0:0.00}", TotalOrderPrice) 'Set the total price in the TextBox'
         Catch ex As Exception
             MsgBox("Data must be in each field")
         End Try
@@ -271,27 +276,36 @@ Public Class ListProductOrders
 
         For Each item As String In LbxOrder.Items
             ' Parse the item details from the string
-            Dim parts As String() = item.Split("-")
-            Dim productName As String = parts(0).Trim()
-            Dim quantity As Integer = Integer.Parse(parts(1).Trim().Split(" ")(0))
-            Dim pricePerItem As Decimal = Decimal.Parse(parts(2).Trim().Split(" ")(0))
-            Dim price As Decimal = Decimal.Parse(parts(3).Trim())
+            'Dim parts As String() = item.Split("-")
+            'Dim productName As String = parts(0).Trim()
+            'Dim quantity As Integer = Integer.Parse(parts(1).Trim().Split(" ")(0))
+            'Dim pricePerItem As Decimal = Decimal.Parse(parts(2).Trim().Split(" ")(0))
+            'Dim price As Decimal = Decimal.Parse(parts(3).Trim())
 
-            receiptText.AppendLine(productName)
-            receiptText.AppendLine($"Quantity: {quantity}")
-            receiptText.AppendLine($"Price per item: {pricePerItem:C2}")
-            receiptText.AppendLine($"Total price: {price:C2}")
-            receiptText.AppendLine("-----------------------------")
+            Dim parts() As String = item.ToString().Split(","c)
+            Dim productName As String = parts(0)
+            Dim quantity As Integer = Integer.Parse(parts(1))
+            Dim pricePerItem As Decimal = Decimal.Parse(parts(2))
+            Dim price As Decimal = Decimal.Parse(parts(3))
+
             ' Add the item details to the receipt
-            receiptText.AppendLine($"{productName} x {quantity} @ {pricePerItem.ToString("C")} = {price.ToString("C")}")
+            receiptText.AppendLine(productName)
+            receiptText.AppendLine(String.Format("Quantity: {0}", quantity))
+            receiptText.AppendLine(String.Format("Price per item: £{0:0.00}", pricePerItem))
+            receiptText.AppendLine(String.Format("Total price of items: £{0:0.00}", price))
+            receiptText.AppendLine("-----------------------------")
+
+            'receiptText.AppendLine($"{productName} x {quantity} @ {pricePerItem.ToString("C")} = {price.ToString("C")}")
         Next
 
         ' Add the total price to the receipt
         Dim totalPrice As Decimal = CDec(TbxTotalPrice.Text)
-            receiptText.AppendLine("===============================")
-            receiptText.AppendLine($"Total Price: {totalPrice.ToString("C")}")
+        receiptText.AppendLine("===============================")
+        receiptText.AppendLine(String.Format("Total Price: £{0:0.00}", totalPrice))
 
         ' Return the receipt text
         Return receiptText.ToString()
     End Function
+
+
 End Class
