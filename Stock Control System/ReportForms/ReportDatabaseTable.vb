@@ -37,6 +37,8 @@ Public Class ReportDatabaseTable
         DGVDataTable.DataSource = ds
         DGVDataTable.DataMember = Tablename
         con.Close()
+        DGVDataTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
     End Sub
 
     Private Sub BtnClearTable_Click(sender As Object, e As EventArgs) Handles BtnClearTable.Click

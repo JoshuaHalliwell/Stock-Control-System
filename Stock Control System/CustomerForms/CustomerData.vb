@@ -42,7 +42,7 @@ Public Class CustomerData
     Private Sub PresenceCheck()
         Try
             If TxbCustomerID.Text = ds.Tables("TblCustomer").Rows(curRow).Item(0) Then          ' Checks to see if there is any data in the textboxes 
-                LblCustomerIDError.Text = "Customer ID field must be filled in with data"        ' if there is none then the realtive error text will
+                LblCustomerIDError.Text = "Customer ID field must be filled in with data"        ' if there is none then the realative error text will
             ElseIf TxbFirstname.Text = ds.Tables("TblCustomer").Rows(curRow).Item(1) Then        '  appear next to the relative textbox
                 LblCustomerFirstName.Text = "Customer firstname field must be filled in with data"
 
